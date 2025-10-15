@@ -133,6 +133,134 @@ Explain TypeScript interfaces in simple terms
 
 ---
 
+## 📋 Phase 2.5: Install Open WebUI (Docker-based Alternative) (10 minutes)
+
+> **Alternative til Jan AI:** Hvis du foretrækker en moderne web-baseret interface med fuld CLI-kontrol
+
+### Prerequisites:
+
+- Docker Desktop må være installeret (check: `docker --version`)
+- Ollama kørende i baggrund
+
+### Step 1: Automated Setup (Anbefalet)
+
+```powershell
+./scripts/setup-open-webui.ps1
+```
+
+Dette script vil:
+- ✅ Verificere Docker er kørende
+- ✅ Hente Open WebUI Docker image
+- ✅ Starte container på port 3000
+- ✅ Vente på health check
+- ✅ Vise næste steps
+
+### Step 2: Manual Setup (Alternative)
+
+Hvis du foretrækker manuel kontrol:
+
+```powershell
+# Start Docker Desktop hvis det ikke kører
+Start-Process "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+
+# Vent 10 sekunder
+Start-Sleep -Seconds 10
+
+# Start Open WebUI container
+docker run -d -p 3000:8080 `
+  --add-host=host.docker.internal:host-gateway `
+  --name open-webui `
+  ghcr.io/open-webui/open-webui:latest
+```
+
+### Step 3: Monitor Stack Status
+
+```powershell
+# Monitor alle tjenester (Ollama, Open WebUI, Docker)
+./scripts/monitor-stack.ps1
+```
+
+**Expected output:**
+```
+TekUp Stack Monitor
+
+Ollama Server:
+   [OK] Ollama is running
+
+Open WebUI:
+   [OK] Open WebUI is running
+
+Docker Container:
+   [OK] Container is running
+   open-webui Up X minutes
+
+Done
+```
+
+### Step 4: Access Open WebUI
+
+1. Open browser: http://localhost:3000
+2. Opret admin account (første bruger)
+3. Gå til **Settings → Models**
+4. Add connection: `http://host.docker.internal:11434`
+5. Select dine Ollama modeller:
+   - qwen2.5-coder:14b-instruct-q4_K_M
+   - llama3.3:8b-instruct-q5_K_M
+   - mistral:7b-instruct-q4_K_M
+
+### Step 5: Test Chat
+
+Send besked i Open WebUI:
+```
+Write a TypeScript function to calculate invoice total with tax
+```
+
+**Expected:** Response inden for 5-10 sekunder
+
+---
+
+## 🛠️ Docker Management CLI Commands
+
+### Check Status
+
+```powershell
+./scripts/manage-docker.ps1 -Action status
+```
+
+### View Real-time Logs
+
+```powershell
+./scripts/manage-docker.ps1 -Action logs
+```
+
+### Stop Container
+
+```powershell
+./scripts/manage-docker.ps1 -Action stop
+```
+
+### Start Container
+
+```powershell
+./scripts/manage-docker.ps1 -Action start
+```
+
+### Health Check
+
+```powershell
+./scripts/manage-docker.ps1 -Action health
+```
+
+---
+
+## 📚 Full CLI Control Guide
+
+Se komplet guide med alle commands:
+- **[CLI Control Guide](guides/cli-control.md)** - Alle Docker/Ollama/Open WebUI commands
+- **[Docker Troubleshooting](guides/docker-troubleshooting.md)** - Fælles problemer og løsninger
+
+---
+
 ## 📋 Phase 3: Configure Billy.dk Integration (15 minutes)
 
 ### Step 1: Understand Current Setup
