@@ -29,15 +29,15 @@ theme:
 nav:
   - Home: index.md
   - Getting Started:
-    - Installation: docs/SETUP.md
-    - Architecture: docs/ARCHITECTURE.md
+    - Installation: SETUP.md
+    - Architecture: ARCHITECTURE.md
   - Documentation:
-    - Daily Workflows: docs/WORKFLOWS.md
-    - Troubleshooting: docs/TROUBLESHOOTING.md
+    - Daily Workflows: WORKFLOWS.md
+    - Troubleshooting: TROUBLESHOOTING.md
   - API Reference:
-    - Billy.dk API: docs/api/tekup-billy-api.md
+    - Billy.dk API: api/tekup-billy-api.md
   - Guides:
-    - Daily Workflow Guide: docs/guides/daily-workflow.md
+    - Daily Workflow Guide: guides/daily-workflow.md
   - Examples:
     - Invoice Creation: examples/create-invoice.md
 

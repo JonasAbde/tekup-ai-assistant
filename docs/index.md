@@ -36,16 +36,16 @@ AI: ✅ 12 invoices created - 1 minute total
 ## 📋 Getting Started
 
 ### 1. **Install & Setup** (30 minutes)
-Follow the [Installation Guide](docs/SETUP.md) to set up:
+Follow the [Installation Guide](SETUP.md) to set up:
 - Ollama server with 3 AI models
 - Jan AI or Open WebUI interface
 - MCP integrations
 
 ### 2. **Learn the Architecture** (10 minutes)
-Understand how everything works in the [Architecture Overview](docs/ARCHITECTURE.md)
+Understand how everything works in the [Architecture Overview](ARCHITECTURE.md)
 
 ### 3. **Use Daily Workflows** (5 minutes)
-See practical examples in [Workflows Guide](docs/WORKFLOWS.md)
+See practical examples in [Workflows Guide](WORKFLOWS.md)
 
 ---
 
@@ -77,14 +77,14 @@ See practical examples in [Workflows Guide](docs/WORKFLOWS.md)
 ## 📚 Documentation Index
 
 ### Core Documentation
-- **[SETUP.md](docs/SETUP.md)** - Complete installation guide (Phase 1-4)
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** - System design and data flow
-- **[WORKFLOWS.md](docs/WORKFLOWS.md)** - Daily use cases and examples
-- **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Common issues & fixes
+- **[SETUP.md](SETUP.md)** - Complete installation guide (Phase 1-4)
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System design and data flow
+- **[WORKFLOWS.md](WORKFLOWS.md)** - Daily use cases and examples
+- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** - Common issues & fixes
 
 ### API & Integration
-- **[Billy.dk API](docs/api/tekup-billy-api.md)** - Invoicing integration
-- **[Daily Workflow Guide](docs/guides/daily-workflow.md)** - Step-by-step workflows
+- **[Billy.dk API](api/tekup-billy-api.md)** - Invoicing integration
+- **[Daily Workflow Guide](guides/daily-workflow.md)** - Step-by-step workflows
 
 ### Examples
 - **[Invoice Creation Example](examples/create-invoice.md)** - Complete walkthrough
@@ -125,10 +125,10 @@ See practical examples in [Workflows Guide](docs/WORKFLOWS.md)
 
 ## 🚀 Next Steps
 
-1. **[Start Setup Guide](docs/SETUP.md)** - Install Ollama & Jan AI
-2. **Review [Architecture](docs/ARCHITECTURE.md)** - Understand the system
-3. **Check [Workflows](docs/WORKFLOWS.md)** - See what's possible
-4. **Troubleshoot** - Use [Troubleshooting Guide](docs/TROUBLESHOOTING.md) if needed
+1. **[Start Setup Guide](SETUP.md)** - Install Ollama & Jan AI
+2. **Review [Architecture](ARCHITECTURE.md)** - Understand the system
+3. **Check [Workflows](WORKFLOWS.md)** - See what's possible
+4. **Troubleshoot** - Use [Troubleshooting Guide](TROUBLESHOOTING.md) if needed
 
 ---
 
