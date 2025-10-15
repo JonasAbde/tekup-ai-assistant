@@ -24,8 +24,12 @@ You → Jan AI / Claude Desktop
 ## 📦 What's Included
 
 - **/docs/** - Setup guides, architecture, workflows
+  - **MCP_WEB_SCRAPER_GUIDE.md** - Complete guide to web scraping with MCP
 - **/configs/** - Jan AI, Claude Desktop, Ollama configurations
+  - **claude-desktop/** - MCP configuration and setup instructions
 - **/scripts/** - Installation and testing automation
+  - **mcp_web_scraper.py** - Python MCP server for web scraping ✅
+  - **test_mcp_scraper.py** - Test suite for MCP server ✅
 - **/examples/** - Usage examples (create invoice, check calendar, etc.)
 
 ## 🚀 Quick Start
@@ -43,4 +47,22 @@ Saves ~2 hours/day on:
 
 ---
 
-**Status:** 🚧 Under development (Phase 1: Foundation)
+## 🆕 Latest: MCP Web Scraper
+
+✅ **Just Implemented!** Python-based MCP server for web scraping
+
+**Features:**
+- Fetch dynamic JavaScript-rendered content (using Playwright)
+- Access shared Claude conversations directly
+- Simple HTTP requests for static pages
+- Fully tested and ready to use
+
+**Get Started:**
+1. Follow setup guide: [docs/MCP_WEB_SCRAPER_GUIDE.md](docs/MCP_WEB_SCRAPER_GUIDE.md)
+2. Test installation: `python scripts/test_mcp_scraper.py`
+3. Add to Cursor Settings and restart
+4. Start scraping web content with AI assistance!
+
+---
+
+**Status:** 🚧 Under development (Phase 1: Foundation + MCP Web Scraper ✅)
