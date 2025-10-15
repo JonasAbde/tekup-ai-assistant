@@ -1,0 +1,1946 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Local AI Assistant for automating daily business tasks">
+      
+      
+        <meta name="author" content="TekUp Team">
+      
+      
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/examples/create-invoice/">
+      
+      
+        <link rel="prev" href="../../guides/docker-troubleshooting/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Invoice Creation - TekUp AI Assistant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-create-invoice-via-ai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TekUp AI Assistant" class="md-header__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TekUp AI Assistant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Invoice Creation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../SETUP/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../WORKFLOWS/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/tekup-billy-api/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/daily-workflow/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TekUp AI Assistant" class="md-nav__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TekUp AI Assistant
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP Web Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/tekup-billy-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/daily-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/cli-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/billy-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/docker-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Invoice Creation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invoice Creation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Scenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#with-ai-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 With AI Assistant
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 With AI Assistant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-open-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Open Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-natural-language-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Natural Language Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-ai-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: AI Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-ai-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: AI Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variation-1-multiple-line-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 1: Multiple Line Items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-2-uncertain-customer-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 2: Uncertain Customer Name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-3-copy-previous-invoice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 3: Copy Previous Invoice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-4-bulk-invoice-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 4: Bulk Invoice Creation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐛 Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-customer-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 1: Customer Not Found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-missing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 2: Missing Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-billydk-api-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 3: Billy.dk API Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Time Comparison
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Time Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-process-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Process (Average)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-process-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Process (Average)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Verification Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Pro Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Pro Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-1-be-specific-with-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 1: Be Specific with Dates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-2-use-customer-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 2: Use Customer Identifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-3-chain-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 3: Chain Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-4-ask-for-confirmation-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 4: Ask for Confirmation (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      📸 Screenshots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roi-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 ROI Calculation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Scenario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#with-ai-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 With AI Assistant
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 With AI Assistant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-open-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Open Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-natural-language-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Natural Language Command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-ai-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: AI Processing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-ai-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: AI Response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variation-1-multiple-line-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 1: Multiple Line Items
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-2-uncertain-customer-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 2: Uncertain Customer Name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-3-copy-previous-invoice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 3: Copy Previous Invoice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-4-bulk-invoice-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variation 4: Bulk Invoice Creation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐛 Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-1-customer-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 1: Customer Not Found
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-2-missing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 2: Missing Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-3-billydk-api-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error 3: Billy.dk API Error
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Time Comparison
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Time Comparison">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-process-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Process (Average)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-process-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Process (Average)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Verification Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pro-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Pro Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Pro Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tip-1-be-specific-with-dates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 1: Be Specific with Dates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-2-use-customer-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 2: Use Customer Identifiers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-3-chain-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 3: Chain Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-4-ask-for-confirmation-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip 4: Ask for Confirmation (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      📸 Screenshots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roi-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 ROI Calculation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="example-create-invoice-via-ai">💰 Example: Create Invoice via AI<a class="headerlink" href="#example-create-invoice-via-ai" title="Permanent link">&para;</a></h1>
+<p>Complete walkthrough of creating an invoice using TekUp AI Assistant.</p>
+<h2 id="scenario">📋 Scenario<a class="headerlink" href="#scenario" title="Permanent link">&para;</a></h2>
+<p><strong>Situation:</strong> You just completed a 4-hour moving clean for Michael Roach yesterday. You need to create and send an invoice.</p>
+<p><strong>Current manual process:</strong>
+1. Open Billy.dk in browser
+2. Click "New Invoice"
+3. Find customer in dropdown
+4. Add line item: "Flytterengøring - 4 timer"
+5. Calculate: 4 × 349 DKK = 1.396 DKK
+6. Save and send
+<strong>Time: 6-8 minutes</strong></p>
+<hr />
+<h2 id="with-ai-assistant">🤖 With AI Assistant<a class="headerlink" href="#with-ai-assistant" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-open-jan-ai">Step 1: Open Jan AI<a class="headerlink" href="#step-1-open-jan-ai" title="Permanent link">&para;</a></h3>
+<p>Launch Jan AI from Start Menu or desktop shortcut.</p>
+<h3 id="step-2-natural-language-command">Step 2: Natural Language Command<a class="headerlink" href="#step-2-natural-language-command" title="Permanent link">&para;</a></h3>
+<p>Type in chat:
+<div class="highlight"><pre><span></span><code>Opret faktura til Michael Roach for 4 timer moving clean fra i går
+</code></pre></div></p>
+<h3 id="step-3-ai-processing">Step 3: AI Processing<a class="headerlink" href="#step-3-ai-processing" title="Permanent link">&para;</a></h3>
+<p><strong>What happens behind the scenes:</strong></p>
+<div class="highlight"><pre><span></span><code>sequenceDiagram
+    participant You
+    participant Jan AI
+    participant Ollama
+    participant Billy MCP
+    participant Tekup-Billy
+    participant Billy.dk
+
+    You-&gt;&gt;Jan AI: &quot;Opret faktura til Michael Roach, 4 timer...&quot;
+    Jan AI-&gt;&gt;Ollama: Parse intent
+    Ollama-&gt;&gt;Jan AI: {customer: &quot;Michael Roach&quot;, hours: 4, service: &quot;moving_clean&quot;}
+
+    Jan AI-&gt;&gt;Billy MCP: list_customers(search: &quot;Michael Roach&quot;)
+    Billy MCP-&gt;&gt;Tekup-Billy: GET /billy/customers?search=Michael+Roach
+    Tekup-Billy-&gt;&gt;Billy.dk: API call
+    Billy.dk-&gt;&gt;Tekup-Billy: Customer data
+    Tekup-Billy-&gt;&gt;Billy MCP: {id: &quot;c123&quot;, name: &quot;Michael Roach&quot;}
+    Billy MCP-&gt;&gt;Jan AI: Customer found ✓
+
+    Jan AI-&gt;&gt;Billy MCP: create_invoice({customer_id: &quot;c123&quot;, hours: 4})
+    Billy MCP-&gt;&gt;Tekup-Billy: POST /billy/invoices
+    Tekup-Billy-&gt;&gt;Billy.dk: Create invoice
+    Billy.dk-&gt;&gt;Tekup-Billy: Invoice created
+    Tekup-Billy-&gt;&gt;Billy MCP: {invoice_id: &quot;INV-2025-042&quot;, amount: 1396}
+    Billy MCP-&gt;&gt;Jan AI: Success ✓
+
+    Jan AI-&gt;&gt;Ollama: Format Danish response
+    Ollama-&gt;&gt;Jan AI: Response text
+    Jan AI-&gt;&gt;You: Display result
+</code></pre></div>
+<h3 id="step-4-ai-response">Step 4: AI Response<a class="headerlink" href="#step-4-ai-response" title="Permanent link">&para;</a></h3>
+<p>You'll see:</p>
+<div class="highlight"><pre><span></span><code>🔍 Søger efter kunde: Michael Roach...
+✓ Fundet: Michael Roach (kunde ID: c123)
+
+💰 Opretter faktura:
+- Service: Flytterengøring
+- Timer: 4
+- Pris pr. time: 349 DKK
+- Subtotal: 1.396 DKK
+- Moms (25%): 349 DKK
+- Total: 1.745 DKK
+
+📨 Sender faktura til Billy.dk...
+
+✅ FAKTURA OPRETTET!
+
+Faktura: INV-2025-042
+Kunde: Michael Roach
+Beløb: 1.745 DKK (inkl. moms)
+Forfaldsdag: 13. februar 2025
+Status: Sendt til kunde via email
+
+Faktura link: https://billy.dk/invoices/INV-2025-042
+
+Noget andet jeg kan hjælpe med? 🙂
+</code></pre></div>
+<p><strong>Time: 15-20 seconds</strong><br />
+<strong>Time saved: ~7 minutes</strong></p>
+<hr />
+<h2 id="variations">🎯 Variations<a class="headerlink" href="#variations" title="Permanent link">&para;</a></h2>
+<h3 id="variation-1-multiple-line-items">Variation 1: Multiple Line Items<a class="headerlink" href="#variation-1-multiple-line-items" title="Permanent link">&para;</a></h3>
+<p><strong>Command:</strong>
+<div class="highlight"><pre><span></span><code>Opret faktura til Jørn Haagensen:
+- 2 timer basic clean
+- 1 time deep cleaning af køkken
+- Tilkørsel 25 km
+</code></pre></div></p>
+<p><strong>AI Response:</strong>
+<div class="highlight"><pre><span></span><code>✅ FAKTURA OPRETTET!
+
+Faktura: INV-2025-043
+Kunde: Jørn Haagensen
+
+Linjer:
+1. Basic clean - 2 timer × 299 DKK = 598 DKK
+2. Deep clean køkken - 1 time × 349 DKK = 349 DKK
+3. Tilkørsel - 25 km × 5 DKK = 125 DKK
+
+Subtotal: 1.072 DKK
+Moms (25%): 268 DKK
+Total: 1.340 DKK
+
+Status: Sendt til kunde
+</code></pre></div></p>
+<hr />
+<h3 id="variation-2-uncertain-customer-name">Variation 2: Uncertain Customer Name<a class="headerlink" href="#variation-2-uncertain-customer-name" title="Permanent link">&para;</a></h3>
+<p><strong>Command:</strong>
+<div class="highlight"><pre><span></span><code>Opret faktura til Michael for 3 timer basic clean
+</code></pre></div></p>
+<p><strong>AI Response:</strong>
+<div class="highlight"><pre><span></span><code>⚠️ Fandt 2 kunder ved navn &quot;Michael&quot;:
+1. Michael Roach (Aarhus C)
+2. Michael Jensen (Risskov)
+
+Hvilken Michael?
+</code></pre></div></p>
+<p><strong>You reply:</strong>
+<div class="highlight"><pre><span></span><code>Den i Aarhus C
+</code></pre></div></p>
+<p><strong>AI:</strong>
+<div class="highlight"><pre><span></span><code>✅ FAKTURA OPRETTET!
+Faktura: INV-2025-044
+Kunde: Michael Roach
+...
+</code></pre></div></p>
+<hr />
+<h3 id="variation-3-copy-previous-invoice">Variation 3: Copy Previous Invoice<a class="headerlink" href="#variation-3-copy-previous-invoice" title="Permanent link">&para;</a></h3>
+<p><strong>Command:</strong>
+<div class="highlight"><pre><span></span><code>Opret faktura til Kunde ABC - samme som sidst
+</code></pre></div></p>
+<p><strong>AI:</strong>
+<div class="highlight"><pre><span></span><code>🔍 Henter sidste faktura til Kunde ABC...
+✓ Fundet: INV-2025-032 fra 15/12/2024
+
+Linjer fra sidste faktura:
+- 3 timer basic clean
+- Tilkørsel 30 km
+
+Opretter samme faktura...
+
+✅ FAKTURA OPRETTET!
+Faktura: INV-2025-045
+Baseret på: INV-2025-032
+Total: 1.490 DKK
+</code></pre></div></p>
+<hr />
+<h3 id="variation-4-bulk-invoice-creation">Variation 4: Bulk Invoice Creation<a class="headerlink" href="#variation-4-bulk-invoice-creation" title="Permanent link">&para;</a></h3>
+<p><strong>Command:</strong>
+<div class="highlight"><pre><span></span><code>Opret fakturaer for alle jobs fra i går
+</code></pre></div></p>
+<p><strong>AI:</strong>
+<div class="highlight"><pre><span></span><code>🔍 Søger efter jobs fra 14/1/2025...
+✓ Fundet 3 bookings:
+
+1. Mette Nielsen - 2 timer basic
+2. Michael Roach - 4 timer moving
+3. Eoin - 2 timer basic
+
+Opretter 3 fakturaer...
+
+✅ 3 FAKTURAER OPRETTET:
+
+1. INV-2025-042 - Mette Nielsen - 748 DKK
+2. INV-2025-043 - Michael Roach - 1.745 DKK
+3. INV-2025-044 - Eoin - 748 DKK
+
+Total: 3.241 DKK
+Alle sendt til kunderne ✓
+</code></pre></div></p>
+<hr />
+<h2 id="error-handling">🐛 Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<h3 id="error-1-customer-not-found">Error 1: Customer Not Found<a class="headerlink" href="#error-1-customer-not-found" title="Permanent link">&para;</a></h3>
+<p><strong>Command:</strong>
+<div class="highlight"><pre><span></span><code>Opret faktura til Unknown Person, 3 timer
+</code></pre></div></p>
+<p><strong>AI Response:</strong>
+<div class="highlight"><pre><span></span><code>❌ Kunde ikke fundet: &quot;Unknown Person&quot;
+
+Fandt ingen match i Billy.dk.
+
+Vil du:
+1. Søge efter lignende navne?
+2. Oprette ny kunde først?
+3. Tjekke stavning?
+</code></pre></div></p>
+<p><strong>Solution:</strong> Correct the name or create customer first</p>
+<hr />
+<h3 id="error-2-missing-information">Error 2: Missing Information<a class="headerlink" href="#error-2-missing-information" title="Permanent link">&para;</a></h3>
+<p><strong>Command:</strong>
+<div class="highlight"><pre><span></span><code>Opret faktura til Michael Roach
+</code></pre></div></p>
+<p><strong>AI Response:</strong>
+<div class="highlight"><pre><span></span><code>⚠️ Manglende information:
+- Antal timer?
+- Service type? (basic/deep/moving)
+
+Eksempel:
+&quot;Opret faktura til Michael Roach for 4 timer moving clean&quot;
+</code></pre></div></p>
+<p><strong>Solution:</strong> Provide missing details</p>
+<hr />
+<h3 id="error-3-billydk-api-error">Error 3: Billy.dk API Error<a class="headerlink" href="#error-3-billydk-api-error" title="Permanent link">&para;</a></h3>
+<p><strong>Command:</strong>
+<div class="highlight"><pre><span></span><code>Opret faktura til Michael Roach, 4 timer
+</code></pre></div></p>
+<p><strong>AI Response:</strong>
+<div class="highlight"><pre><span></span><code>❌ Fejl fra Billy.dk API:
+&quot;Rate limit exceeded - too many requests&quot;
+
+Prøver igen om 30 sekunder...
+
+[After retry]
+✅ Faktura oprettet (forsøg 2/3)
+</code></pre></div></p>
+<p><strong>Solution:</strong> AI retries automatically (up to 3 attempts)</p>
+<hr />
+<h2 id="time-comparison">📊 Time Comparison<a class="headerlink" href="#time-comparison" title="Permanent link">&para;</a></h2>
+<h3 id="manual-process-average">Manual Process (Average)<a class="headerlink" href="#manual-process-average" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Billy.dk</td>
+<td>30s</td>
+</tr>
+<tr>
+<td>Find customer</td>
+<td>30s</td>
+</tr>
+<tr>
+<td>Create invoice form</td>
+<td>30s</td>
+</tr>
+<tr>
+<td>Add line items</td>
+<td>2-3 min</td>
+</tr>
+<tr>
+<td>Calculate total</td>
+<td>30s</td>
+</tr>
+<tr>
+<td>Review and send</td>
+<td>1 min</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>6-8 min</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ai-process-average">AI Process (Average)<a class="headerlink" href="#ai-process-average" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type command</td>
+<td>5s</td>
+</tr>
+<tr>
+<td>AI processing</td>
+<td>10-15s</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>15-20s</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Time saved: ~7 minutes per invoice</strong></p>
+<hr />
+<h2 id="verification-checklist">✅ Verification Checklist<a class="headerlink" href="#verification-checklist" title="Permanent link">&para;</a></h2>
+<p>After invoice creation, verify:</p>
+<ul>
+<li>[ ] <strong>Correct customer:</strong> Check name and email</li>
+<li>[ ] <strong>Correct amount:</strong> Verify calculation</li>
+<li>[ ] <strong>Correct date:</strong> Invoice date is correct</li>
+<li>[ ] <strong>Service description:</strong> Matches work performed</li>
+<li>[ ] <strong>Status:</strong> Invoice shows "Sent" in Billy.dk</li>
+<li>[ ] <strong>Customer received:</strong> Check email was sent</li>
+</ul>
+<p><strong>First 50 invoices:</strong> Manual verification recommended<br />
+<strong>After 50:</strong> Spot checks (every 10th invoice)</p>
+<hr />
+<h2 id="pro-tips">🎓 Pro Tips<a class="headerlink" href="#pro-tips" title="Permanent link">&para;</a></h2>
+<h3 id="tip-1-be-specific-with-dates">Tip 1: Be Specific with Dates<a class="headerlink" href="#tip-1-be-specific-with-dates" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>✅ &quot;faktura fra i går&quot;
+✅ &quot;faktura for job d. 14/1&quot;
+✅ &quot;faktura for sidste onsdag&quot;
+
+❌ &quot;faktura for et job for nylig&quot;
+</code></pre></div>
+<h3 id="tip-2-use-customer-identifiers">Tip 2: Use Customer Identifiers<a class="headerlink" href="#tip-2-use-customer-identifiers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>✅ &quot;Michael Roach i Aarhus&quot;
+✅ &quot;kunde #c123&quot;
+✅ &quot;Michael med email michael@example.com&quot;
+</code></pre></div>
+<h3 id="tip-3-chain-commands">Tip 3: Chain Commands<a class="headerlink" href="#tip-3-chain-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>&quot;Opret fakturaer fra i går og vis mig totalen&quot;
+
+AI will:
+1. Create invoices
+2. Calculate sum
+3. Show summary
+</code></pre></div>
+<h3 id="tip-4-ask-for-confirmation-optional">Tip 4: Ask for Confirmation (Optional)<a class="headerlink" href="#tip-4-ask-for-confirmation-optional" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>&quot;Lav faktura til Michael, 4 timer - men vis mig den først&quot;
+
+AI will:
+- Show preview
+- Ask for confirmation
+- Create only if you approve
+</code></pre></div>
+<hr />
+<h2 id="screenshots">📸 Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">&para;</a></h2>
+<p><em>(In production, add screenshots here)</em></p>
+<ol>
+<li>Jan AI interface with command</li>
+<li>AI processing response</li>
+<li>Final invoice in Billy.dk</li>
+<li>Email sent to customer</li>
+</ol>
+<hr />
+<h2 id="roi-calculation">📈 ROI Calculation<a class="headerlink" href="#roi-calculation" title="Permanent link">&para;</a></h2>
+<p><strong>Your usage (average):</strong>
+- 3 invoices/day
+- 22 working days/month
+- Total: 66 invoices/month</p>
+<p><strong>Time saved:</strong>
+- 7 minutes × 66 = 462 minutes/month
+- = <strong>7.7 hours/month</strong>
+- = <strong>92.4 hours/year</strong></p>
+<p><strong>Value (at 600 DKK/hour):</strong>
+- <strong>4.620 DKK/month</strong>
+- <strong>55.440 DKK/year</strong></p>
+<hr />
+<p><strong>Version:</strong> 1.0.0<br />
+<strong>Last Updated:</strong> 2025-01-15<br />
+<strong>See also:</strong> <a href="../../WORKFLOWS/">WORKFLOWS.md</a> | <a href="../../api/tekup-billy-api/">Billy API</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

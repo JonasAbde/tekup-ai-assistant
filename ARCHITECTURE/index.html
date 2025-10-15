@@ -1,0 +1,2189 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Local AI Assistant for automating daily business tasks">
+      
+      
+        <meta name="author" content="TekUp Team">
+      
+      
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/ARCHITECTURE/">
+      
+      
+        <link rel="prev" href="../SETUP/">
+      
+      
+        <link rel="next" href="../WORKFLOWS/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Architecture - TekUp AI Assistant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tekup-ai-assistant-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TekUp AI Assistant" class="md-header__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TekUp AI Assistant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SETUP/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../WORKFLOWS/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../api/tekup-billy-api/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guides/daily-workflow/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/create-invoice/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TekUp AI Assistant" class="md-nav__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TekUp AI Assistant
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 High-Level Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Component Breakdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Component Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-interface-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Interface Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ai-engine-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. AI Engine Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mcp-integration-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. MCP Integration Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-external-systems-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. External Systems Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-system-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. System Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Data Flow Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Data Flow Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-invoice-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Invoice Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-calendar-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Calendar Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Security Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Security Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Privacy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Performance Characteristics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latency-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latency Breakdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-vs-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Development vs Production
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Development vs Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current (Development)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-production-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future (Production - Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Configuration Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Configuration Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Monitoring &amp; Observability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Monitoring &amp; Observability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metrics-to-track" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics to Track
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Deployment Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Deployment Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-local-development-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Local Development (Current)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-hybrid-week-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Hybrid (Week 2-3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-production-ready-week-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Production Ready (Week 4+)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP Web Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/tekup-billy-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/daily-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/cli-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/billy-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/docker-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/create-invoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invoice Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 High-Level Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Component Breakdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Component Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-interface-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Interface Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ai-engine-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. AI Engine Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mcp-integration-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. MCP Integration Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-external-systems-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. External Systems Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-system-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. System Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Data Flow Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Data Flow Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-invoice-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1: Invoice Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-calendar-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2: Calendar Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Security Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Security Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-privacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Privacy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Performance Characteristics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latency-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latency Breakdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-vs-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Development vs Production
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Development vs Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current (Development)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-production-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future (Production - Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Configuration Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Configuration Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Monitoring &amp; Observability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Monitoring &amp; Observability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metrics-to-track" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics to Track
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Deployment Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Deployment Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-local-development-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 1: Local Development (Current)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-hybrid-week-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: Hybrid (Week 2-3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-production-ready-week-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Production Ready (Week 4+)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tekup-ai-assistant-architecture">🏗️ TekUp AI Assistant - Architecture<a class="headerlink" href="#tekup-ai-assistant-architecture" title="Permanent link">&para;</a></h1>
+<p>System overview og teknisk arkitektur for TekUp AI Assistant projektet.</p>
+<h2 id="high-level-overview">🎯 High-Level Overview<a class="headerlink" href="#high-level-overview" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[User: Jonas] --&gt;|Natural Language| B[Interface Layer]
+    B --&gt; C[Jan AI Desktop]
+    B --&gt; D[Cursor IDE]
+    B --&gt; E[VS Code Terminal]
+
+    C --&gt;|MCP Protocol| F[AI Engine Layer]
+    D --&gt;|MCP Protocol| F
+    E --&gt;|MCP Protocol| F
+
+    F --&gt; G[Ollama Server]
+    G --&gt; H[Qwen2.5-Coder 14B]
+    G --&gt; I[Llama 3.3 8B]
+    G --&gt; J[Mistral 7B]
+
+    H --&gt;|GPU Accelerated| K[MCP Integration Layer]
+    I --&gt;|GPU Accelerated| K
+    J --&gt;|GPU Accelerated| K
+
+    K --&gt; L[Tekup-Billy MCP]
+    K --&gt; M[RenOS MCP]
+    K --&gt; N[System MCP]
+    K --&gt; O[TekupVault MCP]
+
+    L --&gt;|HTTP API| P[Tekup-Billy Server]
+    P --&gt;|Billy.dk API| Q[Billy.dk]
+
+    M --&gt;|HTTP API| R[RenOS Backend]
+    R --&gt;|PostgreSQL| S[(Database)]
+    R --&gt;|API| T[Google Workspace]
+
+    N --&gt;|WMI/PowerShell| U[Windows System]
+
+    O --&gt;|pgvector| V[(Supabase)]
+</code></pre></div>
+<hr />
+<h2 id="component-breakdown">📦 Component Breakdown<a class="headerlink" href="#component-breakdown" title="Permanent link">&para;</a></h2>
+<h3 id="1-interface-layer">1. Interface Layer<a class="headerlink" href="#1-interface-layer" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Brugerinteraktion med AI-assistenten</p>
+<h4 id="jan-ai-desktop">Jan AI Desktop<a class="headerlink" href="#jan-ai-desktop" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Type:</strong> Electron-based desktop app</li>
+<li><strong>Features:</strong></li>
+<li>Chat interface (ChatGPT-like)</li>
+<li>Model selection</li>
+<li>Conversation history</li>
+<li>Settings management</li>
+<li><strong>Communication:</strong> WebSocket til Ollama</li>
+<li><strong>Port:</strong> N/A (desktop app)</li>
+</ul>
+<h4 id="cursor-ide">Cursor IDE<a class="headerlink" href="#cursor-ide" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Type:</strong> VS Code fork med AI integration</li>
+<li><strong>Features:</strong></li>
+<li>Code completion</li>
+<li>Inline chat</li>
+<li>Terminal commands</li>
+<li><strong>Communication:</strong> Built-in MCP support</li>
+<li><strong>Use Case:</strong> Development workflow</li>
+</ul>
+<h4 id="vs-code-terminal">VS Code Terminal<a class="headerlink" href="#vs-code-terminal" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Type:</strong> Command-line interface</li>
+<li><strong>Features:</strong></li>
+<li>Quick commands</li>
+<li>Script execution</li>
+<li>Background tasks</li>
+<li><strong>Communication:</strong> Direct Ollama API calls</li>
+</ul>
+<hr />
+<h3 id="2-ai-engine-layer">2. AI Engine Layer<a class="headerlink" href="#2-ai-engine-layer" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Local AI model inference</p>
+<h4 id="ollama-server">Ollama Server<a class="headerlink" href="#ollama-server" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Version:</strong> 0.x.x</li>
+<li><strong>Protocol:</strong> HTTP REST API</li>
+<li><strong>Default Port:</strong> 11434</li>
+<li><strong>Endpoints:</strong></li>
+<li><code>POST /api/generate</code> - Text generation</li>
+<li><code>POST /api/chat</code> - Chat completion</li>
+<li><code>GET /api/tags</code> - List models</li>
+<li><code>POST /api/pull</code> - Download models</li>
+</ul>
+<p><strong>Configuration:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Location: C:\Users\empir\.ollama\</span>
+<span class="c1"># Models: C:\Users\empir\.ollama\models\</span>
+<span class="c1"># Logs: Event Viewer → Windows Logs → Application</span>
+</code></pre></div></p>
+<h4 id="model-selection-strategy">Model Selection Strategy<a class="headerlink" href="#model-selection-strategy" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Model</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code writing/debugging</td>
+<td>Qwen2.5-Coder 14B</td>
+<td>Specialized for code, excellent TypeScript</td>
+</tr>
+<tr>
+<td>Business questions</td>
+<td>Llama 3.3 8B</td>
+<td>Good reasoning, balanced speed/quality</td>
+</tr>
+<tr>
+<td>Quick facts</td>
+<td>Mistral 7B</td>
+<td>Fast responses, lower resource usage</td>
+</tr>
+<tr>
+<td>Danish language</td>
+<td>Llama 3.3 8B</td>
+<td>Better multilingual support</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hardware Utilization:</strong>
+<div class="highlight"><pre><span></span><code>RTX 5070 (8GB VRAM):
+├── Qwen 14B Q4: ~7GB VRAM, ~50% GPU utilization
+├── Llama 8B Q5: ~5GB VRAM, ~40% GPU utilization
+└── Mistral 7B Q4: ~3.5GB VRAM, ~30% GPU utilization
+
+64GB System RAM:
+├── OS + Apps: ~8GB
+├── Ollama overhead: ~2GB
+├── Model context: ~4-8GB (depending on conversation length)
+└── Available: ~40GB (plenty of headroom)
+</code></pre></div></p>
+<hr />
+<h3 id="3-mcp-integration-layer">3. MCP Integration Layer<a class="headerlink" href="#3-mcp-integration-layer" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Oversætter mellem AI og eksterne services</p>
+<h4 id="model-context-protocol-mcp">Model Context Protocol (MCP)<a class="headerlink" href="#model-context-protocol-mcp" title="Permanent link">&para;</a></h4>
+<p><strong>What is MCP?</strong>
+- Open standard fra Anthropic
+- JSON-RPC baseret
+- AI-first design
+- Self-documenting tools</p>
+<p><strong>MCP Message Flow:</strong>
+<div class="highlight"><pre><span></span><code>User: &quot;Opret faktura til Michael Roach, 4 timer&quot;
+    ↓
+Jan AI parses intent
+    ↓
+Calls MCP: list_tools()
+    → Sees: create_invoice, list_customers
+    ↓
+Calls MCP: call_tool(name=&quot;list_customers&quot;, args={query:&quot;Michael Roach&quot;})
+    → Returns: {id: &quot;c123&quot;, name: &quot;Michael Roach&quot;}
+    ↓
+Calls MCP: call_tool(name=&quot;create_invoice&quot;, args={customer_id:&quot;c123&quot;, hours:4})
+    → Returns: {invoice_id: &quot;INV-2025-042&quot;, amount: 1396}
+    ↓
+Jan AI formats response
+    ↓
+User sees: &quot;✅ Faktura INV-2025-042 oprettet: 1.396 DKK&quot;
+</code></pre></div></p>
+<hr />
+<h3 id="4-external-systems-integration">4. External Systems Integration<a class="headerlink" href="#4-external-systems-integration" title="Permanent link">&para;</a></h3>
+<h4 id="tekup-billy-existing">Tekup-Billy (Existing)<a class="headerlink" href="#tekup-billy-existing" title="Permanent link">&para;</a></h4>
+<p><strong>Status:</strong> ✅ Already deployed<br />
+<strong>URL:</strong> https://tekup-billy.onrender.com<br />
+<strong>Version:</strong> v1.2.0</p>
+<p><strong>Architecture:</strong>
+<div class="highlight"><pre><span></span><code>TekUp AI Assistant
+    ↓ HTTP POST
+Tekup-Billy MCP Wrapper
+    ↓ HTTP
+Tekup-Billy Server (Node.js)
+    ↓ Billy.dk API
+Billy.dk Platform
+</code></pre></div></p>
+<p><strong>Key Endpoints:</strong>
+- <code>POST /billy/invoices</code> - Create invoice
+- <code>GET /billy/customers</code> - List customers
+- <code>GET /billy/products</code> - List products
+- <code>GET /billy/revenue</code> - Get revenue data</p>
+<p><strong>Authentication:</strong> Bearer token (from env vars)</p>
+<hr />
+<h4 id="renos-backend-existing">RenOS Backend (Existing)<a class="headerlink" href="#renos-backend-existing" title="Permanent link">&para;</a></h4>
+<p><strong>Status:</strong> ✅ Already deployed<br />
+<strong>Tech Stack:</strong> Node.js + TypeScript + Prisma</p>
+<p><strong>Architecture:</strong>
+<div class="highlight"><pre><span></span><code>TekUp AI Assistant
+    ↓ HTTP
+RenOS MCP Wrapper
+    ↓ REST API
+RenOS Backend (Express)
+    ↓ Prisma ORM
+PostgreSQL Database
+</code></pre></div></p>
+<p><strong>Key Endpoints:</strong>
+- <code>GET /api/bookings</code> - List/search bookings
+- <code>POST /api/bookings</code> - Create booking
+- <code>GET /api/customers/:id</code> - Get customer
+- <code>GET /api/calendar</code> - Get calendar events</p>
+<p><strong>Database Schema (Prisma):</strong>
+<div class="highlight"><pre><span></span><code>model Booking {
+  id            String   @id @default(cuid())
+  customerId    String
+  serviceType   String
+  startTime     DateTime
+  durationHours Int
+  status        String
+  address       String?
+  accessCode    String?
+  notes         String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  customer Customer @relation(fields: [customerId], references: [id])
+}
+
+model Customer {
+  id       String    @id @default(cuid())
+  name     String
+  email    String?
+  phone    String?
+  address  String?
+  bookings Booking[]
+}
+</code></pre></div></p>
+<hr />
+<h4 id="google-workspace-integration">Google Workspace Integration<a class="headerlink" href="#google-workspace-integration" title="Permanent link">&para;</a></h4>
+<p><strong>Via RenOS (Preferred):</strong>
+<div class="highlight"><pre><span></span><code>TekUp AI → RenOS Backend → Google Calendar API
+                         → Gmail API
+</code></pre></div></p>
+<p><strong>Direct (Alternative):</strong>
+<div class="highlight"><pre><span></span><code>TekUp AI → Google OAuth2 → Calendar/Gmail
+</code></pre></div></p>
+<p><strong>Preferred approach:</strong> Via RenOS (authentication already handled)</p>
+<hr />
+<h3 id="5-system-monitoring">5. System Monitoring<a class="headerlink" href="#5-system-monitoring" title="Permanent link">&para;</a></h3>
+<h4 id="windows-performance-monitoring">Windows Performance Monitoring<a class="headerlink" href="#windows-performance-monitoring" title="Permanent link">&para;</a></h4>
+<p><strong>Data Sources:</strong>
+- WMI (Windows Management Instrumentation)
+- Performance Counters
+- Event Logs
+- Task Manager data</p>
+<p><strong>Metrics Collected:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Chrome RAM usage</span>
+<span class="nb">Get-Process</span> <span class="n">chrome</span> <span class="p">|</span> <span class="nb">Measure-Object</span> <span class="n">WorkingSet</span> <span class="n">-Sum</span>
+
+<span class="c"># GPU utilization (NVIDIA)</span>
+<span class="n">nvidia-smi</span> <span class="p">-</span><span class="n">-query-gpu</span><span class="p">=</span><span class="n">utilization</span><span class="p">.</span><span class="n">gpu</span> <span class="p">-</span><span class="n">-format</span><span class="p">=</span><span class="n">csv</span>
+
+<span class="c"># Disk I/O</span>
+<span class="nb">Get-Counter</span> <span class="s1">&#39;\PhysicalDisk(_Total)\Disk Bytes/sec&#39;</span>
+</code></pre></div></p>
+<p><strong>Alert Thresholds:</strong>
+- Chrome RAM &gt;10GB → Suggest tab suspension
+- GPU usage &gt;95% for 5+ min → Thermal warning
+- Disk usage &gt;90% → Cleanup suggestion</p>
+<hr />
+<h2 id="data-flow-examples">🔄 Data Flow Examples<a class="headerlink" href="#data-flow-examples" title="Permanent link">&para;</a></h2>
+<h3 id="example-1-invoice-creation">Example 1: Invoice Creation<a class="headerlink" href="#example-1-invoice-creation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sequenceDiagram
+    participant U as User
+    participant J as Jan AI
+    participant O as Ollama
+    participant M as Billy MCP
+    participant T as Tekup-Billy
+    participant B as Billy.dk
+
+    U-&gt;&gt;J: &quot;Opret faktura til Michael, 4 timer&quot;
+    J-&gt;&gt;O: Parse intent
+    O-&gt;&gt;J: {customer: &quot;Michael&quot;, hours: 4}
+    J-&gt;&gt;M: list_customers(query: &quot;Michael&quot;)
+    M-&gt;&gt;T: GET /billy/customers?search=Michael
+    T-&gt;&gt;B: API call
+    B-&gt;&gt;T: Customer data
+    T-&gt;&gt;M: {id: &quot;c123&quot;, name: &quot;Michael Roach&quot;}
+    M-&gt;&gt;J: Customer found
+    J-&gt;&gt;M: create_invoice(customer_id: &quot;c123&quot;, hours: 4)
+    M-&gt;&gt;T: POST /billy/invoices
+    T-&gt;&gt;B: Create invoice
+    B-&gt;&gt;T: Invoice created
+    T-&gt;&gt;M: {invoice_id: &quot;INV-2025-042&quot;}
+    M-&gt;&gt;J: Success
+    J-&gt;&gt;O: Format response
+    O-&gt;&gt;J: Danish response
+    J-&gt;&gt;U: &quot;✅ Faktura INV-2025-042 oprettet: 1.396 DKK&quot;
+</code></pre></div>
+<p><strong>Timeline:</strong>
+- User input: 0s
+- AI parsing: 0-2s
+- MCP calls: 2-4s (2 API calls)
+- AI formatting: 4-5s
+- <strong>Total: ~5 seconds</strong></p>
+<hr />
+<h3 id="example-2-calendar-check">Example 2: Calendar Check<a class="headerlink" href="#example-2-calendar-check" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sequenceDiagram
+    participant U as User
+    participant J as Jan AI
+    participant R as RenOS MCP
+    participant B as RenOS Backend
+    participant D as Database
+    participant G as Google Calendar
+
+    U-&gt;&gt;J: &quot;Hvad har jeg i morgen?&quot;
+    J-&gt;&gt;R: search_bookings(date: &quot;2025-01-16&quot;)
+    R-&gt;&gt;B: GET /api/bookings?date=2025-01-16
+    B-&gt;&gt;D: Prisma query
+    D-&gt;&gt;B: Booking records
+    B-&gt;&gt;G: Get calendar events
+    G-&gt;&gt;B: Calendar data
+    B-&gt;&gt;R: Combined results
+    R-&gt;&gt;J: Formatted booking list
+    J-&gt;&gt;U: &quot;I morgen:\n- 08:00-10:00: Mette Nielsen...&quot;
+</code></pre></div>
+<hr />
+<h2 id="security-architecture">🔐 Security Architecture<a class="headerlink" href="#security-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="authentication-flow">Authentication Flow<a class="headerlink" href="#authentication-flow" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>User credentials → RenOS Backend
+                 → Stored in .env (encrypted)
+                 → Never exposed to AI
+
+Billy.dk API key → Tekup-Billy .env
+                 → Not in version control
+                 → Rotated quarterly
+
+Google OAuth2 → RenOS handles
+              → Refresh tokens managed
+              → Scoped permissions only
+</code></pre></div>
+<h3 id="data-privacy">Data Privacy<a class="headerlink" href="#data-privacy" title="Permanent link">&para;</a></h3>
+<p><strong>Local-First Design:</strong>
+- ✅ All AI models run locally (no cloud API calls)
+- ✅ Customer data stays in your database
+- ✅ Conversations stored locally only
+- ✅ No telemetry to external services</p>
+<p><strong>GDPR Compliance:</strong>
+- Right to erasure: Delete conversation history
+- Data minimization: Only fetch needed data
+- Purpose limitation: AI only accesses data for specified tasks
+- Audit trail: All MCP calls logged</p>
+<hr />
+<h2 id="performance-characteristics">📊 Performance Characteristics<a class="headerlink" href="#performance-characteristics" title="Permanent link">&para;</a></h2>
+<h3 id="latency-breakdown">Latency Breakdown<a class="headerlink" href="#latency-breakdown" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Latency</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User input → Jan AI</td>
+<td>&lt;50ms</td>
+<td>Local UI</td>
+</tr>
+<tr>
+<td>Jan AI → Ollama</td>
+<td>50-100ms</td>
+<td>HTTP localhost</td>
+</tr>
+<tr>
+<td>Ollama inference</td>
+<td>2-5s</td>
+<td>GPU dependent</td>
+</tr>
+<tr>
+<td>MCP call</td>
+<td>200-500ms</td>
+<td>Network + API</td>
+</tr>
+<tr>
+<td>Total (simple query)</td>
+<td>3-6s</td>
+<td>Acceptable</td>
+</tr>
+<tr>
+<td>Total (multi-API)</td>
+<td>5-10s</td>
+<td>Multiple MCP calls</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scalability">Scalability<a class="headerlink" href="#scalability" title="Permanent link">&para;</a></h3>
+<p><strong>Current Setup:</strong>
+- Single user (Jonas)
+- Local execution only
+- No concurrent requests</p>
+<p><strong>Future (if needed):</strong>
+- Multi-user: Deploy Ollama on server
+- Concurrent: Queue system for requests
+- Caching: Store common MCP responses</p>
+<hr />
+<h2 id="development-vs-production">🛠️ Development vs Production<a class="headerlink" href="#development-vs-production" title="Permanent link">&para;</a></h2>
+<h3 id="current-development">Current (Development)<a class="headerlink" href="#current-development" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Laptop (Local)
+├── Ollama (localhost:11434)
+├── Jan AI (desktop app)
+└── MCP configs (local files)
+
+Remote Services
+├── Tekup-Billy (Render.com)
+├── RenOS Backend (Render.com)
+└── Billy.dk (cloud)
+</code></pre></div>
+<h3 id="future-production-optional">Future (Production - Optional)<a class="headerlink" href="#future-production-optional" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Desktop (Client)
+├── Jan AI (GUI)
+└── Cursor (development)
+    ↓ HTTPS
+Server (Self-hosted or cloud)
+├── Ollama (centralized)
+├── MCP servers (Docker)
+└── Monitoring (Grafana)
+</code></pre></div>
+<hr />
+<h2 id="configuration-management">🔧 Configuration Management<a class="headerlink" href="#configuration-management" title="Permanent link">&para;</a></h2>
+<h3 id="configuration-files">Configuration Files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>tekup-ai-assistant/
+├── configs/
+│   ├── jan-ai/
+│   │   └── mcp-config.json          # Jan AI MCP settings
+│   ├── claude-desktop/
+│   │   └── mcp-config.json          # Claude Desktop (if used)
+│   └── ollama/
+│       └── modelfile                # Custom model configs
+</code></pre></div>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tekup-Billy</span>
+<span class="nv">BILLY_API_KEY</span><span class="o">=</span>your_key_here
+<span class="nv">TEKUP_BILLY_URL</span><span class="o">=</span>https://tekup-billy.onrender.com
+
+<span class="c1"># RenOS</span>
+<span class="nv">RENOS_API_URL</span><span class="o">=</span>https://renos-backend.onrender.com
+<span class="nv">RENOS_API_KEY</span><span class="o">=</span>your_key_here
+
+<span class="c1"># Google</span>
+<span class="nv">GOOGLE_CLIENT_ID</span><span class="o">=</span>your_client_id
+<span class="nv">GOOGLE_CLIENT_SECRET</span><span class="o">=</span>your_secret
+</code></pre></div>
+<p><strong>Storage:</strong> <code>.env</code> files (NOT committed to Git)</p>
+<hr />
+<h2 id="monitoring-observability">📈 Monitoring &amp; Observability<a class="headerlink" href="#monitoring-observability" title="Permanent link">&para;</a></h2>
+<h3 id="metrics-to-track">Metrics to Track<a class="headerlink" href="#metrics-to-track" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>AI Performance:
+├── Response time (p50, p95, p99)
+├── Token generation speed
+├── GPU utilization
+└── Model accuracy (feedback)
+
+MCP Integration:
+├── API call success rate
+├── API latency
+├── Error rates by endpoint
+└── Rate limit hits
+
+Business Metrics:
+├── Invoices created via AI
+├── Time saved per task
+├── Error rate (incorrect invoices)
+└── User satisfaction
+</code></pre></div>
+<h3 id="logging-strategy">Logging Strategy<a class="headerlink" href="#logging-strategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Levels:
+├── ERROR: API failures, MCP errors
+├── WARN: Slow responses, near-limits
+├── INFO: Successful operations
+└── DEBUG: Detailed MCP calls (dev only)
+
+Storage:
+├── Jan AI: App logs folder
+├── Ollama: Windows Event Viewer
+├── MCP servers: Console output
+└── Custom: TekupVault (optional)
+</code></pre></div>
+<hr />
+<h2 id="deployment-architecture">🚀 Deployment Architecture<a class="headerlink" href="#deployment-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-local-development-current">Phase 1: Local Development (Current)<a class="headerlink" href="#phase-1-local-development-current" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Everything runs locally</li>
+<li>Manual configuration</li>
+<li>Testing and iteration</li>
+</ul>
+<h3 id="phase-2-hybrid-week-2-3">Phase 2: Hybrid (Week 2-3)<a class="headerlink" href="#phase-2-hybrid-week-2-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ollama local</li>
+<li>MCP servers as services</li>
+<li>Remote API integrations stable</li>
+</ul>
+<h3 id="phase-3-production-ready-week-4">Phase 3: Production Ready (Week 4+)<a class="headerlink" href="#phase-3-production-ready-week-4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Automated startup scripts</li>
+<li>Monitoring dashboards</li>
+<li>Error alerting</li>
+<li>Backup strategies</li>
+</ul>
+<hr />
+<p><strong>Version:</strong> 1.0.0<br />
+<strong>Last Updated:</strong> 2025-01-15<br />
+<strong>Maintained by:</strong> TekUp AI Assistant Project</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2417 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Local AI Assistant for automating daily business tasks">
+      
+      
+        <meta name="author" content="TekUp Team">
+      
+      
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/SETUP/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../ARCHITECTURE/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Installation - TekUp AI Assistant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tekup-ai-assistant-setup-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TekUp AI Assistant" class="md-header__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TekUp AI Assistant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../WORKFLOWS/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../api/tekup-billy-api/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guides/daily-workflow/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/create-invoice/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TekUp AI Assistant" class="md-nav__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TekUp AI Assistant
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-install-ollama-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 1: Install Ollama (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 1: Install Ollama (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-download-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download Ollama
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Verify Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-download-ai-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Download AI Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Test Ollama
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-install-jan-ai-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 2: Install Jan AI (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 2: Install Jan AI (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-download-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-launch-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Launch Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-ollama-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure Ollama Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-configure-default-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Configure Default Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-test-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Test Chat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-25-install-open-webui-docker-based-alternative-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 2.5: Install Open WebUI (Docker-based Alternative) (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 2.5: Install Open WebUI (Docker-based Alternative) (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-automated-setup-anbefalet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Automated Setup (Anbefalet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-manual-setup-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Manual Setup (Alternative)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-monitor-stack-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Monitor Stack Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-access-open-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Access Open WebUI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-test-chat_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Test Chat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-management-cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Docker Management CLI Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Docker Management CLI Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-real-time-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Real-time Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-cli-control-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Full CLI Control Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-configure-billydk-integration-15-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 3: Configure Billy.dk Integration (15 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 3: Configure Billy.dk Integration (15 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-understand-current-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Understand Current Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-find-jan-ai-config-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Find Jan AI Config Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-mcp-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create MCP Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-restart-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Restart Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-test-billy-integration-manual-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Test Billy Integration (Manual First)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-4-verify-everything-works-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 4: Verify Everything Works (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 4: Verify Everything Works (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-commands-i-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Commands i Jan AI:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐛 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ollama-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ollama won't start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-download-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model download fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jan-ai-cant-connect-to-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jan AI can't connect to Ollama
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-not-being-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPU not being used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jan-ai-mcp-server-not-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jan AI MCP server not starting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Performance Expectations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Expectations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-your-hardware-rtx-5070-8gb-64gb-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      With Your Hardware (RTX 5070 8GB + 64GB RAM):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-memory-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPU Memory Usage:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Success Metrics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP Web Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/tekup-billy-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/daily-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/cli-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/billy-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/docker-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/create-invoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invoice Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-install-ollama-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 1: Install Ollama (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 1: Install Ollama (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-download-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download Ollama
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Verify Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-download-ai-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Download AI Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-test-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Test Ollama
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-install-jan-ai-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 2: Install Jan AI (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 2: Install Jan AI (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-download-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-launch-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Launch Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-ollama-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure Ollama Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-configure-default-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Configure Default Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-test-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Test Chat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-25-install-open-webui-docker-based-alternative-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 2.5: Install Open WebUI (Docker-based Alternative) (10 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 2.5: Install Open WebUI (Docker-based Alternative) (10 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-automated-setup-anbefalet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Automated Setup (Anbefalet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-manual-setup-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Manual Setup (Alternative)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-monitor-stack-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Monitor Stack Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-access-open-webui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Access Open WebUI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-test-chat_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Test Chat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-management-cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Docker Management CLI Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Docker Management CLI Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-real-time-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      View Real-time Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-cli-control-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Full CLI Control Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-configure-billydk-integration-15-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 3: Configure Billy.dk Integration (15 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 3: Configure Billy.dk Integration (15 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-understand-current-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Understand Current Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-find-jan-ai-config-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Find Jan AI Config Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-mcp-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create MCP Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-restart-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Restart Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-test-billy-integration-manual-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Test Billy Integration (Manual First)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-4-verify-everything-works-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Phase 4: Verify Everything Works (5 minutes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Phase 4: Verify Everything Works (5 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checklist:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-commands-i-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Commands i Jan AI:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐛 Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ollama-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ollama won't start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-download-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model download fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jan-ai-cant-connect-to-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jan AI can't connect to Ollama
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-not-being-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPU not being used
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jan-ai-mcp-server-not-starting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jan AI MCP server not starting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Performance Expectations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Performance Expectations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-your-hardware-rtx-5070-8gb-64gb-ram" class="md-nav__link">
+    <span class="md-ellipsis">
+      With Your Hardware (RTX 5070 8GB + 64GB RAM):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-memory-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPU Memory Usage:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Success Metrics
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tekup-ai-assistant-setup-guide">🚀 TekUp AI Assistant - Setup Guide<a class="headerlink" href="#tekup-ai-assistant-setup-guide" title="Permanent link">&para;</a></h1>
+<p>Komplet installationsguide til opsætning af din lokale AI-assistent.</p>
+<h2 id="prerequisites">⚙️ Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Windows 10/11</strong> (x64)</li>
+<li><strong>16GB+ RAM</strong> (32GB+ recommended) - Du har: <strong>64GB ✅</strong></li>
+<li><strong>GPU:</strong> NVIDIA RTX series (optional but recommended) - Du har: <strong>RTX 5070 ✅</strong></li>
+<li><strong>Disk Space:</strong> ~50GB free (for models)</li>
+<li><strong>Internet:</strong> For initial download only</li>
+</ul>
+<hr />
+<h2 id="phase-1-install-ollama-10-minutes">📋 Phase 1: Install Ollama (10 minutes)<a class="headerlink" href="#phase-1-install-ollama-10-minutes" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-download-ollama">Step 1: Download Ollama<a class="headerlink" href="#step-1-download-ollama" title="Permanent link">&para;</a></h3>
+<p><strong>Install via winget (anbefalet):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">winget</span> <span class="n">install</span> <span class="n">Ollama</span><span class="p">.</span><span class="n">Ollama</span>
+</code></pre></div></p>
+<p><strong>Eller download manuelt:</strong>
+- Visit: https://ollama.com/download/windows
+- Download Windows installer
+- Kør installer og følg instruktioner</p>
+<h3 id="step-2-verify-installation">Step 2: Verify Installation<a class="headerlink" href="#step-2-verify-installation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Check version</span>
+<span class="n">ollama</span> <span class="p">-</span><span class="n">-version</span>
+
+<span class="c"># Should output: ollama version is 0.x.x</span>
+</code></pre></div>
+<h3 id="step-3-download-ai-models">Step 3: Download AI Models<a class="headerlink" href="#step-3-download-ai-models" title="Permanent link">&para;</a></h3>
+<p><strong>Download Qwen2.5-Coder (for coding assistance):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">ollama</span> <span class="n">pull</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b-instruct-q4_K_M</span>
+</code></pre></div>
+⏱️ <em>Download size: ~8GB, takes 5-15 minutes depending on connection</em></p>
+<p><strong>Download Llama 3.3 (for general tasks):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">ollama</span> <span class="n">pull</span> <span class="n">llama3</span><span class="p">.</span><span class="n">3</span><span class="p">:</span><span class="n">8b-instruct-q5_K_M</span>
+</code></pre></div>
+⏱️ <em>Download size: ~6GB</em></p>
+<p><strong>Download Mistral (for fast responses):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">ollama</span> <span class="n">pull</span> <span class="n">mistral</span><span class="p">:</span><span class="n">7b-instruct-q4_K_M</span>
+</code></pre></div>
+⏱️ <em>Download size: ~4GB</em></p>
+<h3 id="step-4-test-ollama">Step 4: Test Ollama<a class="headerlink" href="#step-4-test-ollama" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># List downloaded models</span>
+<span class="n">ollama</span> <span class="n">list</span>
+
+<span class="c"># Start interactive chat with Qwen</span>
+<span class="n">ollama</span> <span class="n">run</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b-instruct-q4_K_M</span>
+
+<span class="c"># Type a test message:</span>
+<span class="c"># &quot;Write a TypeScript function to format Danish currency&quot;</span>
+
+<span class="c"># Exit: Ctrl+D or type /bye</span>
+</code></pre></div>
+<p><strong>Expected output:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">formatDanishCurrency</span><span class="p">(</span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">NumberFormat</span><span class="p">(</span><span class="s1">&#39;da-DK&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">style</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;currency&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">currency</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DKK&#39;</span>
+<span class="w">  </span><span class="p">}).</span><span class="nx">format</span><span class="p">(</span><span class="nx">amount</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h2 id="phase-2-install-jan-ai-5-minutes">📋 Phase 2: Install Jan AI (5 minutes)<a class="headerlink" href="#phase-2-install-jan-ai-5-minutes" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-download-jan-ai">Step 1: Download Jan AI<a class="headerlink" href="#step-1-download-jan-ai" title="Permanent link">&para;</a></h3>
+<p><strong>Install via winget (anbefalet):</strong>
+<div class="highlight"><pre><span></span><code><span class="n">winget</span> <span class="n">install</span> <span class="n">Jan</span><span class="p">.</span><span class="n">Jan</span>
+</code></pre></div></p>
+<p><strong>Eller download manuelt:</strong>
+- Visit: https://jan.ai/download
+- Download Windows installer
+- Kør installer</p>
+<h3 id="step-2-launch-jan-ai">Step 2: Launch Jan AI<a class="headerlink" href="#step-2-launch-jan-ai" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open Jan AI from Start Menu</li>
+<li>Wait for initial setup to complete</li>
+</ol>
+<h3 id="step-3-configure-ollama-connection">Step 3: Configure Ollama Connection<a class="headerlink" href="#step-3-configure-ollama-connection" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Settings</strong> (⚙️ icon i venstre sidebar)</li>
+<li>Go to <strong>Model Sources</strong></li>
+<li>Click <strong>+ Add Model Source</strong></li>
+<li>Select <strong>Ollama</strong> from dropdown</li>
+<li>URL: <code>http://localhost:11434</code></li>
+<li>Click <strong>Connect</strong></li>
+</ol>
+<p>✅ Du skulle se "Connected successfully" hvis Ollama kører</p>
+<h3 id="step-4-configure-default-model">Step 4: Configure Default Model<a class="headerlink" href="#step-4-configure-default-model" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <strong>Chat</strong> tab</li>
+<li>Click <strong>Select Model</strong> (øverst)</li>
+<li>Under "Ollama Models" vælg <strong>qwen2.5-coder:14b-instruct-q4_K_M</strong></li>
+<li>Click <strong>Use Model</strong></li>
+</ol>
+<h3 id="step-5-test-chat">Step 5: Test Chat<a class="headerlink" href="#step-5-test-chat" title="Permanent link">&para;</a></h3>
+<p>Type i chat:
+<div class="highlight"><pre><span></span><code>Explain TypeScript interfaces in simple terms
+</code></pre></div></p>
+<p><strong>Expected:</strong>
+- Response inden for 5-10 sekunder
+- Kvalitets svar om TypeScript
+- GPU utilization (check Task Manager → Performance → GPU)</p>
+<hr />
+<h2 id="phase-25-install-open-webui-docker-based-alternative-10-minutes">📋 Phase 2.5: Install Open WebUI (Docker-based Alternative) (10 minutes)<a class="headerlink" href="#phase-25-install-open-webui-docker-based-alternative-10-minutes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Alternative til Jan AI:</strong> Hvis du foretrækker en moderne web-baseret interface med fuld CLI-kontrol</p>
+</blockquote>
+<h3 id="prerequisites_1">Prerequisites:<a class="headerlink" href="#prerequisites_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Docker Desktop må være installeret (check: <code>docker --version</code>)</li>
+<li>Ollama kørende i baggrund</li>
+</ul>
+<h3 id="step-1-automated-setup-anbefalet">Step 1: Automated Setup (Anbefalet)<a class="headerlink" href="#step-1-automated-setup-anbefalet" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">setup-open-webui</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p>Dette script vil:
+- ✅ Verificere Docker er kørende
+- ✅ Hente Open WebUI Docker image
+- ✅ Starte container på port 3000
+- ✅ Vente på health check
+- ✅ Vise næste steps</p>
+<h3 id="step-2-manual-setup-alternative">Step 2: Manual Setup (Alternative)<a class="headerlink" href="#step-2-manual-setup-alternative" title="Permanent link">&para;</a></h3>
+<p>Hvis du foretrækker manuel kontrol:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># Start Docker Desktop hvis det ikke kører</span>
+<span class="nb">Start-Process</span> <span class="s2">&quot;C:\Program Files\Docker\Docker\Docker Desktop.exe&quot;</span>
+
+<span class="c"># Vent 10 sekunder</span>
+<span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">10</span>
+
+<span class="c"># Start Open WebUI container</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="n">-d</span> <span class="n">-p</span> <span class="n">3000</span><span class="p">:</span><span class="n">8080</span> <span class="p">`</span>
+  <span class="p">-</span><span class="n">-add-host</span><span class="p">=</span><span class="n">host</span><span class="p">.</span><span class="n">docker</span><span class="p">.</span><span class="n">internal</span><span class="p">:</span><span class="n">host-gateway</span> <span class="p">`</span>
+  <span class="p">-</span><span class="n">-name</span> <span class="nb">open-webui</span> <span class="p">`</span>
+  <span class="n">ghcr</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="nb">open-webui</span><span class="p">/</span><span class="nb">open-webui</span><span class="p">:</span><span class="n">latest</span>
+</code></pre></div>
+<h3 id="step-3-monitor-stack-status">Step 3: Monitor Stack Status<a class="headerlink" href="#step-3-monitor-stack-status" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Monitor alle tjenester (Ollama, Open WebUI, Docker)</span>
+<span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">monitor-stack</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+<p><strong>Expected output:</strong>
+<div class="highlight"><pre><span></span><code>TekUp Stack Monitor
+
+Ollama Server:
+   [OK] Ollama is running
+
+Open WebUI:
+   [OK] Open WebUI is running
+
+Docker Container:
+   [OK] Container is running
+   open-webui Up X minutes
+
+Done
+</code></pre></div></p>
+<h3 id="step-4-access-open-webui">Step 4: Access Open WebUI<a class="headerlink" href="#step-4-access-open-webui" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open browser: http://localhost:3000</li>
+<li>Opret admin account (første bruger)</li>
+<li>Gå til <strong>Settings → Models</strong></li>
+<li>Add connection: <code>http://host.docker.internal:11434</code></li>
+<li>Select dine Ollama modeller:</li>
+<li>qwen2.5-coder:14b-instruct-q4_K_M</li>
+<li>llama3.3:8b-instruct-q5_K_M</li>
+<li>mistral:7b-instruct-q4_K_M</li>
+</ol>
+<h3 id="step-5-test-chat_1">Step 5: Test Chat<a class="headerlink" href="#step-5-test-chat_1" title="Permanent link">&para;</a></h3>
+<p>Send besked i Open WebUI:
+<div class="highlight"><pre><span></span><code>Write a TypeScript function to calculate invoice total with tax
+</code></pre></div></p>
+<p><strong>Expected:</strong> Response inden for 5-10 sekunder</p>
+<hr />
+<h2 id="docker-management-cli-commands">🛠️ Docker Management CLI Commands<a class="headerlink" href="#docker-management-cli-commands" title="Permanent link">&para;</a></h2>
+<h3 id="check-status">Check Status<a class="headerlink" href="#check-status" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">manage-docker</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Action</span> <span class="n">status</span>
+</code></pre></div>
+<h3 id="view-real-time-logs">View Real-time Logs<a class="headerlink" href="#view-real-time-logs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">manage-docker</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Action</span> <span class="n">logs</span>
+</code></pre></div>
+<h3 id="stop-container">Stop Container<a class="headerlink" href="#stop-container" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">manage-docker</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Action</span> <span class="n">stop</span>
+</code></pre></div>
+<h3 id="start-container">Start Container<a class="headerlink" href="#start-container" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">manage-docker</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Action</span> <span class="nb">start</span>
+</code></pre></div>
+<h3 id="health-check">Health Check<a class="headerlink" href="#health-check" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">scripts</span><span class="p">/</span><span class="n">manage-docker</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Action</span> <span class="n">health</span>
+</code></pre></div>
+<hr />
+<h2 id="full-cli-control-guide">📚 Full CLI Control Guide<a class="headerlink" href="#full-cli-control-guide" title="Permanent link">&para;</a></h2>
+<p>Se komplet guide med alle commands:
+- <strong><a href="../guides/cli-control/">CLI Control Guide</a></strong> - Alle Docker/Ollama/Open WebUI commands
+- <strong><a href="../guides/docker-troubleshooting/">Docker Troubleshooting</a></strong> - Fælles problemer og løsninger</p>
+<hr />
+<h2 id="phase-3-configure-billydk-integration-15-minutes">📋 Phase 3: Configure Billy.dk Integration (15 minutes)<a class="headerlink" href="#phase-3-configure-billydk-integration-15-minutes" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-understand-current-setup">Step 1: Understand Current Setup<a class="headerlink" href="#step-1-understand-current-setup" title="Permanent link">&para;</a></h3>
+<p>Du har allerede:
+- <strong>Tekup-Billy</strong> deployed på: https://tekup-billy.onrender.com
+- <strong>API endpoints</strong> til Billy.dk (invoices, customers, products)</p>
+<h3 id="step-2-find-jan-ai-config-location">Step 2: Find Jan AI Config Location<a class="headerlink" href="#step-2-find-jan-ai-config-location" title="Permanent link">&para;</a></h3>
+<p>Jan AI config fil er typisk her:
+<div class="highlight"><pre><span></span><code>C:\Users\empir\AppData\Roaming\jan\extensions\
+</code></pre></div></p>
+<p>eller</p>
+<div class="highlight"><pre><span></span><code>C:\Users\empir\.jan\extensions\
+</code></pre></div>
+<h3 id="step-3-create-mcp-config">Step 3: Create MCP Config<a class="headerlink" href="#step-3-create-mcp-config" title="Permanent link">&para;</a></h3>
+<p><strong>Opret fil:</strong> <code>mcp-config.json</code> i extensions folder</p>
+<p><strong>Content (start simple):</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;tekup-billy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;const http = require(&#39;http&#39;); const fetch = require(&#39;node-fetch&#39;); const server = http.createServer(async (req, res) =&gt; { if (req.method === &#39;POST&#39; &amp;&amp; req.url === &#39;/mcp/tools/list&#39;) { res.writeHead(200, {&#39;Content-Type&#39;: &#39;application/json&#39;}); res.end(JSON.stringify({tools: [{name: &#39;create_invoice&#39;, description: &#39;Create invoice in Billy.dk&#39;, inputSchema: {type: &#39;object&#39;, properties: {customer_id: {type: &#39;string&#39;}, hours: {type: &#39;number&#39;}, description: {type: &#39;string&#39;}}, required: [&#39;customer_id&#39;, &#39;hours&#39;]}}]})); } else if (req.method === &#39;POST&#39; &amp;&amp; req.url === &#39;/mcp/tools/call&#39;) { let body = &#39;&#39;; req.on(&#39;data&#39;, chunk =&gt; body += chunk); req.on(&#39;end&#39;, async () =&gt; { const data = JSON.parse(body); if (data.name === &#39;create_invoice&#39;) { const result = await fetch(&#39;https://tekup-billy.onrender.com/billy/invoices&#39;, { method: &#39;POST&#39;, headers: {&#39;Content-Type&#39;: &#39;application/json&#39;}, body: JSON.stringify(data.arguments) }); const json = await result.json(); res.writeHead(200, {&#39;Content-Type&#39;: &#39;application/json&#39;}); res.end(JSON.stringify(json)); } }); } }); server.listen(3001); console.log(&#39;Billy MCP running on port 3001&#39;);&quot;</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Note:</strong> Dette er en simpel inline MCP server. I Phase 2 bygger vi en proper server.</p>
+<h3 id="step-4-restart-jan-ai">Step 4: Restart Jan AI<a class="headerlink" href="#step-4-restart-jan-ai" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Close Jan AI helt</li>
+<li>Åbn igen</li>
+<li>Check at MCP server starter (se console/logs)</li>
+</ol>
+<h3 id="step-5-test-billy-integration-manual-first">Step 5: Test Billy Integration (Manual First)<a class="headerlink" href="#step-5-test-billy-integration-manual-first" title="Permanent link">&para;</a></h3>
+<p><strong>Test API direkte først:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Test Tekup-Billy API</span>
+<span class="nb">curl </span><span class="n">https</span><span class="p">://</span><span class="n">tekup-billy</span><span class="p">.</span><span class="n">onrender</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">billy</span><span class="p">/</span><span class="n">customers</span>
+
+<span class="c"># Should return customer list</span>
+</code></pre></div></p>
+<hr />
+<h2 id="phase-4-verify-everything-works-5-minutes">📋 Phase 4: Verify Everything Works (5 minutes)<a class="headerlink" href="#phase-4-verify-everything-works-5-minutes" title="Permanent link">&para;</a></h2>
+<h3 id="checklist">Checklist:<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>Ollama running:</strong> <code>ollama list</code> viser 3 modeller</li>
+<li>[ ] <strong>Jan AI connected:</strong> Jan AI kan se Ollama models</li>
+<li>[ ] <strong>Chat works:</strong> Kan få responses fra AI</li>
+<li>[ ] <strong>GPU utilized:</strong> Task Manager viser GPU usage når AI svarer</li>
+<li>[ ] <strong>Tekup-Billy accessible:</strong> API svarer på requests</li>
+</ul>
+<h3 id="test-commands-i-jan-ai">Test Commands i Jan AI:<a class="headerlink" href="#test-commands-i-jan-ai" title="Permanent link">&para;</a></h3>
+<p><strong>Test 1: General query</strong>
+<div class="highlight"><pre><span></span><code>What is TypeScript?
+</code></pre></div></p>
+<p><strong>Test 2: Coding assistance</strong>
+<div class="highlight"><pre><span></span><code>Write a React component for a booking form with fields:
+- Customer name
+- Date picker
+- Service type dropdown (Basic, Deep, Move-out)
+- Duration (2-8 hours)
+</code></pre></div></p>
+<p><strong>Test 3: Danish response</strong>
+<div class="highlight"><pre><span></span><code>Forklar hvad React hooks er på dansk
+</code></pre></div></p>
+<hr />
+<h2 id="troubleshooting">🐛 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="ollama-wont-start">Ollama won't start<a class="headerlink" href="#ollama-wont-start" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Check if already running</span>
+<span class="n">tasklist</span> <span class="p">|</span> <span class="n">findstr</span> <span class="n">ollama</span>
+
+<span class="c"># Kill and restart</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">ollama</span><span class="p">.</span><span class="n">exe</span>
+<span class="n">ollama</span> <span class="n">serve</span>
+</code></pre></div>
+<h3 id="model-download-fails">Model download fails<a class="headerlink" href="#model-download-fails" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Check disk space</span>
+<span class="nb">Get-PSDrive</span> <span class="n">C</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Used</span><span class="p">,</span><span class="n">Free</span>
+
+<span class="c"># Clear Ollama cache</span>
+<span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">ollama</span><span class="p">\</span><span class="n">models</span><span class="p">\</span><span class="n">blobs</span><span class="p">\</span><span class="n">sha256</span><span class="p">-*</span>
+
+<span class="c"># Retry download</span>
+<span class="n">ollama</span> <span class="n">pull</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b-instruct-q4_K_M</span>
+</code></pre></div>
+<h3 id="jan-ai-cant-connect-to-ollama">Jan AI can't connect to Ollama<a class="headerlink" href="#jan-ai-cant-connect-to-ollama" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Ensure Ollama is running:</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">ollama</span> <span class="n">serve</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check port 11434 is free:</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">netstat</span> <span class="n">-an</span> <span class="p">|</span> <span class="n">findstr</span> <span class="n">11434</span>
+</code></pre></div>
+   Should show: <code>LISTENING</code> on port 11434</p>
+</li>
+<li>
+<p><strong>Restart Jan AI</strong> completely</p>
+</li>
+<li>
+<p><strong>Check firewall:</strong> Windows Defender might block localhost connections</p>
+</li>
+<li>Settings → Windows Security → Firewall → Allow an app</li>
+<li>Add Ollama and Jan AI</li>
+</ol>
+<h3 id="gpu-not-being-used">GPU not being used<a class="headerlink" href="#gpu-not-being-used" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Check NVIDIA drivers:</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">nvidia-smi</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Verify Ollama sees GPU:</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">ollama</span> <span class="n">run</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b-instruct-q4_K_M</span> <span class="s2">&quot;test&quot;</span>
+</code></pre></div>
+   Should show GPU usage in Task Manager</p>
+</li>
+<li>
+<p><strong>If CPU only:</strong> Models will work but slower (10-30 sek vs 3-5 sek)</p>
+</li>
+</ol>
+<h3 id="jan-ai-mcp-server-not-starting">Jan AI MCP server not starting<a class="headerlink" href="#jan-ai-mcp-server-not-starting" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Check Node.js installed:</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">node</span> <span class="p">-</span><span class="n">-version</span>
+</code></pre></div>
+   Should show v24.8.0 or similar</p>
+</li>
+<li>
+<p><strong>Check MCP config syntax:</strong> Validate JSON
+   <div class="highlight"><pre><span></span><code><span class="nb">Get-Content</span> <span class="s2">&quot;C:\Users\empir\.jan\extensions\mcp-config.json&quot;</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check Jan AI logs:</strong></p>
+</li>
+<li>Open Jan AI</li>
+<li>Settings → Advanced → Show Logs</li>
+<li>Look for MCP errors</li>
+</ol>
+<hr />
+<h2 id="performance-expectations">📊 Performance Expectations<a class="headerlink" href="#performance-expectations" title="Permanent link">&para;</a></h2>
+<h3 id="with-your-hardware-rtx-5070-8gb-64gb-ram">With Your Hardware (RTX 5070 8GB + 64GB RAM):<a class="headerlink" href="#with-your-hardware-rtx-5070-8gb-64gb-ram" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Response Time</th>
+<th>Quality</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen2.5-Coder 14B</td>
+<td>3-5 sek</td>
+<td>Excellent</td>
+<td>Coding, debugging</td>
+</tr>
+<tr>
+<td>Llama 3.3 8B</td>
+<td>2-3 sek</td>
+<td>Very Good</td>
+<td>General chat, business</td>
+</tr>
+<tr>
+<td>Mistral 7B</td>
+<td>1-2 sek</td>
+<td>Good</td>
+<td>Quick answers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gpu-memory-usage">GPU Memory Usage:<a class="headerlink" href="#gpu-memory-usage" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>VRAM Used</th>
+<th>Can Run?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen 14B Q4</td>
+<td>~7GB</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Llama 8B Q5</td>
+<td>~5GB</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Mistral 7B Q4</td>
+<td>~3.5GB</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Multiple simultaneously</td>
+<td>8GB+</td>
+<td>⚠️ One at a time</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="next-steps">📊 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Once Phase 1-4 complete:</p>
+<ol>
+<li>✅ <strong>See <a href="../WORKFLOWS/">WORKFLOWS.md</a></strong> for usage examples</li>
+<li>✅ <strong>See <a href="../ARCHITECTURE/">ARCHITECTURE.md</a></strong> for system overview</li>
+<li>⏳ <strong>Configure RenOS integration</strong> (Phase 3)</li>
+<li>⏳ <strong>Setup system monitoring</strong> (Phase 4)</li>
+</ol>
+<hr />
+<h2 id="success-metrics">🎯 Success Metrics<a class="headerlink" href="#success-metrics" title="Permanent link">&para;</a></h2>
+<p>After completing setup, you should achieve:</p>
+<ul>
+<li>✅ <strong>AI response time:</strong> &lt;5 sekunder (typically 2-4 sek)</li>
+<li>✅ <strong>Chat quality:</strong> Coherent, relevant responses</li>
+<li>✅ <strong>GPU utilization:</strong> 70-90% during inference</li>
+<li>✅ <strong>System stability:</strong> No crashes, smooth operation</li>
+</ul>
+<hr />
+<p><strong>Estimated Total Time:</strong> 30-40 minutes<br />
+<strong>Your Status:</strong> 🚧 Start with Phase 1 (Ollama installation)</p>
+<p><strong>Need help?</strong> Check <a href="../TROUBLESHOOTING/">TROUBLESHOOTING.md</a> eller se chat.md for tidligere diskussioner.</p>
+<hr />
+<p><strong>Version:</strong> 1.0.0<br />
+<strong>Last Updated:</strong> 2025-01-15<br />
+<strong>Author:</strong> TekUp AI Assistant Project</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

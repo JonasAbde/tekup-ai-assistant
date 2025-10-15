@@ -1,0 +1,2134 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Local AI Assistant for automating daily business tasks">
+      
+      
+        <meta name="author" content="TekUp Team">
+      
+      
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/TROUBLESHOOTING/">
+      
+      
+        <link rel="prev" href="../WORKFLOWS/">
+      
+      
+        <link rel="next" href="../MCP_WEB_SCRAPER_GUIDE/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Troubleshooting - TekUp AI Assistant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tekup-ai-assistant-troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TekUp AI Assistant" class="md-header__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TekUp AI Assistant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../SETUP/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../WORKFLOWS/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../api/tekup-billy-api/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../guides/daily-workflow/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/create-invoice/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TekUp AI Assistant" class="md-nav__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TekUp AI Assistant
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollama-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 Ollama Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 Ollama Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-ollama-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Ollama won't start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-model-download-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Model download fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-model-runs-very-slowly-30-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Model runs very slowly (30+ seconds)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jan-ai-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 Jan AI Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 Jan AI Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-jan-ai-wont-connect-to-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Jan AI won't connect to Ollama
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-jan-ai-crashes-or-freezes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Jan AI crashes or freezes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-integration-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 MCP Integration Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 MCP Integration Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-billy-mcp-not-responding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Billy MCP not responding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-mcp-tools-not-showing-in-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: MCP tools not showing in Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Performance Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Performance Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-high-ram-usage-40gb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: High RAM usage (&gt;40GB)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-slow-ai-responses-30-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Slow AI responses (&gt;30 seconds)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#billydk-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Billy.dk Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Billy.dk Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-customer-not-found-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: "Customer not found" errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-invoice-creation-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Invoice creation fails
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renos-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗓️ RenOS Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗓️ RenOS Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-bookings-not-syncing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Bookings not syncing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-access-codes-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Access codes missing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emergency-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Emergency Reset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 Getting Help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📞 Getting Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect-debug-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collect Debug Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report Issue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP Web Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/tekup-billy-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/daily-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/cli-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/billy-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/docker-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/create-invoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invoice Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollama-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 Ollama Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🤖 Ollama Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-ollama-wont-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Ollama won't start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-model-download-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Model download fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-model-runs-very-slowly-30-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Model runs very slowly (30+ seconds)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jan-ai-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      💬 Jan AI Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💬 Jan AI Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-jan-ai-wont-connect-to-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Jan AI won't connect to Ollama
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-jan-ai-crashes-or-freezes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Jan AI crashes or freezes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-integration-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 MCP Integration Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 MCP Integration Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-billy-mcp-not-responding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Billy MCP not responding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-mcp-tools-not-showing-in-jan-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: MCP tools not showing in Jan AI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Performance Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Performance Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-high-ram-usage-40gb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: High RAM usage (&gt;40GB)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-slow-ai-responses-30-seconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Slow AI responses (&gt;30 seconds)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#billydk-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Billy.dk Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Billy.dk Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-customer-not-found-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: "Customer not found" errors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-invoice-creation-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Invoice creation fails
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renos-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗓️ RenOS Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗓️ RenOS Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-bookings-not-syncing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Bookings not syncing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-access-codes-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue: Access codes missing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emergency-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Emergency Reset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 Getting Help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📞 Getting Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collect-debug-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collect Debug Info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report Issue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tekup-ai-assistant-troubleshooting">🔧 TekUp AI Assistant - Troubleshooting<a class="headerlink" href="#tekup-ai-assistant-troubleshooting" title="Permanent link">&para;</a></h1>
+<p>Common issues og solutions for TekUp AI Assistant setup.</p>
+<h2 id="table-of-contents">📋 Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#ollama-issues">Ollama Issues</a></li>
+<li><a href="#jan-ai-issues">Jan AI Issues</a></li>
+<li><a href="#mcp-integration-issues">MCP Integration Issues</a></li>
+<li><a href="#performance-issues">Performance Issues</a></li>
+<li><a href="#billydk-integration">Billy.dk Integration</a></li>
+<li><a href="#renos-integration">RenOS Integration</a></li>
+</ol>
+<hr />
+<h2 id="ollama-issues">🤖 Ollama Issues<a class="headerlink" href="#ollama-issues" title="Permanent link">&para;</a></h2>
+<h3 id="issue-ollama-wont-start">Issue: Ollama won't start<a class="headerlink" href="#issue-ollama-wont-start" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- <code>ollama</code> command not found
+- "Failed to connect to Ollama" in Jan AI
+- Port 11434 not listening</p>
+<p><strong>Solutions:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># 1. Check if Ollama is installed</span>
+<span class="n">ollama</span> <span class="p">-</span><span class="n">-version</span>
+
+<span class="c"># If not found, reinstall:</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Ollama</span><span class="p">.</span><span class="n">Ollama</span>
+
+<span class="c"># 2. Check if service is running</span>
+<span class="n">tasklist</span> <span class="p">|</span> <span class="n">findstr</span> <span class="n">ollama</span>
+
+<span class="c"># If not running, start it:</span>
+<span class="n">ollama</span> <span class="n">serve</span>
+
+<span class="c"># 3. Check port 11434</span>
+<span class="n">netstat</span> <span class="n">-an</span> <span class="p">|</span> <span class="n">findstr</span> <span class="n">11434</span>
+<span class="c"># Should show: LISTENING on 11434</span>
+
+<span class="c"># 4. Restart Ollama service</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">ollama</span><span class="p">.</span><span class="n">exe</span>
+<span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">2</span>
+<span class="n">ollama</span> <span class="n">serve</span>
+</code></pre></div>
+<p><strong>Prevention:</strong>
+- Add Ollama to startup programs
+- Create shortcut: <code>ollama serve</code> in Startup folder</p>
+<hr />
+<h3 id="issue-model-download-fails">Issue: Model download fails<a class="headerlink" href="#issue-model-download-fails" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- Download stops at X%
+- "Network error" during pull
+- Disk space error</p>
+<p><strong>Solutions:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># 1. Check disk space (need ~20GB free)</span>
+<span class="nb">Get-PSDrive</span> <span class="n">C</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">Used</span><span class="p">,</span><span class="n">Free</span>
+
+<span class="c"># 2. Check internet connection</span>
+<span class="nb">Test-NetConnection</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span> <span class="n">-Port</span> <span class="n">443</span>
+
+<span class="c"># 3. Retry with verbose logging</span>
+<span class="n">ollama</span> <span class="n">pull</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b-instruct-q4_K_M</span> <span class="p">-</span><span class="n">-verbose</span>
+
+<span class="c"># 4. If still fails, try smaller model first</span>
+<span class="n">ollama</span> <span class="n">pull</span> <span class="n">mistral</span><span class="p">:</span><span class="n">7b-instruct-q4_K_M</span>
+
+<span class="c"># 5. Clear Ollama cache</span>
+<span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">ollama</span><span class="p">\</span><span class="n">models</span><span class="p">\</span><span class="n">blobs</span><span class="p">\</span><span class="n">sha256-incomplete</span><span class="p">*</span>
+
+<span class="c"># 6. Retry download</span>
+<span class="n">ollama</span> <span class="n">pull</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b-instruct-q4_K_M</span>
+</code></pre></div>
+<hr />
+<h3 id="issue-model-runs-very-slowly-30-seconds">Issue: Model runs very slowly (30+ seconds)<a class="headerlink" href="#issue-model-runs-very-slowly-30-seconds" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- GPU not being used (check Task Manager)
+- CPU at 100%
+- Long response times</p>
+<p><strong>Diagnosis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># Check if NVIDIA GPU is detected</span>
+<span class="n">nvidia-smi</span>
+
+<span class="c"># If error, reinstall NVIDIA drivers</span>
+<span class="c"># Download from: https://www.nvidia.com/Download/index.aspx</span>
+</code></pre></div>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Update NVIDIA drivers:</strong></li>
+<li>Download latest GeForce driver</li>
+<li>
+<p>Install and restart</p>
+</li>
+<li>
+<p><strong>Verify GPU support:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Ollama should show GPU</span>
+<span class="n">ollama</span> <span class="n">run</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b-instruct-q4_K_M</span> <span class="s2">&quot;test&quot;</span>
+<span class="c"># Check Task Manager → Performance → GPU → CUDA</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>If GPU still not used:</strong></p>
+</li>
+<li>Reinstall Ollama (might have installed CPU-only version)</li>
+<li>Check CUDA toolkit: <code>nvcc --version</code></li>
+</ol>
+<hr />
+<h2 id="jan-ai-issues">💬 Jan AI Issues<a class="headerlink" href="#jan-ai-issues" title="Permanent link">&para;</a></h2>
+<h3 id="issue-jan-ai-wont-connect-to-ollama">Issue: Jan AI won't connect to Ollama<a class="headerlink" href="#issue-jan-ai-wont-connect-to-ollama" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- "Failed to connect" error
+- Ollama models not showing in Jan AI
+- Timeout errors</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Verify Ollama is running:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Should return HTTP 200</span>
+<span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">11434</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">tags</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check Jan AI settings:</strong></p>
+</li>
+<li>Settings → Model Sources</li>
+<li>Ensure URL is exactly: <code>http://localhost:11434</code></li>
+<li>
+<p>Click "Test Connection" → should show green checkmark</p>
+</li>
+<li>
+<p><strong>Firewall issues:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Check if Windows Firewall is blocking</span>
+<span class="nb">Get-NetFirewallRule</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">DisplayName</span> <span class="o">-like</span> <span class="s2">&quot;*Ollama*&quot;</span><span class="p">}</span>
+
+<span class="c"># If blocked, create rule:</span>
+<span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;Ollama&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Action</span> <span class="n">Allow</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="n">11434</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Restart both applications:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Kill both</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">ollama</span><span class="p">.</span><span class="n">exe</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">jan</span><span class="p">.</span><span class="n">exe</span>
+
+<span class="c"># Start Ollama first</span>
+<span class="nb">Start-Process</span> <span class="n">ollama</span> <span class="n">-ArgumentList</span> <span class="s2">&quot;serve&quot;</span>
+
+<span class="c"># Wait 5 seconds</span>
+<span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">5</span>
+
+<span class="c"># Start Jan AI</span>
+<span class="nb">Start-Process</span> <span class="n">jan</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h3 id="issue-jan-ai-crashes-or-freezes">Issue: Jan AI crashes or freezes<a class="headerlink" href="#issue-jan-ai-crashes-or-freezes" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- App becomes unresponsive
+- White screen
+- Memory error</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Clear Jan AI cache:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Close Jan AI first</span>
+<span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="s2">&quot;$env:APPDATA\jan\Cache&quot;</span>
+<span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="s2">&quot;$env:APPDATA\jan\GPUCache&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Reset Jan AI settings:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Backup first</span>
+<span class="nb">Copy-Item</span> <span class="s2">&quot;$env:APPDATA\jan&quot;</span> <span class="s2">&quot;$env:APPDATA\jan_backup&quot;</span> <span class="n">-Recurse</span>
+
+<span class="c"># Remove settings</span>
+<span class="nb">Remove-Item</span> <span class="s2">&quot;$env:APPDATA\jan\settings.json&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Reinstall Jan AI:</strong>
+   <div class="highlight"><pre><span></span><code><span class="n">winget</span> <span class="n">uninstall</span> <span class="n">Jan</span><span class="p">.</span><span class="n">Jan</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Jan</span><span class="p">.</span><span class="n">Jan</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="mcp-integration-issues">🔌 MCP Integration Issues<a class="headerlink" href="#mcp-integration-issues" title="Permanent link">&para;</a></h2>
+<h3 id="issue-billy-mcp-not-responding">Issue: Billy MCP not responding<a class="headerlink" href="#issue-billy-mcp-not-responding" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- "Tool not found" error
+- Invoice creation fails
+- Timeout errors</p>
+<p><strong>Diagnosis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># 1. Test Tekup-Billy API directly</span>
+<span class="nb">curl </span><span class="n">https</span><span class="p">://</span><span class="n">tekup-billy</span><span class="p">.</span><span class="n">onrender</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">health</span>
+
+<span class="c"># 2. Check if MCP config exists</span>
+<span class="nb">Test-Path</span> <span class="s2">&quot;$env:APPDATA\jan\extensions\mcp-config.json&quot;</span>
+
+<span class="c"># 3. Validate JSON syntax</span>
+<span class="nb">Get-Content</span> <span class="s2">&quot;$env:APPDATA\jan\extensions\mcp-config.json&quot;</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+</code></pre></div>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Verify Tekup-Billy is running:</strong></li>
+<li>Visit: https://tekup-billy.onrender.com</li>
+<li>
+<p>Should show API status page</p>
+</li>
+<li>
+<p><strong>Check MCP config:</strong>
+   <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;tekup-billy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://tekup-billy.onrender.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30000</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check API key (if required):</strong></p>
+</li>
+<li>Ensure <code>.env</code> has <code>BILLY_API_KEY</code></li>
+<li>
+<p>Verify key is valid</p>
+</li>
+<li>
+<p><strong>Restart Jan AI</strong> to reload MCP config</p>
+</li>
+</ol>
+<hr />
+<h3 id="issue-mcp-tools-not-showing-in-jan-ai">Issue: MCP tools not showing in Jan AI<a class="headerlink" href="#issue-mcp-tools-not-showing-in-jan-ai" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- Can't see <code>create_invoice</code> tool
+- AI doesn't know about Billy integration</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Verify MCP config location:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Jan AI looks here:</span>
+<span class="nv">$env:APPDATA</span><span class="p">\</span><span class="n">jan</span><span class="p">\</span><span class="n">extensions</span><span class="p">\</span><span class="n">mcp-config</span><span class="p">.</span><span class="n">json</span>
+
+<span class="c"># Or here:</span>
+<span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">jan</span><span class="p">\</span><span class="n">extensions</span><span class="p">\</span><span class="n">mcp-config</span><span class="p">.</span><span class="n">json</span>
+
+<span class="c"># Create if missing:</span>
+<span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Force</span> <span class="n">-Path</span> <span class="s2">&quot;$env:APPDATA\jan\extensions&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check Jan AI logs:</strong></p>
+</li>
+<li>Jan AI → Settings → Advanced → Show Logs</li>
+<li>
+<p>Look for "MCP" errors</p>
+</li>
+<li>
+<p><strong>Minimal test config:</strong>
+   <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-e&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;console.log(&#39;MCP test&#39;)&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="performance-issues">⚡ Performance Issues<a class="headerlink" href="#performance-issues" title="Permanent link">&para;</a></h2>
+<h3 id="issue-high-ram-usage-40gb">Issue: High RAM usage (&gt;40GB)<a class="headerlink" href="#issue-high-ram-usage-40gb" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- System slows down
+- Ollama using 20GB+ RAM
+- Chrome crashes</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Check what's using RAM:</strong>
+   <div class="highlight"><pre><span></span><code><span class="nb">Get-Process</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">WorkingSet</span> <span class="n">-Descending</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">-First</span> <span class="n">10</span> <span class="n">ProcessName</span><span class="p">,@{</span><span class="n">Name</span><span class="p">=</span><span class="s2">&quot;RAM(MB)&quot;</span><span class="p">;</span><span class="n">Expression</span><span class="p">={</span><span class="no">[math]</span><span class="p">::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">WorkingSet</span><span class="p">/</span><span class="n">1MB</span><span class="p">,</span><span class="n">2</span><span class="p">)}}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Limit Ollama context:</strong></p>
+</li>
+<li>Shorter conversations use less RAM</li>
+<li>
+<p>Restart Ollama periodically</p>
+</li>
+<li>
+<p><strong>Close unused apps:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Kill Chrome if not needed</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">chrome</span><span class="p">.</span><span class="n">exe</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Use smaller model temporarily:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Switch to Mistral 7B (uses ~4GB vs 8GB)</span>
+<span class="n">ollama</span> <span class="n">run</span> <span class="n">mistral</span><span class="p">:</span><span class="n">7b-instruct-q4_K_M</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h3 id="issue-slow-ai-responses-30-seconds">Issue: Slow AI responses (&gt;30 seconds)<a class="headerlink" href="#issue-slow-ai-responses-30-seconds" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- Every response takes 30+ seconds
+- GPU shows 0% usage
+- CPU at 100%</p>
+<p><strong>Root causes &amp; fixes:</strong></p>
+<ol>
+<li><strong>GPU not being used:</strong></li>
+<li>Update NVIDIA drivers</li>
+<li>Reinstall Ollama</li>
+<li>
+<p>Check <code>nvidia-smi</code> shows GPU</p>
+</li>
+<li>
+<p><strong>Model too large:</strong></p>
+</li>
+<li>Qwen 14B might be too big if RAM is low</li>
+<li>
+<p>Try Llama 8B instead:
+     <div class="highlight"><pre><span></span><code><span class="n">ollama</span> <span class="n">run</span> <span class="n">llama3</span><span class="p">.</span><span class="n">3</span><span class="p">:</span><span class="n">8b-instruct-q5_K_M</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Thermal throttling:</strong></p>
+</li>
+<li>Check GPU temperature: <code>nvidia-smi</code></li>
+<li>If &gt;80°C, improve cooling</li>
+<li>
+<p>Reduce GPU clock if needed</p>
+</li>
+<li>
+<p><strong>Background processes:</strong>
+   <div class="highlight"><pre><span></span><code><span class="c"># Find CPU hogs</span>
+<span class="nb">Get-Process</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">CPU</span> <span class="n">-Descending</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">-First</span> <span class="n">10</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="billydk-integration">💰 Billy.dk Integration<a class="headerlink" href="#billydk-integration" title="Permanent link">&para;</a></h2>
+<h3 id="issue-customer-not-found-errors">Issue: "Customer not found" errors<a class="headerlink" href="#issue-customer-not-found-errors" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- AI can't find customer by name
+- list_customers returns empty</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Test API manually:</strong>
+   <div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="s2">&quot;https://tekup-billy.onrender.com/billy/customers?search=Michael&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check customer name spelling:</strong></p>
+</li>
+<li>AI needs exact match</li>
+<li>
+<p>Try: "Michael Roach" not "Michael R."</p>
+</li>
+<li>
+<p><strong>Update customer search logic:</strong></p>
+</li>
+<li>Fuzzy matching might be needed</li>
+<li>See <code>tekup-billy</code> repo for improvements</li>
+</ol>
+<hr />
+<h3 id="issue-invoice-creation-fails">Issue: Invoice creation fails<a class="headerlink" href="#issue-invoice-creation-fails" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- "Unknown error" when creating invoice
+- 500 error from Billy API
+- Missing required fields</p>
+<p><strong>Diagnosis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># Test invoice creation manually</span>
+<span class="nv">$body</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="n">contactId</span> <span class="p">=</span> <span class="s2">&quot;test-customer-id&quot;</span>
+    <span class="n">lines</span> <span class="p">=</span> <span class="p">@(</span>
+        <span class="p">@{</span>
+            <span class="n">description</span> <span class="p">=</span> <span class="s2">&quot;Test service&quot;</span>
+            <span class="n">quantity</span> <span class="p">=</span> <span class="n">2</span>
+            <span class="n">unitPrice</span> <span class="p">=</span> <span class="n">349</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+<span class="p">}</span> <span class="p">|</span> <span class="nb">ConvertTo-Json</span>
+
+<span class="nb">curl </span><span class="n">-X</span> <span class="n">POST</span> <span class="s2">&quot;https://tekup-billy.onrender.com/billy/invoices&quot;</span> <span class="p">`</span>
+     <span class="n">-H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="p">`</span>
+     <span class="n">-d</span> <span class="nv">$body</span>
+</code></pre></div>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Check Billy.dk API status:</strong></li>
+<li>Visit Billy.dk</li>
+<li>
+<p>Check for maintenance</p>
+</li>
+<li>
+<p><strong>Verify API credentials:</strong></p>
+</li>
+<li>Check <code>.env</code> in Tekup-Billy</li>
+<li>
+<p>Regenerate API key if expired</p>
+</li>
+<li>
+<p><strong>Check invoice data:</strong></p>
+</li>
+<li>Customer ID must exist</li>
+<li>Quantity must be &gt;0</li>
+<li>Unit price must be &gt;0</li>
+</ol>
+<hr />
+<h2 id="renos-integration">🗓️ RenOS Integration<a class="headerlink" href="#renos-integration" title="Permanent link">&para;</a></h2>
+<h3 id="issue-bookings-not-syncing">Issue: Bookings not syncing<a class="headerlink" href="#issue-bookings-not-syncing" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- AI shows old bookings
+- Calendar out of date
+- Missing recent entries</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Check RenOS API:</strong>
+   <div class="highlight"><pre><span></span><code><span class="nb">curl </span><span class="s2">&quot;https://renos-backend.onrender.com/api/bookings&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Clear cache (if implemented):</strong></p>
+</li>
+<li>Restart MCP server</li>
+<li>
+<p>Force refresh in Jan AI</p>
+</li>
+<li>
+<p><strong>Check database connection:</strong></p>
+</li>
+<li>RenOS backend logs</li>
+<li>Supabase/PostgreSQL status</li>
+</ol>
+<hr />
+<h3 id="issue-access-codes-missing">Issue: Access codes missing<a class="headerlink" href="#issue-access-codes-missing" title="Permanent link">&para;</a></h3>
+<p><strong>Symptoms:</strong>
+- AI shows booking without access code
+- "null" or "-" for code</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Check database:</strong></li>
+<li>Verify <code>accessCode</code> field exists</li>
+<li>
+<p>Check if it's populated</p>
+</li>
+<li>
+<p><strong>Update query:</strong></p>
+</li>
+<li>Ensure MCP fetches all fields</li>
+<li>
+<p>Include <code>accessCode</code> in SELECT</p>
+</li>
+<li>
+<p><strong>Manual entry:</strong></p>
+</li>
+<li>Update RenOS booking with code</li>
+<li>Refresh AI query</li>
+</ol>
+<hr />
+<h2 id="emergency-reset">🆘 Emergency Reset<a class="headerlink" href="#emergency-reset" title="Permanent link">&para;</a></h2>
+<p>If everything is broken:</p>
+<div class="highlight"><pre><span></span><code><span class="c"># 1. Stop all services</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">ollama</span><span class="p">.</span><span class="n">exe</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">jan</span><span class="p">.</span><span class="n">exe</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">F</span> <span class="p">/</span><span class="n">IM</span> <span class="n">node</span><span class="p">.</span><span class="n">exe</span>
+
+<span class="c"># 2. Clear caches</span>
+<span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="s2">&quot;$env:APPDATA\jan\Cache&quot;</span>
+<span class="nb">Remove-Item</span> <span class="n">-Recurse</span> <span class="n">-Force</span> <span class="s2">&quot;$env:USERPROFILE\.ollama\models\blobs\sha256-incomplete*&quot;</span>
+
+<span class="c"># 3. Restart Ollama</span>
+<span class="nb">Start-Process</span> <span class="n">ollama</span> <span class="n">-ArgumentList</span> <span class="s2">&quot;serve&quot;</span>
+<span class="nb">Start-Sleep</span> <span class="n">-Seconds</span> <span class="n">5</span>
+
+<span class="c"># 4. Test Ollama</span>
+<span class="nb">curl </span><span class="n">http</span><span class="p">://</span><span class="n">localhost</span><span class="p">:</span><span class="n">11434</span><span class="p">/</span><span class="n">api</span><span class="p">/</span><span class="n">tags</span>
+
+<span class="c"># 5. Start Jan AI</span>
+<span class="nb">Start-Process</span> <span class="n">jan</span>
+
+<span class="c"># 6. Reconfigure from scratch</span>
+<span class="c"># Follow SETUP.md Phase 1-3 again</span>
+</code></pre></div>
+<hr />
+<h2 id="getting-help">📞 Getting Help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
+<h3 id="check-logs">Check Logs<a class="headerlink" href="#check-logs" title="Permanent link">&para;</a></h3>
+<p><strong>Ollama logs:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Windows Event Viewer</span>
+<span class="n">eventvwr</span>
+<span class="c"># → Windows Logs → Application → Source: Ollama</span>
+</code></pre></div></p>
+<p><strong>Jan AI logs:</strong>
+- Jan AI → Settings → Advanced → Show Logs</p>
+<p><strong>MCP logs:</strong>
+- Console output where MCP server runs</p>
+<h3 id="collect-debug-info">Collect Debug Info<a class="headerlink" href="#collect-debug-info" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># System info</span>
+<span class="n">systeminfo</span> <span class="p">|</span> <span class="n">findstr</span> <span class="p">/</span><span class="n">C</span><span class="p">:</span><span class="s2">&quot;OS Name&quot;</span> <span class="p">/</span><span class="n">C</span><span class="p">:</span><span class="s2">&quot;Total Physical Memory&quot;</span>
+
+<span class="c"># GPU info</span>
+<span class="n">nvidia-smi</span>
+
+<span class="c"># Ollama info</span>
+<span class="n">ollama</span> <span class="n">list</span>
+<span class="n">ollama</span> <span class="p">-</span><span class="n">-version</span>
+
+<span class="c"># Network connectivity</span>
+<span class="nb">Test-NetConnection</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span> <span class="n">-Port</span> <span class="n">443</span>
+<span class="nb">Test-NetConnection</span> <span class="n">localhost</span> <span class="n">-Port</span> <span class="n">11434</span>
+
+<span class="c"># Save to file</span>
+<span class="n">systeminfo</span> <span class="p">&gt;</span> <span class="nb">debug-info</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">nvidia-smi</span> <span class="p">&gt;&gt;</span> <span class="nb">debug-info</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">ollama</span> <span class="n">list</span> <span class="p">&gt;&gt;</span> <span class="nb">debug-info</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+<h3 id="report-issue">Report Issue<a class="headerlink" href="#report-issue" title="Permanent link">&para;</a></h3>
+<p>Include:
+1. Error message (exact text)
+2. Steps to reproduce
+3. System info (from above)
+4. Screenshots (if UI issue)
+5. Logs (relevant sections)</p>
+<p><strong>Where to report:</strong>
+- GitHub Issues: <code>tekup-ai-assistant</code>
+- Or check <code>chat.md</code> for previous discussions</p>
+<hr />
+<p><strong>Version:</strong> 1.0.0<br />
+<strong>Last Updated:</strong> 2025-01-15<br />
+<strong>See also:</strong> <a href="../SETUP/">SETUP.md</a> | <a href="../ARCHITECTURE/">ARCHITECTURE.md</a> | <a href="../WORKFLOWS/">WORKFLOWS.md</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
