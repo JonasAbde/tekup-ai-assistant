@@ -34,10 +34,14 @@ nav:
   - Documentation:
     - Daily Workflows: WORKFLOWS.md
     - Troubleshooting: TROUBLESHOOTING.md
+    - MCP Web Scraper: MCP_WEB_SCRAPER_GUIDE.md
   - API Reference:
     - Billy.dk API: api/tekup-billy-api.md
   - Guides:
     - Daily Workflow Guide: guides/daily-workflow.md
+    - CLI Control Guide: guides/cli-control.md
+    - Billy.dk Integration: guides/billy-integration.md
+    - Docker Troubleshooting: guides/docker-troubleshooting.md
   - Examples:
     - Invoice Creation: examples/create-invoice.md
 
