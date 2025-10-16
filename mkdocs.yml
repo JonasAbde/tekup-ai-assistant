@@ -31,10 +31,21 @@ nav:
   - Getting Started:
     - Installation: SETUP.md
     - Architecture: ARCHITECTURE.md
+    - Status Report: AI_ASSISTANT_STATUS_REPORT.md
+    - Installed Models: INSTALLED_MODELS_REPORT.md
+    - Qwen Test Results: QWEN_TEST_RESULTS.md
+    - Changelog: CHANGELOG.md
   - Documentation:
     - Daily Workflows: WORKFLOWS.md
     - Troubleshooting: TROUBLESHOOTING.md
     - MCP Web Scraper: MCP_WEB_SCRAPER_GUIDE.md
+    - MCP Resources: MCP_RESOURCES.md
+    - TekUp Code Standards: TEKUP_UNIFIED_CODE_STANDARDS.md
+  - Billy Integration:
+    - Integration Summary: BILLY_INTEGRATION_SUMMARY.md
+    - Complete Report: BILLY_INTEGRATION_COMPLETE.md
+    - Code Analysis: analysis/TEKUP_BILLY_COMPLETE_ANALYSIS.md
+    - Repository Inventory: analysis/REPO_INVENTORY.md
   - API Reference:
     - Billy.dk API: api/tekup-billy-api.md
   - Guides:
@@ -42,6 +53,7 @@ nav:
     - CLI Control Guide: guides/cli-control.md
     - Billy.dk Integration: guides/billy-integration.md
     - Docker Troubleshooting: guides/docker-troubleshooting.md
+    - TekupVault Guide: guides/tekupvault-guide.md
   - Examples:
     - Invoice Creation: examples/create-invoice.md
 
