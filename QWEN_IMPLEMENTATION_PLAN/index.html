@@ -12,13 +12,9 @@
         <meta name="author" content="TekUp Team">
       
       
-        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/MCP_WEB_SCRAPER_GUIDE/">
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/QWEN_IMPLEMENTATION_PLAN/">
       
       
-        <link rel="prev" href="../TROUBLESHOOTING/">
-      
-      
-        <link rel="next" href="../MCP_RESOURCES/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>MCP Web Scraper - TekUp AI Assistant</title>
+        <title>Qwen 2.5 Coder 14B - Implementation Plan - TekUp AI Assistant</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mcp-web-scraper-setup-guide" class="md-skip">
+        <a href="#qwen-25-coder-14b-implementation-plan" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MCP Web Scraper
+              Qwen 2.5 Coder 14B - Implementation Plan
             
           </span>
         </div>
@@ -262,12 +258,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../WORKFLOWS/" class="md-tabs__link">
           
   
@@ -619,31 +613,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -656,7 +645,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -713,32 +702,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    MCP Web Scraper
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
         
   
   
@@ -749,254 +716,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-er-implementeret" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Hvad er implementeret?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Installation Status
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-skridt-aktiver-mcp-serveren-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Næste skridt: Aktivér MCP-serveren i Cursor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Næste skridt: Aktivér MCP-serveren i Cursor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metode-1-via-cursor-settings-anbefalet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 1: Via Cursor Settings (Anbefalet)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metode-2-via-konfigurationsfil" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 2: Via konfigurationsfil
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tilgngelige-vrktjer" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Tilgængelige værktøjer
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Tilgængelige værktøjer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-fetch_url-anbefalet-til-dynamisk-indhold" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. fetch_url (Anbefalet til dynamisk indhold)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-fetch_url_simple-hurtigere-til-statiske-sider" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. fetch_url_simple (Hurtigere til statiske sider)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verificer-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Verificér installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧪 Verificér installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#test-mcp-serveren-direkte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test MCP-serveren direkte:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-i-cursor-efter-genstart" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test i Cursor (efter genstart):
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brug-mcp-serveren" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Brug MCP-serveren
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🎯 Brug MCP-serveren">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#eksempel-1-hent-delt-claude-samtale" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eksempel 1: Hent delt Claude-samtale
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eksempel-2-hent-og-analyser-enhver-webside" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eksempel 2: Hent og analysér enhver webside
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fejlfinding" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Fejlfinding
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔍 Fejlfinding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-mcp-server-vises-ikke-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: MCP-server vises ikke i Cursor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-playwright-timeout-fejl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: Playwright timeout fejl
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-unicodeencodeerror" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: UnicodeEncodeError
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fil-struktur" class="md-nav__link">
-    <span class="md-ellipsis">
-      📁 Fil struktur
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-kan-du-nu-gre" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎉 Hvad kan du nu gøre?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      📞 Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-opgave" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 Næste opgave
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1535,46 +1254,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hvad-er-implementeret" class="md-nav__link">
+  <a href="#executive-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Hvad er implementeret?
+      🎯 Executive Summary
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Installation Status
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-skridt-aktiver-mcp-serveren-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Næste skridt: Aktivér MCP-serveren i Cursor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Næste skridt: Aktivér MCP-serveren i Cursor">
+    <nav class="md-nav" aria-label="🎯 Executive Summary">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#metode-1-via-cursor-settings-anbefalet" class="md-nav__link">
+  <a href="#key-findings" class="md-nav__link">
     <span class="md-ellipsis">
-      Metode 1: Via Cursor Settings (Anbefalet)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metode-2-via-konfigurationsfil" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 2: Via konfigurationsfil
+      Key Findings
     </span>
   </a>
   
@@ -1586,28 +1278,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tilgngelige-vrktjer" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      🔧 Tilgængelige værktøjer
+      📋 Next Steps
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔧 Tilgængelige værktøjer">
+    <nav class="md-nav" aria-label="📋 Next Steps">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-fetch_url-anbefalet-til-dynamisk-indhold" class="md-nav__link">
+  <a href="#immediat-i-dag-1-2-timer" class="md-nav__link">
     <span class="md-ellipsis">
-      1. fetch_url (Anbefalet til dynamisk indhold)
+      Immediat (I Dag - 1-2 timer)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-fetch_url_simple-hurtigere-til-statiske-sider" class="md-nav__link">
+  <a href="#denne-uge-3-5-timer" class="md-nav__link">
     <span class="md-ellipsis">
-      2. fetch_url_simple (Hurtigere til statiske sider)
+      Denne Uge (3-5 timer)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nste-uge-5-8-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Næste Uge (5-8 timer)
     </span>
   </a>
   
@@ -1619,28 +1320,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verificer-installation" class="md-nav__link">
+  <a href="#development-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Verificér installation
+      🛠️ Development Workflow
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧪 Verificér installation">
+    <nav class="md-nav" aria-label="🛠️ Development Workflow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-mcp-serveren-direkte" class="md-nav__link">
+  <a href="#model-selection-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Test MCP-serveren direkte:
+      Model Selection Strategy
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-i-cursor-efter-genstart" class="md-nav__link">
+  <a href="#recommended-prompts-for-billydk" class="md-nav__link">
     <span class="md-ellipsis">
-      Test i Cursor (efter genstart):
+      Recommended Prompts for Billy.dk
     </span>
   </a>
   
@@ -1652,28 +1353,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brug-mcp-serveren" class="md-nav__link">
+  <a href="#success-metrics" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Brug MCP-serveren
+      📊 Success Metrics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎯 Brug MCP-serveren">
+    <nav class="md-nav" aria-label="📊 Success Metrics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#eksempel-1-hent-delt-claude-samtale" class="md-nav__link">
+  <a href="#phase-2-completion-ai-infrastructure" class="md-nav__link">
     <span class="md-ellipsis">
-      Eksempel 1: Hent delt Claude-samtale
+      Phase 2 Completion (AI Infrastructure)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#eksempel-2-hent-og-analyser-enhver-webside" class="md-nav__link">
+  <a href="#phase-3-kickoff-billy-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Eksempel 2: Hent og analysér enhver webside
+      Phase 3 Kickoff (Billy Integration)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Targets
     </span>
   </a>
   
@@ -1685,37 +1395,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fejlfinding" class="md-nav__link">
+  <a href="#learning-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 Fejlfinding
+      🎓 Learning &amp; Best Practices
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔍 Fejlfinding">
+    <nav class="md-nav" aria-label="🎓 Learning &amp; Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problem-mcp-server-vises-ikke-i-cursor" class="md-nav__link">
+  <a href="#working-with-qwen-25-coder" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem: MCP-server vises ikke i Cursor
+      Working with Qwen 2.5 Coder
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#problem-playwright-timeout-fejl" class="md-nav__link">
+  <a href="#code-review-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem: Playwright timeout fejl
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-unicodeencodeerror" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: UnicodeEncodeError
+      Code Review Checklist
     </span>
   </a>
   
@@ -1727,36 +1428,123 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fil-struktur" class="md-nav__link">
+  <a href="#risk-mitigation" class="md-nav__link">
     <span class="md-ellipsis">
-      📁 Fil struktur
+      🚨 Risk Mitigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Risk Mitigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#potential-issues-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential Issues &amp; Solutions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roi-projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 ROI Projection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 ROI Projection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-savings-with-qwen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Savings with Qwen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progress-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Progress Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Progress Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#week-1-milestones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Week 1 Milestones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Definition of Done
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Definition of Done">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-ai-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 2: AI Infrastructure ✅
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-billydk-integration-week-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phase 3: Billy.dk Integration (Week 1)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 Support Resources
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hvad-kan-du-nu-gre" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      🎉 Hvad kan du nu gøre?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      📞 Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-opgave" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 Næste opgave
+      🎉 Conclusion
     </span>
   </a>
   
@@ -1781,161 +1569,375 @@
   
 
 
-<h1 id="mcp-web-scraper-setup-guide">MCP Web Scraper Setup Guide<a class="headerlink" href="#mcp-web-scraper-setup-guide" title="Permanent link">&para;</a></h1>
-<h2 id="hvad-er-implementeret">🎯 Hvad er implementeret?<a class="headerlink" href="#hvad-er-implementeret" title="Permanent link">&para;</a></h2>
-<p>En Python-baseret MCP (Model Context Protocol) server der giver AI-assistenten evnen til at hente og analysere webindhold direkte, inklusiv JavaScript-renderet indhold fra delte Claude-samtaler.</p>
-<h2 id="installation-status">✅ Installation Status<a class="headerlink" href="#installation-status" title="Permanent link">&para;</a></h2>
-<p>Alle nødvendige komponenter er installeret og testet:</p>
+<h1 id="qwen-25-coder-14b-implementation-plan">Qwen 2.5 Coder 14B - Implementation Plan<a class="headerlink" href="#qwen-25-coder-14b-implementation-plan" title="Permanent link">&para;</a></h1>
+<p><strong>Baseret på Test Resultater (97% Score)</strong><br />
+<strong>Dato:</strong> 16. oktober 2025<br />
+<strong>Status:</strong> ✅ Ready for Production Use</p>
+<hr />
+<h2 id="executive-summary">🎯 Executive Summary<a class="headerlink" href="#executive-summary" title="Permanent link">&para;</a></h2>
+<p>Qwen 2.5 Coder 14B er succesfuldt downloadet, installeret og testet med <strong>fremragende resultater</strong> (58/60 points, 97%). Modellen er nu <strong>production-ready</strong> og klar til at drive Billy.dk MCP implementation.</p>
+<h3 id="key-findings">Key Findings<a class="headerlink" href="#key-findings" title="Permanent link">&para;</a></h3>
 <ul>
-<li>✅ <strong>Python 3.13.7</strong> - Kørende og verificeret</li>
-<li>✅ <strong>Node.js v24.8.0</strong> - Installeret (bonus, ikke påkrævet)</li>
-<li>✅ <strong>MCP Python pakke</strong> - Installeret</li>
-<li>✅ <strong>Playwright</strong> - Installeret med Chromium browser</li>
-<li>✅ <strong>Requests &amp; BeautifulSoup4</strong> - Installeret</li>
-<li>✅ <strong>MCP Web Scraper</strong> - Oprettet og testet</li>
-<li>✅ <strong>Test Suite</strong> - Alle tests bestået ✅</li>
+<li>✅ <strong>Code Quality:</strong> 10/10 - Production-ready kode</li>
+<li>✅ <strong>Debugging:</strong> 10/10 - Instant og accurate</li>
+<li>✅ <strong>Documentation:</strong> 10/10 - Professional level</li>
+<li>✅ <strong>MCP Integration:</strong> 10/10 - Perfect til Billy.dk</li>
 </ul>
-<h2 id="nste-skridt-aktiver-mcp-serveren-i-cursor">🚀 Næste skridt: Aktivér MCP-serveren i Cursor<a class="headerlink" href="#nste-skridt-aktiver-mcp-serveren-i-cursor" title="Permanent link">&para;</a></h2>
-<h3 id="metode-1-via-cursor-settings-anbefalet">Metode 1: Via Cursor Settings (Anbefalet)<a class="headerlink" href="#metode-1-via-cursor-settings-anbefalet" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Åbn Cursor Settings</strong></li>
-<li>
-<p>Tryk <code>Ctrl+,</code> eller File &gt; Preferences &gt; Settings</p>
-</li>
-<li>
-<p><strong>Find MCP Settings</strong></p>
-</li>
-<li>Søg efter "MCP" i søgefeltet</li>
-<li>
-<p>Gå til Features &gt; MCP</p>
-</li>
-<li>
-<p><strong>Tilføj MCP Server</strong></p>
-</li>
-<li>Klik på "+ Add New MCP Server"</li>
-<li>
-<p>Indtast:</p>
-<ul>
-<li><strong>Navn:</strong> <code>web-scraper</code></li>
-<li><strong>Type:</strong> <code>stdio</code></li>
-<li><strong>Command:</strong> <code>python</code></li>
-<li><strong>Args:</strong> <code>C:\Users\empir\tekup-ai-assistant\scripts\mcp_web_scraper.py</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Gem og Genstart</strong></p>
-</li>
-<li>Gem ændringerne</li>
-<li>Genstart Cursor fuldstændigt (luk og åbn)</li>
-</ol>
-<h3 id="metode-2-via-konfigurationsfil">Metode 2: Via konfigurationsfil<a class="headerlink" href="#metode-2-via-konfigurationsfil" title="Permanent link">&para;</a></h3>
-<p>Hvis Cursor understøtter at læse MCP-konfiguration fra fil:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;web-scraper&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;C:\\Users\\empir\\tekup-ai-assistant\\scripts\\mcp_web_scraper.py&quot;</span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Konfigurationsfilen findes allerede her: <code>configs/claude-desktop/mcp_config.json</code></p>
-<h2 id="tilgngelige-vrktjer">🔧 Tilgængelige værktøjer<a class="headerlink" href="#tilgngelige-vrktjer" title="Permanent link">&para;</a></h2>
-<p>Når MCP-serveren er aktiveret, har AI-assistenten adgang til:</p>
-<h3 id="1-fetch_url-anbefalet-til-dynamisk-indhold">1. <code>fetch_url</code> (Anbefalet til dynamisk indhold)<a class="headerlink" href="#1-fetch_url-anbefalet-til-dynamisk-indhold" title="Permanent link">&para;</a></h3>
-<p>Bruger Playwright med Chromium til at hente indhold, inklusiv JavaScript-renderet sider.</p>
-<p><strong>Eksempel brug:</strong>
-<div class="highlight"><pre><span></span><code>Brug fetch_url værktøjet til at hente indhold fra:
-https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
-</code></pre></div></p>
-<p><strong>Parametre:</strong>
-- <code>url</code> (påkrævet): URL'en der skal hentes
-- <code>wait_for</code> (valgfri): CSS selector at vente på før scraping</p>
-<h3 id="2-fetch_url_simple-hurtigere-til-statiske-sider">2. <code>fetch_url_simple</code> (Hurtigere til statiske sider)<a class="headerlink" href="#2-fetch_url_simple-hurtigere-til-statiske-sider" title="Permanent link">&para;</a></h3>
-<p>Bruger simple HTTP requests til statiske HTML-sider.</p>
-<p><strong>Eksempel brug:</strong>
-<div class="highlight"><pre><span></span><code>Brug fetch_url_simple værktøjet til at hente: https://example.com
-</code></pre></div></p>
-<h2 id="verificer-installation">🧪 Verificér installation<a class="headerlink" href="#verificer-installation" title="Permanent link">&para;</a></h2>
-<h3 id="test-mcp-serveren-direkte">Test MCP-serveren direkte:<a class="headerlink" href="#test-mcp-serveren-direkte" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">scripts</span><span class="p">/</span><span class="n">test_mcp_scraper</span><span class="p">.</span><span class="n">py</span>
-</code></pre></div>
-<p>Du skulle se:
-<div class="highlight"><pre><span></span><code>✅ Simple HTTP: PASSED
-✅ Playwright: PASSED
-🎉 Alle tests bestået!
-</code></pre></div></p>
-<h3 id="test-i-cursor-efter-genstart">Test i Cursor (efter genstart):<a class="headerlink" href="#test-i-cursor-efter-genstart" title="Permanent link">&para;</a></h3>
-<p>Åbn en ny chat og spørg:
-<div class="highlight"><pre><span></span><code>Hvilke MCP-værktøjer har du adgang til?
-</code></pre></div></p>
-<p>Du skulle se <code>fetch_url</code> og <code>fetch_url_simple</code> i listen.</p>
-<h2 id="brug-mcp-serveren">🎯 Brug MCP-serveren<a class="headerlink" href="#brug-mcp-serveren" title="Permanent link">&para;</a></h2>
-<h3 id="eksempel-1-hent-delt-claude-samtale">Eksempel 1: Hent delt Claude-samtale<a class="headerlink" href="#eksempel-1-hent-delt-claude-samtale" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Brug fetch_url til at hente indholdet fra denne delte Claude-samtale:
-https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
+<p><strong>Anbefaling:</strong> GØR Qwen til primary coding model og start Billy.dk MCP implementation NU!</p>
+<hr />
+<h2 id="next-steps">📋 Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h3 id="immediat-i-dag-1-2-timer">Immediat (I Dag - 1-2 timer)<a class="headerlink" href="#immediat-i-dag-1-2-timer" title="Permanent link">&para;</a></h3>
+<h4 id="1-test-open-webui-med-qwen-30-min">1. Test Open WebUI med Qwen ⏰ 30 min<a class="headerlink" href="#1-test-open-webui-med-qwen-30-min" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Start Open WebUI</span>
+<span class="p">.\</span><span class="n">scripts</span><span class="p">\</span><span class="n">manage-docker</span><span class="p">.</span><span class="n">ps1</span> <span class="nb">start</span>
 
-Analysér derefter indholdet og giv mig en rapport.
+<span class="c"># Åbn browser: http://localhost:3000</span>
+<span class="c"># Test conversation med qwen2.5-coder:14b</span>
+<span class="c"># Verificer tool/function calling virker</span>
 </code></pre></div>
-<h3 id="eksempel-2-hent-og-analyser-enhver-webside">Eksempel 2: Hent og analysér enhver webside<a class="headerlink" href="#eksempel-2-hent-og-analyser-enhver-webside" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Hent indholdet fra https://example.com og giv mig en opsummering.
+<p><strong>Success Criteria:</strong>
+- ✅ Chat interface connects to Ollama
+- ✅ Kan vælge Qwen model
+- ✅ Response quality matches CLI tests
+- ✅ Multi-turn conversations work</p>
+<h4 id="2-generate-billydk-mcp-server-skeleton-30-min">2. Generate Billy.dk MCP Server Skeleton ⏰ 30 min<a class="headerlink" href="#2-generate-billydk-mcp-server-skeleton-30-min" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Brug Qwen til at generate initial code</span>
+<span class="n">ollama</span> <span class="n">run</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b</span> <span class="s2">&quot;Create a Python MCP server for Billy.dk invoice API integration. Include endpoints for: create invoice, list invoices, get invoice by ID. Use FastAPI, include type hints, error handling, and authentication.&quot;</span>
 </code></pre></div>
-<h2 id="fejlfinding">🔍 Fejlfinding<a class="headerlink" href="#fejlfinding" title="Permanent link">&para;</a></h2>
-<h3 id="problem-mcp-server-vises-ikke-i-cursor">Problem: MCP-server vises ikke i Cursor<a class="headerlink" href="#problem-mcp-server-vises-ikke-i-cursor" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-1. Bekræft at Python er i PATH: <code>python --version</code>
-2. Kontroller den fulde sti er korrekt i konfigurationen
-3. Genstart Cursor fuldstændigt
-4. Tjek Cursor's output/developer tools for fejl</p>
-<h3 id="problem-playwright-timeout-fejl">Problem: Playwright timeout fejl<a class="headerlink" href="#problem-playwright-timeout-fejl" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-1. Kontroller internetforbindelse
-2. Nogle sider tager længere tid - timeout kan øges i <code>mcp_web_scraper.py</code>
-3. Prøv <code>fetch_url_simple</code> som alternativ for statiske sider</p>
-<h3 id="problem-unicodeencodeerror">Problem: UnicodeEncodeError<a class="headerlink" href="#problem-unicodeencodeerror" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-- Dette er allerede fikset i test-scriptet
-- Hvis det sker i MCP-serveren, lad mig vide</p>
-<h2 id="fil-struktur">📁 Fil struktur<a class="headerlink" href="#fil-struktur" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>tekup-ai-assistant/
-├── configs/
-│   └── claude-desktop/
-│       ├── mcp_config.json           # MCP konfiguration
-│       └── CURSOR_MCP_SETUP.md       # Detaljerede setup-instruktioner
-├── scripts/
-│   ├── mcp_web_scraper.py            # MCP server (hovedfil)
-│   ├── test_mcp_scraper.py           # Test suite
-│   └── README.md                     # Scripts dokumentation
-└── docs/
-    └── MCP_WEB_SCRAPER_GUIDE.md      # Denne guide
+<p><strong>Forventet Output:</strong>
+- Complete FastAPI server structure
+- Authentication middleware
+- Error handling
+- Type hints throughout
+- Ready for customization</p>
+<h4 id="3-review-og-save-generated-code-30-min">3. Review og Save Generated Code ⏰ 30 min<a class="headerlink" href="#3-review-og-save-generated-code-30-min" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Review Qwen's generated code</li>
+<li>Save til <code>mcp-servers/billy/</code></li>
+<li>Test basic structure</li>
+<li>Plan customizations</li>
+</ul>
+<hr />
+<h3 id="denne-uge-3-5-timer">Denne Uge (3-5 timer)<a class="headerlink" href="#denne-uge-3-5-timer" title="Permanent link">&para;</a></h3>
+<h4 id="day-1-billydk-mcp-server-foundation">Day 1: Billy.dk MCP Server Foundation<a class="headerlink" href="#day-1-billydk-mcp-server-foundation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Setup project structure (<code>mcp-servers/billy/</code>)</li>
+<li>[ ] Create <code>requirements.txt</code> med dependencies</li>
+<li>[ ] Implement basic FastAPI server</li>
+<li>[ ] Add Billy.dk API authentication</li>
+<li>[ ] Test connection til Billy.dk API</li>
+</ul>
+<h4 id="day-2-core-mcp-tools-implementation">Day 2: Core MCP Tools Implementation<a class="headerlink" href="#day-2-core-mcp-tools-implementation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Implement <code>create_invoice</code> tool</li>
+<li>[ ] Implement <code>list_invoices</code> tool</li>
+<li>[ ] Implement <code>get_invoice</code> tool</li>
+<li>[ ] Add error handling og logging</li>
+<li>[ ] Write unit tests</li>
+</ul>
+<h4 id="day-3-integration-testing">Day 3: Integration &amp; Testing<a class="headerlink" href="#day-3-integration-testing" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Connect MCP server til Open WebUI</li>
+<li>[ ] Test invoice creation via chat</li>
+<li>[ ] Test error scenarios</li>
+<li>[ ] Document API usage</li>
+<li>[ ] Create usage examples</li>
+</ul>
+<hr />
+<h3 id="nste-uge-5-8-timer">Næste Uge (5-8 timer)<a class="headerlink" href="#nste-uge-5-8-timer" title="Permanent link">&para;</a></h3>
+<h4 id="week-2-renos-integration">Week 2: RenOS Integration<a class="headerlink" href="#week-2-renos-integration" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Create RenOS MCP server</li>
+<li>[ ] Implement booking tools</li>
+<li>[ ] Calendar sync</li>
+<li>[ ] Google Workspace integration</li>
+<li>[ ] End-to-end testing</li>
+</ul>
+<h4 id="week-2-documentation-deployment">Week 2: Documentation &amp; Deployment<a class="headerlink" href="#week-2-documentation-deployment" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Complete API documentation</li>
+<li>[ ] Create user guides</li>
+<li>[ ] Setup monitoring</li>
+<li>[ ] Deploy to production environment</li>
+<li>[ ] Create demo video</li>
+</ul>
+<hr />
+<h2 id="development-workflow">🛠️ Development Workflow<a class="headerlink" href="#development-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="model-selection-strategy">Model Selection Strategy<a class="headerlink" href="#model-selection-strategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Task Type → Model Choice
+
+├─ Code Generation (Billy/RenOS MCP)
+│  └─ Qwen 2.5 Coder 14B ⭐
+│
+├─ Code Review &amp; Debugging
+│  └─ Qwen 2.5 Coder 14B ⭐
+│
+├─ Documentation Writing
+│  ├─ Qwen 2.5 Coder 14B (best quality)
+│  └─ Llama 3.2 3B (faster)
+│
+├─ Complex Architecture Decisions
+│  └─ GPT-OSS 120B Cloud
+│
+└─ Quick Q&amp;A
+    └─ Llama 3.2 3B (fastest)
 </code></pre></div>
-<h2 id="hvad-kan-du-nu-gre">🎉 Hvad kan du nu gøre?<a class="headerlink" href="#hvad-kan-du-nu-gre" title="Permanent link">&para;</a></h2>
-<p>Med MCP Web Scraper aktiveret kan AI-assistenten:</p>
-<ol>
-<li>✅ Hente indhold fra delte Claude-samtaler</li>
-<li>✅ Analysere dynamisk JavaScript-renderet indhold</li>
-<li>✅ Scrape enhver offentlig tilgængelig webside</li>
-<li>✅ Automatisk analysere og rapportere om webindhold</li>
-<li>✅ Integrere web-data i dit TekUp AI Assistant workflow</li>
-</ol>
-<h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Hvis du støder på problemer:</p>
-<ol>
-<li>Kør test-scriptet: <code>python scripts/test_mcp_scraper.py</code></li>
-<li>Tjek logs i Cursor's developer tools</li>
-<li>Verificér alle pakker er installeret: <code>pip list | findstr "mcp playwright requests"</code></li>
-</ol>
-<h2 id="nste-opgave">🔄 Næste opgave<a class="headerlink" href="#nste-opgave" title="Permanent link">&para;</a></h2>
-<p>Nu hvor MCP-serveren er sat op, er næste skridt:</p>
-<ol>
-<li><strong>Tilføj MCP-serveren i Cursor Settings</strong> (følg Metode 1 ovenfor)</li>
-<li><strong>Genstart Cursor</strong></li>
-<li><strong>Test at værktøjerne er tilgængelige</strong></li>
-<li><strong>Hent og analysér det delte Claude-link</strong></li>
-</ol>
-<p>Når du har aktiveret MCP-serveren i Cursor, kan du bede AI-assistenten om at hente og analysere indholdet fra:
-<div class="highlight"><pre><span></span><code>https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
+<h3 id="recommended-prompts-for-billydk">Recommended Prompts for Billy.dk<a class="headerlink" href="#recommended-prompts-for-billydk" title="Permanent link">&para;</a></h3>
+<p><strong>Prompt Template:</strong>
+<div class="highlight"><pre><span></span><code>Context: I&#39;m building an MCP server for Billy.dk invoice API integration.
+
+Task: [Specific task]
+
+Requirements:
+- Use Python 3.11+
+- Include type hints
+- Add comprehensive error handling
+- Follow FastAPI best practices
+- Include docstrings
+- Make it production-ready
+
+Code:
 </code></pre></div></p>
+<p><strong>Example Prompts:</strong></p>
+<ol>
+<li>
+<p><strong>Authentication:</strong>
+<div class="highlight"><pre><span></span><code>Create a Billy.dk API authentication module with:
+- API key management
+- Token refresh logic
+- Error handling for auth failures
+- Environment variable configuration
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Invoice Creation:</strong>
+<div class="highlight"><pre><span></span><code>Create an invoice creation function that:
+- Takes customer_id, items list, and optional notes
+- Validates all inputs
+- Calls Billy.dk API endpoint
+- Returns structured response or error
+- Logs all operations
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Error Handling:</strong>
+<div class="highlight"><pre><span></span><code>Create comprehensive error handling for Billy.dk API with:
+- Custom exception classes
+- Retry logic for network errors
+- User-friendly error messages
+- Logging of all errors
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="success-metrics">📊 Success Metrics<a class="headerlink" href="#success-metrics" title="Permanent link">&para;</a></h2>
+<h3 id="phase-2-completion-ai-infrastructure">Phase 2 Completion (AI Infrastructure)<a class="headerlink" href="#phase-2-completion-ai-infrastructure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Ollama running (DONE)</li>
+<li>✅ Coding model installed (DONE - Qwen)</li>
+<li>✅ Model tested (DONE - 97% score)</li>
+<li>⏳ Chat interface configured (30 min)</li>
+<li><strong>Target:</strong> 100% by end of day</li>
+</ul>
+<h3 id="phase-3-kickoff-billy-integration">Phase 3 Kickoff (Billy Integration)<a class="headerlink" href="#phase-3-kickoff-billy-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>⏳ MCP server skeleton generated</li>
+<li>⏳ Basic invoice creation working</li>
+<li>⏳ First test invoice created via chat</li>
+<li><strong>Target:</strong> Week 1 completion</li>
+</ul>
+<h3 id="performance-targets">Performance Targets<a class="headerlink" href="#performance-targets" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Response Time:</strong> &lt; 15 seconds per code generation</li>
+<li><strong>Code Quality:</strong> &gt; 90% production-ready (no major refactor needed)</li>
+<li><strong>Success Rate:</strong> &gt; 95% of generated code works first time</li>
+<li><strong>Time Saving:</strong> 80% reduction vs manual coding</li>
+</ul>
+<hr />
+<h2 id="learning-best-practices">🎓 Learning &amp; Best Practices<a class="headerlink" href="#learning-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="working-with-qwen-25-coder">Working with Qwen 2.5 Coder<a class="headerlink" href="#working-with-qwen-25-coder" title="Permanent link">&para;</a></h3>
+<p><strong>DO:</strong>
+✅ Provide clear context and requirements
+✅ Ask for type hints and error handling explicitly
+✅ Request documentation and examples
+✅ Use for complex code generation
+✅ Leverage for debugging assistance
+✅ Ask for explanations of generated code</p>
+<p><strong>DON'T:</strong>
+❌ Use for trivial tasks (use Llama 3.2 instead)
+❌ Accept code without review
+❌ Skip testing generated code
+❌ Forget to ask for production-ready features</p>
+<h3 id="code-review-checklist">Code Review Checklist<a class="headerlink" href="#code-review-checklist" title="Permanent link">&para;</a></h3>
+<p>For all Qwen-generated code:
+- [ ] Type hints present og correct
+- [ ] Error handling comprehensive
+- [ ] Logging implemented
+- [ ] Docstrings complete
+- [ ] Tests written
+- [ ] Security considerations addressed
+- [ ] Performance acceptable
+- [ ] Follows project conventions</p>
+<hr />
+<h2 id="risk-mitigation">🚨 Risk Mitigation<a class="headerlink" href="#risk-mitigation" title="Permanent link">&para;</a></h2>
+<h3 id="potential-issues-solutions">Potential Issues &amp; Solutions<a class="headerlink" href="#potential-issues-solutions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generated code has bugs</td>
+<td>Always review &amp; test; use test-driven approach</td>
+</tr>
+<tr>
+<td>API rate limiting</td>
+<td>Implement caching &amp; retry logic in generated code</td>
+</tr>
+<tr>
+<td>Model misunderstands requirements</td>
+<td>Provide detailed context; iterate on prompts</td>
+</tr>
+<tr>
+<td>Performance issues</td>
+<td>Profile code; ask Qwen for optimization suggestions</td>
+</tr>
+<tr>
+<td>Security vulnerabilities</td>
+<td>Security review; ask Qwen about security best practices</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="roi-projection">💰 ROI Projection<a class="headerlink" href="#roi-projection" title="Permanent link">&para;</a></h2>
+<h3 id="time-savings-with-qwen">Time Savings with Qwen<a class="headerlink" href="#time-savings-with-qwen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Manual Time</th>
+<th>Qwen Time</th>
+<th>Savings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Billy MCP Server</td>
+<td>8 hours</td>
+<td>2 hours</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>RenOS Integration</td>
+<td>6 hours</td>
+<td>1.5 hours</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>Test Generation</td>
+<td>4 hours</td>
+<td>1 hour</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>3 hours</td>
+<td>30 min</td>
+<td>83%</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>21 hours</strong></td>
+<td><strong>5 hours</strong></td>
+<td><strong>76%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Value Created:</strong>
+- 16 hours saved per major integration
+- @ 350 DKK/hour = <strong>5,600 DKK saved</strong>
+- Høj code quality = færre bugs = yderligere besparelser</p>
+<hr />
+<h2 id="progress-tracking">📈 Progress Tracking<a class="headerlink" href="#progress-tracking" title="Permanent link">&para;</a></h2>
+<h3 id="week-1-milestones">Week 1 Milestones<a class="headerlink" href="#week-1-milestones" title="Permanent link">&para;</a></h3>
+<p><strong>Monday (Today):</strong>
+- [x] Download Qwen ✅
+- [x] Test Qwen ✅
+- [x] Document results ✅
+- [ ] Test Open WebUI
+- [ ] Generate Billy skeleton</p>
+<p><strong>Tuesday:</strong>
+- [ ] Implement Billy MCP foundation
+- [ ] Test basic functionality
+- [ ] Create first invoice via chat</p>
+<p><strong>Wednesday:</strong>
+- [ ] Complete Billy MCP tools
+- [ ] Write tests
+- [ ] Documentation</p>
+<p><strong>Thursday:</strong>
+- [ ] Integration testing
+- [ ] Bug fixes
+- [ ] Performance tuning</p>
+<p><strong>Friday:</strong>
+- [ ] Demo preparation
+- [ ] Review &amp; retrospective
+- [ ] Plan RenOS integration</p>
+<hr />
+<h2 id="definition-of-done">🎯 Definition of Done<a class="headerlink" href="#definition-of-done" title="Permanent link">&para;</a></h2>
+<h3 id="phase-2-ai-infrastructure">Phase 2: AI Infrastructure ✅<a class="headerlink" href="#phase-2-ai-infrastructure" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[x] Qwen 2.5 Coder 14B downloaded</li>
+<li>[x] Model tested thoroughly</li>
+<li>[x] Test results documented</li>
+<li>[ ] Open WebUI configured</li>
+<li>[ ] All models accessible via chat</li>
+</ul>
+<h3 id="phase-3-billydk-integration-week-1">Phase 3: Billy.dk Integration (Week 1)<a class="headerlink" href="#phase-3-billydk-integration-week-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] MCP server running</li>
+<li>[ ] Create invoice via chat works</li>
+<li>[ ] List invoices works</li>
+<li>[ ] Error handling tested</li>
+<li>[ ] Documentation complete</li>
+<li>[ ] Demo video recorded</li>
+</ul>
+<hr />
+<h2 id="support-resources">📞 Support Resources<a class="headerlink" href="#support-resources" title="Permanent link">&para;</a></h2>
+<p><strong>Documentation:</strong>
+- Test Results: <code>docs/QWEN_TEST_RESULTS.md</code>
+- Model Status: <code>docs/INSTALLED_MODELS_REPORT.md</code>
+- MCP Resources: <code>docs/MCP_RESOURCES.md</code>
+- Billy Guide: <code>docs/guides/billy-integration.md</code></p>
+<p><strong>Commands:</strong>
+<div class="highlight"><pre><span></span><code><span class="c"># Test Qwen directly</span>
+<span class="n">ollama</span> <span class="n">run</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b</span> <span class="s2">&quot;your prompt here&quot;</span>
+
+<span class="c"># Check all models</span>
+<span class="n">ollama</span> <span class="n">list</span>
+
+<span class="c"># Model details</span>
+<span class="n">ollama</span> <span class="n">show</span> <span class="n">qwen2</span><span class="p">.</span><span class="n">5-coder</span><span class="p">:</span><span class="n">14b</span>
+
+<span class="c"># Start Open WebUI</span>
+<span class="p">.\</span><span class="n">scripts</span><span class="p">\</span><span class="n">manage-docker</span><span class="p">.</span><span class="n">ps1</span> <span class="nb">start</span>
+</code></pre></div></p>
+<hr />
+<h2 id="conclusion">🎉 Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Qwen 2.5 Coder 14B er <strong>game-changing</strong> for TekUp AI Assistant projektet:</p>
+<p>✅ <strong>Production-ready code quality</strong><br />
+✅ <strong>Perfect til Billy.dk MCP development</strong><br />
+✅ <strong>76% time savings projected</strong><br />
+✅ <strong>97% test score - EXCELLENT</strong></p>
+<p><strong>Status:</strong> READY TO BUILD! 🚀</p>
+<p><strong>Next Action:</strong> Start Open WebUI og begin Billy.dk MCP implementation</p>
+<hr />
+<p><strong>Document Version:</strong> 1.0<br />
+<strong>Last Updated:</strong> 2025-10-16<br />
+<strong>Status:</strong> Active Implementation Plan<br />
+<strong>Owner:</strong> TekUp Team</p>
 
 
 

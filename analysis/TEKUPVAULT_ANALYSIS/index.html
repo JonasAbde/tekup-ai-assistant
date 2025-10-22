@@ -12,28 +12,24 @@
         <meta name="author" content="TekUp Team">
       
       
-        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/MCP_WEB_SCRAPER_GUIDE/">
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/analysis/TEKUPVAULT_ANALYSIS/">
       
       
-        <link rel="prev" href="../TROUBLESHOOTING/">
       
       
-        <link rel="next" href="../MCP_RESOURCES/">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>MCP Web Scraper - TekUp AI Assistant</title>
+        <title>TekupVault - Architecture Analysis - TekUp AI Assistant</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mcp-web-scraper-setup-guide" class="md-skip">
+        <a href="#tekupvault-architecture-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="TekUp AI Assistant" class="md-header__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+    <a href="../.." title="TekUp AI Assistant" class="md-header__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MCP Web Scraper
+              TekupVault - Architecture Analysis
             
           </span>
         </div>
@@ -225,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../SETUP/" class="md-tabs__link">
+        <a href="../../SETUP/" class="md-tabs__link">
           
   
   
@@ -262,13 +258,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../WORKFLOWS/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../WORKFLOWS/" class="md-tabs__link">
           
   
   
@@ -288,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../BILLY_INTEGRATION_SUMMARY/" class="md-tabs__link">
+        <a href="../../BILLY_INTEGRATION_SUMMARY/" class="md-tabs__link">
           
   
   
@@ -308,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../api/tekup-billy-api/" class="md-tabs__link">
+        <a href="../../api/tekup-billy-api/" class="md-tabs__link">
           
   
   
@@ -328,7 +322,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../guides/daily-workflow/" class="md-tabs__link">
+        <a href="../../guides/daily-workflow/" class="md-tabs__link">
           
   
   
@@ -348,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../examples/create-invoice/" class="md-tabs__link">
+        <a href="../../examples/create-invoice/" class="md-tabs__link">
           
   
   
@@ -382,7 +376,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="TekUp AI Assistant" class="md-nav__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+    <a href="../.." title="TekUp AI Assistant" class="md-nav__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -412,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -477,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SETUP/" class="md-nav__link">
+      <a href="../../SETUP/" class="md-nav__link">
         
   
   
@@ -500,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ARCHITECTURE/" class="md-nav__link">
+      <a href="../../ARCHITECTURE/" class="md-nav__link">
         
   
   
@@ -523,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AI_ASSISTANT_STATUS_REPORT/" class="md-nav__link">
+      <a href="../../AI_ASSISTANT_STATUS_REPORT/" class="md-nav__link">
         
   
   
@@ -546,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../INSTALLED_MODELS_REPORT/" class="md-nav__link">
+      <a href="../../INSTALLED_MODELS_REPORT/" class="md-nav__link">
         
   
   
@@ -569,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QWEN_TEST_RESULTS/" class="md-nav__link">
+      <a href="../../QWEN_TEST_RESULTS/" class="md-nav__link">
         
   
   
@@ -592,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../CHANGELOG/" class="md-nav__link">
+      <a href="../../CHANGELOG/" class="md-nav__link">
         
   
   
@@ -619,31 +613,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -656,7 +645,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -670,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WORKFLOWS/" class="md-nav__link">
+      <a href="../../WORKFLOWS/" class="md-nav__link">
         
   
   
@@ -693,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TROUBLESHOOTING/" class="md-nav__link">
+      <a href="../../TROUBLESHOOTING/" class="md-nav__link">
         
   
   
@@ -713,32 +702,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    MCP Web Scraper
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
         
   
   
@@ -749,254 +716,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-er-implementeret" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Hvad er implementeret?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Installation Status
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-skridt-aktiver-mcp-serveren-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Næste skridt: Aktivér MCP-serveren i Cursor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Næste skridt: Aktivér MCP-serveren i Cursor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metode-1-via-cursor-settings-anbefalet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 1: Via Cursor Settings (Anbefalet)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metode-2-via-konfigurationsfil" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 2: Via konfigurationsfil
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tilgngelige-vrktjer" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Tilgængelige værktøjer
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Tilgængelige værktøjer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-fetch_url-anbefalet-til-dynamisk-indhold" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. fetch_url (Anbefalet til dynamisk indhold)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-fetch_url_simple-hurtigere-til-statiske-sider" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. fetch_url_simple (Hurtigere til statiske sider)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verificer-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Verificér installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧪 Verificér installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#test-mcp-serveren-direkte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test MCP-serveren direkte:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-i-cursor-efter-genstart" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test i Cursor (efter genstart):
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brug-mcp-serveren" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Brug MCP-serveren
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🎯 Brug MCP-serveren">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#eksempel-1-hent-delt-claude-samtale" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eksempel 1: Hent delt Claude-samtale
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eksempel-2-hent-og-analyser-enhver-webside" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eksempel 2: Hent og analysér enhver webside
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fejlfinding" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Fejlfinding
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔍 Fejlfinding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-mcp-server-vises-ikke-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: MCP-server vises ikke i Cursor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-playwright-timeout-fejl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: Playwright timeout fejl
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-unicodeencodeerror" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: UnicodeEncodeError
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fil-struktur" class="md-nav__link">
-    <span class="md-ellipsis">
-      📁 Fil struktur
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-kan-du-nu-gre" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎉 Hvad kan du nu gøre?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      📞 Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-opgave" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 Næste opgave
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1009,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MCP_RESOURCES/" class="md-nav__link">
+      <a href="../../MCP_RESOURCES/" class="md-nav__link">
         
   
   
@@ -1032,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TEKUP_UNIFIED_CODE_STANDARDS/" class="md-nav__link">
+      <a href="../../TEKUP_UNIFIED_CODE_STANDARDS/" class="md-nav__link">
         
   
   
@@ -1105,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../BILLY_INTEGRATION_SUMMARY/" class="md-nav__link">
+      <a href="../../BILLY_INTEGRATION_SUMMARY/" class="md-nav__link">
         
   
   
@@ -1128,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../BILLY_INTEGRATION_COMPLETE/" class="md-nav__link">
+      <a href="../../BILLY_INTEGRATION_COMPLETE/" class="md-nav__link">
         
   
   
@@ -1151,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis/TEKUP_BILLY_COMPLETE_ANALYSIS/" class="md-nav__link">
+      <a href="../TEKUP_BILLY_COMPLETE_ANALYSIS/" class="md-nav__link">
         
   
   
@@ -1174,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis/REPO_INVENTORY/" class="md-nav__link">
+      <a href="../REPO_INVENTORY/" class="md-nav__link">
         
   
   
@@ -1247,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/tekup-billy-api/" class="md-nav__link">
+      <a href="../../api/tekup-billy-api/" class="md-nav__link">
         
   
   
@@ -1320,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/daily-workflow/" class="md-nav__link">
+      <a href="../../guides/daily-workflow/" class="md-nav__link">
         
   
   
@@ -1343,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/cli-control/" class="md-nav__link">
+      <a href="../../guides/cli-control/" class="md-nav__link">
         
   
   
@@ -1366,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/billy-integration/" class="md-nav__link">
+      <a href="../../guides/billy-integration/" class="md-nav__link">
         
   
   
@@ -1389,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/docker-troubleshooting/" class="md-nav__link">
+      <a href="../../guides/docker-troubleshooting/" class="md-nav__link">
         
   
   
@@ -1412,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guides/tekupvault-guide/" class="md-nav__link">
+      <a href="../../guides/tekupvault-guide/" class="md-nav__link">
         
   
   
@@ -1485,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/create-invoice/" class="md-nav__link">
+      <a href="../../examples/create-invoice/" class="md-nav__link">
         
   
   
@@ -1535,46 +1254,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hvad-er-implementeret" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Hvad er implementeret?
+      🏗️ Architecture
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Installation Status
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-skridt-aktiver-mcp-serveren-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Næste skridt: Aktivér MCP-serveren i Cursor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Næste skridt: Aktivér MCP-serveren i Cursor">
+    <nav class="md-nav" aria-label="🏗️ Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#metode-1-via-cursor-settings-anbefalet" class="md-nav__link">
+  <a href="#monorepo-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      Metode 1: Via Cursor Settings (Anbefalet)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metode-2-via-konfigurationsfil" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 2: Via konfigurationsfil
+      Monorepo Structure
     </span>
   </a>
   
@@ -1586,28 +1278,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tilgngelige-vrktjer" class="md-nav__link">
+  <a href="#tech-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      🔧 Tilgængelige værktøjer
+      📦 Tech Stack
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔧 Tilgængelige værktøjer">
+    <nav class="md-nav" aria-label="📦 Tech Stack">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-fetch_url-anbefalet-til-dynamisk-indhold" class="md-nav__link">
+  <a href="#build-system" class="md-nav__link">
     <span class="md-ellipsis">
-      1. fetch_url (Anbefalet til dynamisk indhold)
+      Build System
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-fetch_url_simple-hurtigere-til-statiske-sider" class="md-nav__link">
+  <a href="#runtime" class="md-nav__link">
     <span class="md-ellipsis">
-      2. fetch_url_simple (Hurtigere til statiske sider)
+      Runtime
     </span>
   </a>
   
@@ -1619,28 +1311,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verificer-installation" class="md-nav__link">
+  <a href="#apps-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Verificér installation
+      🔧 Apps &amp; Packages
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧪 Verificér installation">
+    <nav class="md-nav" aria-label="🔧 Apps &amp; Packages">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-mcp-serveren-direkte" class="md-nav__link">
+  <a href="#app-vault-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Test MCP-serveren direkte:
+      App: vault-api
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-i-cursor-efter-genstart" class="md-nav__link">
+  <a href="#app-vault-worker" class="md-nav__link">
     <span class="md-ellipsis">
-      Test i Cursor (efter genstart):
+      App: vault-worker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-vault-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package: vault-core
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-vault-ingest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package: vault-ingest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-vault-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package: vault-search
     </span>
   </a>
   
@@ -1652,28 +1371,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brug-mcp-serveren" class="md-nav__link">
+  <a href="#notable-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Brug MCP-serveren
+      🎯 Notable Patterns
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎯 Brug MCP-serveren">
+    <nav class="md-nav" aria-label="🎯 Notable Patterns">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#eksempel-1-hent-delt-claude-samtale" class="md-nav__link">
+  <a href="#monorepo-benefits" class="md-nav__link">
     <span class="md-ellipsis">
-      Eksempel 1: Hent delt Claude-samtale
+      Monorepo Benefits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#eksempel-2-hent-og-analyser-enhver-webside" class="md-nav__link">
+  <a href="#microservices-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Eksempel 2: Hent og analysér enhver webside
+      Microservices Approach
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspace References
     </span>
   </a>
   
@@ -1685,37 +1413,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fejlfinding" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 Fejlfinding
+      💡 Key Takeaways
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔍 Fejlfinding">
+    <nav class="md-nav" aria-label="💡 Key Takeaways">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problem-mcp-server-vises-ikke-i-cursor" class="md-nav__link">
+  <a href="#for-ai-assistant-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem: MCP-server vises ikke i Cursor
+      For AI Assistant Integration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#problem-playwright-timeout-fejl" class="md-nav__link">
+  <a href="#code-standards-same-as-billyrenos" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem: Playwright timeout fejl
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-unicodeencodeerror" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: UnicodeEncodeError
+      Code Standards (Same as Billy/RenOS)
     </span>
   </a>
   
@@ -1727,36 +1446,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fil-struktur" class="md-nav__link">
+  <a href="#complexity" class="md-nav__link">
     <span class="md-ellipsis">
-      📁 Fil struktur
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-kan-du-nu-gre" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎉 Hvad kan du nu gøre?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      📞 Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-opgave" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 Næste opgave
+      📊 Complexity
     </span>
   </a>
   
@@ -1781,161 +1473,167 @@
   
 
 
-<h1 id="mcp-web-scraper-setup-guide">MCP Web Scraper Setup Guide<a class="headerlink" href="#mcp-web-scraper-setup-guide" title="Permanent link">&para;</a></h1>
-<h2 id="hvad-er-implementeret">🎯 Hvad er implementeret?<a class="headerlink" href="#hvad-er-implementeret" title="Permanent link">&para;</a></h2>
-<p>En Python-baseret MCP (Model Context Protocol) server der giver AI-assistenten evnen til at hente og analysere webindhold direkte, inklusiv JavaScript-renderet indhold fra delte Claude-samtaler.</p>
-<h2 id="installation-status">✅ Installation Status<a class="headerlink" href="#installation-status" title="Permanent link">&para;</a></h2>
-<p>Alle nødvendige komponenter er installeret og testet:</p>
+<h1 id="tekupvault-architecture-analysis">TekupVault - Architecture Analysis<a class="headerlink" href="#tekupvault-architecture-analysis" title="Permanent link">&para;</a></h1>
+<p><strong>Dato:</strong> 16. oktober 2025<br />
+<strong>Version:</strong> 0.1.0<br />
+<strong>Repo:</strong> C:\Users\empir\TekupVault</p>
+<hr />
+<h2 id="architecture">🏗️ Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p><strong>Pattern:</strong> Turborepo Monorepo + Microservices</p>
+<h3 id="monorepo-structure">Monorepo Structure<a class="headerlink" href="#monorepo-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>TekupVault/
+├── apps/
+│   ├── vault-api/          # REST API service
+│   └── vault-worker/       # Background job worker
+├── packages/
+│   ├── vault-core/         # Shared config og types
+│   ├── vault-ingest/       # GitHub sync logic
+│   └── vault-search/       # Embeddings og search
+├── supabase/               # Database migrations
+├── turbo.json              # Turbo config
+└── pnpm-workspace.yaml     # Workspace definition
+</code></pre></div>
+<hr />
+<h2 id="tech-stack">📦 Tech Stack<a class="headerlink" href="#tech-stack" title="Permanent link">&para;</a></h2>
+<h3 id="build-system">Build System<a class="headerlink" href="#build-system" title="Permanent link">&para;</a></h3>
 <ul>
-<li>✅ <strong>Python 3.13.7</strong> - Kørende og verificeret</li>
-<li>✅ <strong>Node.js v24.8.0</strong> - Installeret (bonus, ikke påkrævet)</li>
-<li>✅ <strong>MCP Python pakke</strong> - Installeret</li>
-<li>✅ <strong>Playwright</strong> - Installeret med Chromium browser</li>
-<li>✅ <strong>Requests &amp; BeautifulSoup4</strong> - Installeret</li>
-<li>✅ <strong>MCP Web Scraper</strong> - Oprettet og testet</li>
-<li>✅ <strong>Test Suite</strong> - Alle tests bestået ✅</li>
+<li><strong>Monorepo:</strong> Turborepo 1.11</li>
+<li><strong>Package Manager:</strong> pnpm 8.15</li>
+<li><strong>Testing:</strong> Vitest 2.1 + Coverage</li>
+<li><strong>Linting:</strong> ESLint + TypeScript ESLint</li>
+<li><strong>Formatting:</strong> Prettier</li>
 </ul>
-<h2 id="nste-skridt-aktiver-mcp-serveren-i-cursor">🚀 Næste skridt: Aktivér MCP-serveren i Cursor<a class="headerlink" href="#nste-skridt-aktiver-mcp-serveren-i-cursor" title="Permanent link">&para;</a></h2>
-<h3 id="metode-1-via-cursor-settings-anbefalet">Metode 1: Via Cursor Settings (Anbefalet)<a class="headerlink" href="#metode-1-via-cursor-settings-anbefalet" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Åbn Cursor Settings</strong></li>
-<li>
-<p>Tryk <code>Ctrl+,</code> eller File &gt; Preferences &gt; Settings</p>
-</li>
-<li>
-<p><strong>Find MCP Settings</strong></p>
-</li>
-<li>Søg efter "MCP" i søgefeltet</li>
-<li>
-<p>Gå til Features &gt; MCP</p>
-</li>
-<li>
-<p><strong>Tilføj MCP Server</strong></p>
-</li>
-<li>Klik på "+ Add New MCP Server"</li>
-<li>
-<p>Indtast:</p>
+<h3 id="runtime">Runtime<a class="headerlink" href="#runtime" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Navn:</strong> <code>web-scraper</code></li>
-<li><strong>Type:</strong> <code>stdio</code></li>
-<li><strong>Command:</strong> <code>python</code></li>
-<li><strong>Args:</strong> <code>C:\Users\empir\tekup-ai-assistant\scripts\mcp_web_scraper.py</code></li>
+<li><strong>Language:</strong> TypeScript 5.3</li>
+<li><strong>Runtime:</strong> Node.js 18+</li>
+<li><strong>Database:</strong> Supabase</li>
+<li><strong>Logging:</strong> Pino 8.17</li>
+<li><strong>API:</strong> Express 4.18</li>
+<li><strong>Security:</strong> Helmet + CORS + Rate Limiting</li>
 </ul>
-</li>
-<li>
-<p><strong>Gem og Genstart</strong></p>
-</li>
-<li>Gem ændringerne</li>
-<li>Genstart Cursor fuldstændigt (luk og åbn)</li>
-</ol>
-<h3 id="metode-2-via-konfigurationsfil">Metode 2: Via konfigurationsfil<a class="headerlink" href="#metode-2-via-konfigurationsfil" title="Permanent link">&para;</a></h3>
-<p>Hvis Cursor understøtter at læse MCP-konfiguration fra fil:</p>
+<hr />
+<h2 id="apps-packages">🔧 Apps &amp; Packages<a class="headerlink" href="#apps-packages" title="Permanent link">&para;</a></h2>
+<h3 id="app-vault-api">App: vault-api<a class="headerlink" href="#app-vault-api" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> REST API for knowledge search</p>
+<p><strong>Dependencies:</strong>
+- <code>@supabase/supabase-js</code> - Database client
+- <code>@tekupvault/vault-core</code> - Shared config
+- <code>@tekupvault/vault-search</code> - Search logic
+- <code>express</code> - HTTP server
+- <code>helmet</code> + <code>cors</code> - Security
+- <code>express-rate-limit</code> - Rate limiting
+- <code>pino</code> + <code>pino-http</code> - Logging</p>
+<p><strong>Routes:</strong>
+- <code>/search</code> - Semantic search
+- <code>/sync</code> - GitHub sync trigger
+- <code>/webhooks</code> - GitHub webhooks
+- <code>/debug</code> - Debug endpoints</p>
+<h3 id="app-vault-worker">App: vault-worker<a class="headerlink" href="#app-vault-worker" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Background jobs</p>
+<p><strong>Jobs:</strong>
+- <code>sync-github.ts</code> - GitHub repository sync
+- <code>index-documents.ts</code> - Document indexing</p>
+<p><strong>Shared:</strong> Uses vault-core for config, vault-search for indexing</p>
+<h3 id="package-vault-core">Package: vault-core<a class="headerlink" href="#package-vault-core" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Shared configuration og types</p>
+<p><strong>Dependencies:</strong>
+- <code>zod</code> - Validation schemas
+- <code>typescript</code> - Build</p>
+<p><strong>Exports:</strong>
+- Config management
+- Shared types
+- Constants</p>
+<h3 id="package-vault-ingest">Package: vault-ingest<a class="headerlink" href="#package-vault-ingest" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> GitHub sync logic</p>
+<p><strong>Functionality:</strong>
+- GitHub API integration
+- Repository file fetching
+- Code indexing</p>
+<h3 id="package-vault-search">Package: vault-search<a class="headerlink" href="#package-vault-search" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Embeddings og search</p>
+<p><strong>Functionality:</strong>
+- Generate embeddings
+- Vector search
+- Semantic matching</p>
+<hr />
+<h2 id="notable-patterns">🎯 Notable Patterns<a class="headerlink" href="#notable-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="monorepo-benefits">Monorepo Benefits<a class="headerlink" href="#monorepo-benefits" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Code Sharing:</strong> vault-core shared across apps</li>
+<li><strong>Type Safety:</strong> Shared types across workspace</li>
+<li><strong>Atomic Changes:</strong> Update multiple packages together</li>
+<li><strong>Build Optimization:</strong> Turbo caching</li>
+</ul>
+<h3 id="microservices-approach">Microservices Approach<a class="headerlink" href="#microservices-approach" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Separation:</strong> API server vs background worker</li>
+<li><strong>Scalability:</strong> Scale API og worker independently</li>
+<li><strong>Resilience:</strong> Worker failures don't affect API</li>
+</ul>
+<h3 id="workspace-references">Workspace References<a class="headerlink" href="#workspace-references" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;web-scraper&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;C:\\Users\\empir\\tekup-ai-assistant\\scripts\\mcp_web_scraper.py&quot;</span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;@tekupvault/vault-core&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;workspace:*&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;@tekupvault/vault-search&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;workspace:*&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Konfigurationsfilen findes allerede her: <code>configs/claude-desktop/mcp_config.json</code></p>
-<h2 id="tilgngelige-vrktjer">🔧 Tilgængelige værktøjer<a class="headerlink" href="#tilgngelige-vrktjer" title="Permanent link">&para;</a></h2>
-<p>Når MCP-serveren er aktiveret, har AI-assistenten adgang til:</p>
-<h3 id="1-fetch_url-anbefalet-til-dynamisk-indhold">1. <code>fetch_url</code> (Anbefalet til dynamisk indhold)<a class="headerlink" href="#1-fetch_url-anbefalet-til-dynamisk-indhold" title="Permanent link">&para;</a></h3>
-<p>Bruger Playwright med Chromium til at hente indhold, inklusiv JavaScript-renderet sider.</p>
-<p><strong>Eksempel brug:</strong>
-<div class="highlight"><pre><span></span><code>Brug fetch_url værktøjet til at hente indhold fra:
-https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
-</code></pre></div></p>
-<p><strong>Parametre:</strong>
-- <code>url</code> (påkrævet): URL'en der skal hentes
-- <code>wait_for</code> (valgfri): CSS selector at vente på før scraping</p>
-<h3 id="2-fetch_url_simple-hurtigere-til-statiske-sider">2. <code>fetch_url_simple</code> (Hurtigere til statiske sider)<a class="headerlink" href="#2-fetch_url_simple-hurtigere-til-statiske-sider" title="Permanent link">&para;</a></h3>
-<p>Bruger simple HTTP requests til statiske HTML-sider.</p>
-<p><strong>Eksempel brug:</strong>
-<div class="highlight"><pre><span></span><code>Brug fetch_url_simple værktøjet til at hente: https://example.com
-</code></pre></div></p>
-<h2 id="verificer-installation">🧪 Verificér installation<a class="headerlink" href="#verificer-installation" title="Permanent link">&para;</a></h2>
-<h3 id="test-mcp-serveren-direkte">Test MCP-serveren direkte:<a class="headerlink" href="#test-mcp-serveren-direkte" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">scripts</span><span class="p">/</span><span class="n">test_mcp_scraper</span><span class="p">.</span><span class="n">py</span>
-</code></pre></div>
-<p>Du skulle se:
-<div class="highlight"><pre><span></span><code>✅ Simple HTTP: PASSED
-✅ Playwright: PASSED
-🎉 Alle tests bestået!
-</code></pre></div></p>
-<h3 id="test-i-cursor-efter-genstart">Test i Cursor (efter genstart):<a class="headerlink" href="#test-i-cursor-efter-genstart" title="Permanent link">&para;</a></h3>
-<p>Åbn en ny chat og spørg:
-<div class="highlight"><pre><span></span><code>Hvilke MCP-værktøjer har du adgang til?
-</code></pre></div></p>
-<p>Du skulle se <code>fetch_url</code> og <code>fetch_url_simple</code> i listen.</p>
-<h2 id="brug-mcp-serveren">🎯 Brug MCP-serveren<a class="headerlink" href="#brug-mcp-serveren" title="Permanent link">&para;</a></h2>
-<h3 id="eksempel-1-hent-delt-claude-samtale">Eksempel 1: Hent delt Claude-samtale<a class="headerlink" href="#eksempel-1-hent-delt-claude-samtale" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Brug fetch_url til at hente indholdet fra denne delte Claude-samtale:
-https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
-
-Analysér derefter indholdet og giv mig en rapport.
-</code></pre></div>
-<h3 id="eksempel-2-hent-og-analyser-enhver-webside">Eksempel 2: Hent og analysér enhver webside<a class="headerlink" href="#eksempel-2-hent-og-analyser-enhver-webside" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Hent indholdet fra https://example.com og giv mig en opsummering.
-</code></pre></div>
-<h2 id="fejlfinding">🔍 Fejlfinding<a class="headerlink" href="#fejlfinding" title="Permanent link">&para;</a></h2>
-<h3 id="problem-mcp-server-vises-ikke-i-cursor">Problem: MCP-server vises ikke i Cursor<a class="headerlink" href="#problem-mcp-server-vises-ikke-i-cursor" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-1. Bekræft at Python er i PATH: <code>python --version</code>
-2. Kontroller den fulde sti er korrekt i konfigurationen
-3. Genstart Cursor fuldstændigt
-4. Tjek Cursor's output/developer tools for fejl</p>
-<h3 id="problem-playwright-timeout-fejl">Problem: Playwright timeout fejl<a class="headerlink" href="#problem-playwright-timeout-fejl" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-1. Kontroller internetforbindelse
-2. Nogle sider tager længere tid - timeout kan øges i <code>mcp_web_scraper.py</code>
-3. Prøv <code>fetch_url_simple</code> som alternativ for statiske sider</p>
-<h3 id="problem-unicodeencodeerror">Problem: UnicodeEncodeError<a class="headerlink" href="#problem-unicodeencodeerror" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-- Dette er allerede fikset i test-scriptet
-- Hvis det sker i MCP-serveren, lad mig vide</p>
-<h2 id="fil-struktur">📁 Fil struktur<a class="headerlink" href="#fil-struktur" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>tekup-ai-assistant/
-├── configs/
-│   └── claude-desktop/
-│       ├── mcp_config.json           # MCP konfiguration
-│       └── CURSOR_MCP_SETUP.md       # Detaljerede setup-instruktioner
-├── scripts/
-│   ├── mcp_web_scraper.py            # MCP server (hovedfil)
-│   ├── test_mcp_scraper.py           # Test suite
-│   └── README.md                     # Scripts dokumentation
-└── docs/
-    └── MCP_WEB_SCRAPER_GUIDE.md      # Denne guide
-</code></pre></div>
-<h2 id="hvad-kan-du-nu-gre">🎉 Hvad kan du nu gøre?<a class="headerlink" href="#hvad-kan-du-nu-gre" title="Permanent link">&para;</a></h2>
-<p>Med MCP Web Scraper aktiveret kan AI-assistenten:</p>
+<hr />
+<h2 id="key-takeaways">💡 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h3 id="for-ai-assistant-integration">For AI Assistant Integration<a class="headerlink" href="#for-ai-assistant-integration" title="Permanent link">&para;</a></h3>
 <ol>
-<li>✅ Hente indhold fra delte Claude-samtaler</li>
-<li>✅ Analysere dynamisk JavaScript-renderet indhold</li>
-<li>✅ Scrape enhver offentlig tilgængelig webside</li>
-<li>✅ Automatisk analysere og rapportere om webindhold</li>
-<li>✅ Integrere web-data i dit TekUp AI Assistant workflow</li>
+<li><strong>Monorepo NOT needed:</strong> TekUp AI Assistant can stay simple</li>
+<li><strong>Shared Config Pattern:</strong> Can adopt for multi-module projects</li>
+<li><strong>Background Jobs:</strong> If needed, separate worker process</li>
+<li><strong>Pino Logging:</strong> Same as RenOS Backend</li>
+<li><strong>Supabase:</strong> Consistent database choice</li>
 </ol>
-<h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Hvis du støder på problemer:</p>
-<ol>
-<li>Kør test-scriptet: <code>python scripts/test_mcp_scraper.py</code></li>
-<li>Tjek logs i Cursor's developer tools</li>
-<li>Verificér alle pakker er installeret: <code>pip list | findstr "mcp playwright requests"</code></li>
-</ol>
-<h2 id="nste-opgave">🔄 Næste opgave<a class="headerlink" href="#nste-opgave" title="Permanent link">&para;</a></h2>
-<p>Nu hvor MCP-serveren er sat op, er næste skridt:</p>
-<ol>
-<li><strong>Tilføj MCP-serveren i Cursor Settings</strong> (følg Metode 1 ovenfor)</li>
-<li><strong>Genstart Cursor</strong></li>
-<li><strong>Test at værktøjerne er tilgængelige</strong></li>
-<li><strong>Hent og analysér det delte Claude-link</strong></li>
-</ol>
-<p>Når du har aktiveret MCP-serveren i Cursor, kan du bede AI-assistenten om at hente og analysere indholdet fra:
-<div class="highlight"><pre><span></span><code>https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
-</code></pre></div></p>
+<h3 id="code-standards-same-as-billyrenos">Code Standards (Same as Billy/RenOS)<a class="headerlink" href="#code-standards-same-as-billyrenos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>TypeScript strict mode</li>
+<li>Zod validation</li>
+<li>Express + Security middleware</li>
+<li>Pino logging</li>
+<li>ESLint + Prettier</li>
+</ul>
+<hr />
+<h2 id="complexity">📊 Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Complexity</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>High</td>
+<td>Monorepo with 2 apps, 3 packages</td>
+</tr>
+<tr>
+<td>Build System</td>
+<td>Medium</td>
+<td>Turbo + pnpm</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td>Low</td>
+<td>Minimal per package</td>
+</tr>
+<tr>
+<td>Deployment</td>
+<td>Medium</td>
+<td>Multiple services</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Status:</strong> ✅ Complete<br />
+<strong>Time:</strong> ~10 minutter<br />
+<strong>Insights:</strong> Sophisticated monorepo setup, not needed for AI Assistant</p>
 
 
 
@@ -1992,10 +1690,10 @@ Analysér derefter indholdet og giv mig en rapport.
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

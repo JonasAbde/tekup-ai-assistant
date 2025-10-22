@@ -1,0 +1,2586 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Local AI Assistant for automating daily business tasks">
+      
+      
+        <meta name="author" content="TekUp Team">
+      
+      
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/guides/tekupvault-guide/">
+      
+      
+        <link rel="prev" href="../docker-troubleshooting/">
+      
+      
+        <link rel="next" href="../../examples/create-invoice/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>TekupVault Guide - TekUp AI Assistant</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tekupvault-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TekUp AI Assistant" class="md-header__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TekUp AI Assistant
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TekupVault Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../SETUP/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../WORKFLOWS/" class="md-tabs__link">
+          
+  
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../BILLY_INTEGRATION_SUMMARY/" class="md-tabs__link">
+          
+  
+  
+  Billy Integration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api/tekup-billy-api/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../daily-workflow/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/create-invoice/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TekUp AI Assistant" class="md-nav__button md-logo" aria-label="TekUp AI Assistant" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TekUp AI Assistant
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JonasAbde/tekup-ai-assistant" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tekup-ai-assistant
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SETUP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI_ASSISTANT_STATUS_REPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Status Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../INSTALLED_MODELS_REPORT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installed Models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../QWEN_TEST_RESULTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qwen Test Results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TROUBLESHOOTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP Web Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MCP_RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MCP Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TEKUP_UNIFIED_CODE_STANDARDS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TekUp Code Standards
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Billy Integration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Billy Integration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BILLY_INTEGRATION_SUMMARY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Summary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BILLY_INTEGRATION_COMPLETE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Complete Report
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysis/TEKUP_BILLY_COMPLETE_ANALYSIS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysis/REPO_INVENTORY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repository Inventory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/tekup-billy-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Workflow Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../billy-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billy.dk Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    TekupVault Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    TekupVault Guide
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hvad-er-tekupvault" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hvad er TekupVault?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hvad er TekupVault?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hovedfunktioner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hovedfunktioner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arkitektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arkitektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Sessions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-archive_chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. archive_chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-retrieve_context" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. retrieve_context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-search_decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. search_decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-extract_code_snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. extract_code_snippets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Setup Supabase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-installer-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Installer Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mcp-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. MCP Server Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brugseksempler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brugseksempler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brugseksempler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arkiver-en-samtale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arkiver en Samtale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sg-i-historie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Søg i Historie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-kode-eksempler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Kode Eksempler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Suite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hvornar-skal-man-arkivere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hvornår Skal Man Arkivere?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roi-vrdiskabelse" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROI &amp; Værdiskabelse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ROI &amp; Værdiskabelse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tidsbesparelser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tidsbesparelser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Retention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Knowledge Base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fejlfinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fejlfinding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fejlfinding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-embeddings-er-for-langsomme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Embeddings er for langsomme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-search-resultater-er-ikke-relevante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Search resultater er ikke relevante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-supabase-storage-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Supabase storage limits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roadmap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-10-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1.0 (Current)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-11-planned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1.1 (Planned)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-20-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2.0 (Future)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/create-invoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invoice Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hvad-er-tekupvault" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hvad er TekupVault?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hvad er TekupVault?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hovedfunktioner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hovedfunktioner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arkitektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arkitektur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chat-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Sessions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      MCP Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MCP Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-archive_chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. archive_chat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-retrieve_context" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. retrieve_context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-search_decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. search_decisions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-extract_code_snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. extract_code_snippets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-setup-supabase" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Setup Supabase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-installer-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Installer Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mcp-server-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. MCP Server Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brugseksempler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brugseksempler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Brugseksempler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arkiver-en-samtale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arkiver en Samtale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sg-i-historie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Søg i Historie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-kode-eksempler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Kode Eksempler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Suite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Output
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hvornar-skal-man-arkivere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hvornår Skal Man Arkivere?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimering
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roi-vrdiskabelse" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROI &amp; Værdiskabelse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ROI &amp; Værdiskabelse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tidsbesparelser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tidsbesparelser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Retention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Knowledge Base
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fejlfinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fejlfinding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fejlfinding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-embeddings-er-for-langsomme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Embeddings er for langsomme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-search-resultater-er-ikke-relevante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Search resultater er ikke relevante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-supabase-storage-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem: Supabase storage limits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roadmap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-10-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1.0 (Current)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-11-planned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1.1 (Planned)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-20-future" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2.0 (Future)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tekupvault-guide">TekupVault Guide<a class="headerlink" href="#tekupvault-guide" title="Permanent link">&para;</a></h1>
+<p><strong>AI-powered chat history archival with semantic search</strong></p>
+<hr />
+<h2 id="hvad-er-tekupvault">Hvad er TekupVault?<a class="headerlink" href="#hvad-er-tekupvault" title="Permanent link">&para;</a></h2>
+<p>TekupVault er et intelligent chat historie arkiveringssystem der bruger AI og vector embeddings til at gøre dine samtaler søgbare og nyttige fremover.</p>
+<h3 id="hovedfunktioner">Hovedfunktioner<a class="headerlink" href="#hovedfunktioner" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Automatisk Arkivering</strong> - Gem hele chat sessioner med AI-genereret metadata</li>
+<li><strong>Semantisk Søgning</strong> - Find relevant information fra tidligere samtaler</li>
+<li><strong>Artifact Extraction</strong> - Udtr æk kode snippets, beslutninger, og konfigurationer</li>
+<li><strong>Vector Embeddings</strong> - Brug pgvector i Supabase for hurtig similarity search</li>
+<li><strong>Smart Summaries</strong> - AI-genererede resuméer og tags</li>
+</ul>
+<hr />
+<h2 id="arkitektur">Arkitektur<a class="headerlink" href="#arkitektur" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>┌─────────────────────┐
+│  Chat Interface     │
+│  (Jan AI / Claude)  │
+└──────────┬──────────┘
+           │
+           ↓ MCP Protocol
+┌─────────────────────┐
+│  TekupVault MCP     │
+│  - archive_chat     │
+│  - retrieve_context │
+│  - search_decisions │
+└──────────┬──────────┘
+           │
+           ↓ HTTP API
+┌─────────────────────┐
+│  Supabase           │
+│  - chat_sessions    │
+│  - chat_embeddings  │
+│  - chat_artifacts   │
+│  - pgvector index   │
+└─────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="database-schema">Database Schema<a class="headerlink" href="#database-schema" title="Permanent link">&para;</a></h2>
+<p>TekupVault bruger Supabase med pgvector extension til vector similarity search.</p>
+<h3 id="chat-sessions">Chat Sessions<a class="headerlink" href="#chat-sessions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">chat_sessions</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">gen_random_uuid</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">title</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">summary</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tags</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">[],</span>
+<span class="w">  </span><span class="n">message_count</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">archived_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="p">,</span>
+<span class="w">  </span><span class="n">user_id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">auth</span><span class="p">.</span><span class="n">users</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<h3 id="chat-embeddings">Chat Embeddings<a class="headerlink" href="#chat-embeddings" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">chat_embeddings</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">gen_random_uuid</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">session_id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">chat_sessions</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+<span class="w">  </span><span class="n">message_index</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="k">role</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="k">role</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;assistant&#39;</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">embedding</span><span class="w"> </span><span class="n">VECTOR</span><span class="p">(</span><span class="mi">1536</span><span class="p">),</span><span class="w">  </span><span class="c1">-- OpenAI ada-002 dimensions</span>
+<span class="w">  </span><span class="n">metadata</span><span class="w"> </span><span class="n">JSONB</span><span class="p">,</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span>
+<span class="p">);</span>
+
+<span class="c1">-- Vector similarity search index</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">chat_embeddings</span><span class="w"> </span>
+<span class="k">USING</span><span class="w"> </span><span class="n">ivfflat</span><span class="w"> </span><span class="p">(</span><span class="n">embedding</span><span class="w"> </span><span class="n">vector_cosine_ops</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="chat-artifacts">Chat Artifacts<a class="headerlink" href="#chat-artifacts" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">chat_artifacts</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">gen_random_uuid</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">session_id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">chat_sessions</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span>
+<span class="w">  </span><span class="k">type</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="k">type</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;decision&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;config&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;command&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;diagram&#39;</span><span class="p">)),</span>
+<span class="w">  </span><span class="n">title</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="k">language</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">file_path</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">  </span><span class="n">tags</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">[],</span>
+<span class="w">  </span><span class="n">created_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span>
+<span class="p">);</span>
+</code></pre></div>
+<hr />
+<h2 id="mcp-tools">MCP Tools<a class="headerlink" href="#mcp-tools" title="Permanent link">&para;</a></h2>
+<h3 id="1-archive_chat">1. archive_chat<a class="headerlink" href="#1-archive_chat" title="Permanent link">&para;</a></h3>
+<p>Arkiver en chat session med automatisk AI-genereret metadata.</p>
+<p><strong>Parameters:</strong>
+- <code>auto_summarize</code> (boolean) - Generer AI summary (default: true)
+- <code>extract_code</code> (boolean) - Udtræk kode blocks (default: true)
+- <code>extract_decisions</code> (boolean) - Udtræk arkitektur beslutninger (default: true)</p>
+<p><strong>Process:</strong>
+1. Generer AI summary med Llama 8B
+2. Udtræk artifacts (kode, beslutninger)
+3. Generer vector embeddings
+4. Gem i Supabase
+5. Gem artifacts i <code>/docs/</code> folder</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Archive current chat</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">tekupvault</span><span class="p">.</span><span class="nx">archive_chat</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">auto_summarize</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">extract_code</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">extract_decisions</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<h3 id="2-retrieve_context">2. retrieve_context<a class="headerlink" href="#2-retrieve_context" title="Permanent link">&para;</a></h3>
+<p>Hent relevant kontekst fra tidligere samtaler baseret på semantisk søgning.</p>
+<p><strong>Parameters:</strong>
+- <code>query</code> (string, required) - Søgeforespørgsel
+- <code>max_results</code> (number) - Maks antal resultater (default: 5)</p>
+<p><strong>Process:</strong>
+1. Generer embedding for query
+2. Søg med cosine similarity i pgvector
+3. Returner rankerede resultater</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">// Find relevant past conversations</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">tekupvault</span><span class="p">.</span><span class="nx">retrieve_context</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">query</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hvordan laver jeg en faktura i Billy.dk?&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">max_results</span><span class="o">:</span><span class="w"> </span><span class="kt">3</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<h3 id="3-search_decisions">3. search_decisions<a class="headerlink" href="#3-search_decisions" title="Permanent link">&para;</a></h3>
+<p>Søg speciktificeret i arkitektur beslutninger (ADRs).</p>
+<p><strong>Parameters:</strong>
+- <code>query</code> (string) - Søgeterm</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">decisions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">tekupvault</span><span class="p">.</span><span class="nx">search_decisions</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">query</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MCP server architecture&quot;</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<h3 id="4-extract_code_snippets">4. extract_code_snippets<a class="headerlink" href="#4-extract_code_snippets" title="Permanent link">&para;</a></h3>
+<p>Udtræk kode eksempler filtreret efter sprog.</p>
+<p><strong>Parameters:</strong>
+- <code>language</code> (string, optional) - Programmeringssprog</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">pythonCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">tekupvault</span><span class="p">.</span><span class="nx">extract_code_snippets</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">language</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;python&quot;</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<hr />
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="1-setup-supabase">1. Setup Supabase<a class="headerlink" href="#1-setup-supabase" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Opret Supabase projekt på https://supabase.com</span>
+<span class="c1"># Aktivér pgvector extension</span>
+</code></pre></div>
+<p>I Supabase SQL Editor:
+<div class="highlight"><pre><span></span><code><span class="c1">-- Enable pgvector</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">vector</span><span class="p">;</span>
+
+<span class="c1">-- Kør database schema (se ovenfor)</span>
+</code></pre></div></p>
+<h3 id="2-installer-dependencies">2. Installer Dependencies<a class="headerlink" href="#2-installer-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>@supabase/supabase-js
+npm<span class="w"> </span>install<span class="w"> </span>openai<span class="w">  </span><span class="c1"># For embeddings</span>
+</code></pre></div>
+<p>Eller brug lokal embedding model:
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>sentence-transformers
+</code></pre></div></p>
+<h3 id="3-environment-variables">3. Environment Variables<a class="headerlink" href="#3-environment-variables" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># .env</span>
+<span class="nv">SUPABASE_URL</span><span class="o">=</span>https://your-project.supabase.co
+<span class="nv">SUPABASE_ANON_KEY</span><span class="o">=</span>your-anon-key
+<span class="nv">SUPABASE_SERVICE_KEY</span><span class="o">=</span>your-service-key
+
+<span class="c1"># OpenAI (optional)</span>
+<span class="nv">OPENAI_API_KEY</span><span class="o">=</span>sk-...
+
+<span class="c1"># Eller brug lokal embedding model</span>
+<span class="nv">USE_LOCAL_EMBEDDINGS</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div>
+<h3 id="4-mcp-server-configuration">4. MCP Server Configuration<a class="headerlink" href="#4-mcp-server-configuration" title="Permanent link">&para;</a></h3>
+<p>Tilføj til <code>.cursor/mcp.json</code>:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;tekupvault&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;./mcp-servers/tekupvault/dist/index.js&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;env&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;SUPABASE_URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${SUPABASE_URL}&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;SUPABASE_ANON_KEY&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${SUPABASE_ANON_KEY}&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h2 id="brugseksempler">Brugseksempler<a class="headerlink" href="#brugseksempler" title="Permanent link">&para;</a></h2>
+<h3 id="arkiver-en-samtale">Arkiver en Samtale<a class="headerlink" href="#arkiver-en-samtale" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Efter en produktiv coding session</span>
+<span class="nx">You</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Arkiver denne samtale til TekupVault&quot;</span>
+
+<span class="nx">AI</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Arkiverer chat session...&quot;</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">ARCHIVE</span><span class="p">]</span><span class="w"> </span><span class="nx">Archiving</span><span class="w"> </span><span class="nx">chat</span><span class="w"> </span><span class="nx">session</span><span class="p">...</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">AI</span><span class="p">]</span><span class="w"> </span><span class="nx">Generating</span><span class="w"> </span><span class="nx">summary</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MCP Server Implementation - 45 messages&quot;</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">EXTRACT</span><span class="p">]</span><span class="w"> </span><span class="nx">Found</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="nx">snippets</span><span class="w"> </span><span class="p">(</span><span class="nx">TypeScript</span><span class="p">,</span><span class="w"> </span><span class="nx">Python</span><span class="p">)</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">EMBED</span><span class="p">]</span><span class="w"> </span><span class="nx">Generated</span><span class="w"> </span><span class="mf">45</span><span class="w"> </span><span class="nx">embeddings</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">STORE</span><span class="p">]</span><span class="w"> </span><span class="nx">Saved</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">Supabase</span>
+<span class="w">    </span><span class="err">✓</span><span class="w"> </span><span class="nx">Session</span><span class="w"> </span><span class="nx">archived</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">ID</span><span class="o">:</span><span class="w"> </span><span class="kt">abc</span><span class="o">-</span><span class="mf">123</span><span class="o">-</span><span class="nx">def</span>
+</code></pre></div>
+<h3 id="sg-i-historie">Søg i Historie<a class="headerlink" href="#sg-i-historie" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Senere, i en ny samtale</span>
+<span class="nx">You</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hvordan implementerede vi Billy.dk API integration?&quot;</span>
+
+<span class="nx">AI</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Søger i TekupVault...&quot;</span>
+<span class="w">    </span><span class="p">[</span><span class="nx">SEARCH</span><span class="p">]</span><span class="w"> </span><span class="nx">Found</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="nx">relevant</span><span class="w"> </span><span class="nx">messages</span><span class="o">:</span>
+
+<span class="w">    </span><span class="kt">1.</span><span class="w"> </span><span class="s2">&quot;Vi brugte MCP server pattern med HTTP client...&quot;</span>
+<span class="w">       </span><span class="p">(</span><span class="nx">Session</span><span class="o">:</span><span class="w"> </span><span class="kt">Billy</span><span class="w"> </span><span class="nx">Integration</span><span class="p">,</span><span class="w"> </span><span class="nx">Similarity</span><span class="o">:</span><span class="w"> </span><span class="kt">0.92</span><span class="p">)</span>
+
+<span class="w">    </span><span class="mf">2.</span><span class="w"> </span><span class="s2">&quot;API key gemmes i .env file...&quot;</span>
+<span class="w">       </span><span class="p">(</span><span class="nx">Session</span><span class="o">:</span><span class="w"> </span><span class="kt">Billy</span><span class="w"> </span><span class="nx">Integration</span><span class="p">,</span><span class="w"> </span><span class="nx">Similarity</span><span class="o">:</span><span class="w"> </span><span class="kt">0.87</span><span class="p">)</span>
+
+<span class="w">    </span><span class="mf">3.</span><span class="w"> </span><span class="s2">&quot;POST /invoices endpoint med body: {...}&quot;</span>
+<span class="w">       </span><span class="p">(</span><span class="nx">Session</span><span class="o">:</span><span class="w"> </span><span class="kt">Billy</span><span class="w"> </span><span class="nx">Integration</span><span class="p">,</span><span class="w"> </span><span class="nx">Similarity</span><span class="o">:</span><span class="w"> </span><span class="kt">0.85</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="find-kode-eksempler">Find Kode Eksempler<a class="headerlink" href="#find-kode-eksempler" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nx">You</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Vis mig Python eksempler på MCP servers&quot;</span>
+
+<span class="nx">AI</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Her er 3 relevante eksempler fra tidligere samtaler:&quot;</span>
+
+<span class="w">    </span><span class="mf">1.</span><span class="w"> </span><span class="nx">mcp_web_scraper</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="p">(</span><span class="nx">Fra</span><span class="w"> </span><span class="nx">session</span><span class="o">:</span><span class="w"> </span><span class="kt">MCP</span><span class="w"> </span><span class="nx">Implementation</span><span class="p">)</span>
+<span class="w">    </span><span class="mf">2.</span><span class="w"> </span><span class="nx">test_mcp_scraper</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="p">(</span><span class="nx">Fra</span><span class="w"> </span><span class="nx">session</span><span class="o">:</span><span class="w"> </span><span class="kt">Testing</span><span class="w"> </span><span class="nx">Guide</span><span class="p">)</span>
+<span class="w">    </span><span class="mf">3.</span><span class="w"> </span><span class="nx">fetch_claude_share</span><span class="p">.</span><span class="nx">py</span><span class="w"> </span><span class="p">(</span><span class="nx">Fra</span><span class="w"> </span><span class="nx">session</span><span class="o">:</span><span class="w"> </span><span class="kt">Web</span><span class="w"> </span><span class="nx">Scraping</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="test-suite">Test Suite<a class="headerlink" href="#test-suite" title="Permanent link">&para;</a></h2>
+<p>Kør test suite for at validere funktionalitet:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Kør alle tests</span>
+python<span class="w"> </span>scripts/test_tekupvault.py
+</code></pre></div>
+<h3 id="test-output">Test Output<a class="headerlink" href="#test-output" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>================================================================================
+                       TekupVault Test Suite                          
+================================================================================
+
+TEST 1: Archive Chat Session
+[ARCHIVE] Archiving chat session to TekupVault...
+   [AI] Generating AI summary...
+   [EXTRACT] Extracting code snippets...
+   [EMBED] Generating embeddings for 4 messages...
+   [STORE] Storing in Supabase...
+   [SUCCESS] Archived session
+   [STATS] 4 messages, 1 artifacts, 1 tags
+✓ TEST PASSED
+
+TEST 2: Retrieve Context
+[SEARCH] Searching TekupVault for: &#39;hvordan laver jeg en changelog?&#39;
+   [SUCCESS] Found 3 relevant messages
+✓ TEST PASSED
+
+TEST 3: Extract Code Snippets
+   Found 1 markdown snippets
+✓ TEST PASSED
+
+TEST 4: Semantic Search Accuracy
+   Found 3 sessions, 100% accuracy
+✓ TEST PASSED
+
+TEST 5: Complete Workflow
+✓ TEST PASSED
+
+================================================================================
+ALL TESTS PASSED!
+================================================================================
+</code></pre></div>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="hvornar-skal-man-arkivere">Hvornår Skal Man Arkivere?<a class="headerlink" href="#hvornar-skal-man-arkivere" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Arkiver når:</strong>
+- Du har løst et komplekst problem
+- Du har oprettet nyt kode eller arkitektur
+- Du har truffet vigtige beslutninger
+- Samtalen indeholder nyttig domain knowledge</p>
+<p>❌ <strong>Spring over når:</strong>
+- Trivielle spørgsmål
+- Small talk
+- Debugging uden løsning</p>
+<h3 id="optimering">Optimering<a class="headerlink" href="#optimering" title="Permanent link">&para;</a></h3>
+<p><strong>Embeddings:</strong>
+- Brug OpenAI ada-002 for bedst kvalitet (cost: $0.0001/1K tokens)
+- Eller brug lokal model (sentence-transformers) for privacy</p>
+<p><strong>Search:</strong>
+- Brug cosine similarity for vector search
+- Filtrer resultater med metadata (tags, dates)
+- Kombiner vector search med full-text search</p>
+<p><strong>Storage:</strong>
+- Arkiver månedligt til cold storage
+- Hold seneste 3 måneder i hot storage
+- Brug compression for gamle chats</p>
+<hr />
+<h2 id="roi-vrdiskabelse">ROI &amp; Værdiskabelse<a class="headerlink" href="#roi-vrdiskabelse" title="Permanent link">&para;</a></h2>
+<h3 id="tidsbesparelser">Tidsbesparelser<a class="headerlink" href="#tidsbesparelser" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Scenario: Find tidligere løsning
+- Uden TekupVault: 15-30 min (søg i git, docs, manuelt)
+- Med TekupVault: 30 sekunder (semantisk søgning)
+
+Besparelse: ~20 min/dag = 7 timer/måned
+Værdi: 7 * 350 DKK = 2,450 DKK/måned
+</code></pre></div>
+<h3 id="knowledge-retention">Knowledge Retention<a class="headerlink" href="#knowledge-retention" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Problem:</strong> Glemmer løsninger efter 2-3 uger</li>
+<li><strong>Løsning:</strong> Instant recall af tidligere samtaler</li>
+<li><strong>Værdi:</strong> Undgå at løse samme problem flere gange</li>
+</ul>
+<h3 id="team-knowledge-base">Team Knowledge Base<a class="headerlink" href="#team-knowledge-base" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Del søgbar knowledge base med team</li>
+<li>Onboard nye udviklere hurtigere</li>
+<li>Document architectural decisions automatisk</li>
+</ul>
+<hr />
+<h2 id="fejlfinding">Fejlfinding<a class="headerlink" href="#fejlfinding" title="Permanent link">&para;</a></h2>
+<h3 id="problem-embeddings-er-for-langsomme">Problem: Embeddings er for langsomme<a class="headerlink" href="#problem-embeddings-er-for-langsomme" title="Permanent link">&para;</a></h3>
+<p><strong>Løsning:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Brug batch processing</span>
+<span class="nv">BATCH_SIZE</span><span class="o">=</span><span class="m">50</span><span class="w"> </span>python<span class="w"> </span>scripts/generate_embeddings.py
+
+<span class="c1"># Eller kør async</span>
+<span class="nv">USE_ASYNC</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span>python<span class="w"> </span>scripts/generate_embeddings.py
+</code></pre></div></p>
+<h3 id="problem-search-resultater-er-ikke-relevante">Problem: Search resultater er ikke relevante<a class="headerlink" href="#problem-search-resultater-er-ikke-relevante" title="Permanent link">&para;</a></h3>
+<p><strong>Løsning:</strong>
+- Tjek embedding model (ada-002 vs local)
+- Øg max_results parameter
+- Filtrer med tags og metadata
+- Kombiner med keyword search</p>
+<h3 id="problem-supabase-storage-limits">Problem: Supabase storage limits<a class="headerlink" href="#problem-supabase-storage-limits" title="Permanent link">&para;</a></h3>
+<p><strong>Løsning:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Arkiver gamle sessions</span>
+<span class="k">UPDATE</span><span class="w"> </span><span class="n">chat_sessions</span><span class="w"> </span>
+<span class="k">SET</span><span class="w"> </span><span class="n">archived</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">created_at</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NOW</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="s1">&#39;90 days&#39;</span><span class="p">;</span>
+
+<span class="c1">-- Slet meget gamle embeddings</span>
+<span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">chat_embeddings</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">session_id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">chat_sessions</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">archived</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span>
+<span class="p">);</span>
+</code></pre></div></p>
+<hr />
+<h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
+<h3 id="version-10-current">Version 1.0 (Current)<a class="headerlink" href="#version-10-current" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Basic archival and retrieval</li>
+<li>✅ Vector embeddings</li>
+<li>✅ Code extraction</li>
+<li>✅ Test suite</li>
+</ul>
+<h3 id="version-11-planned">Version 1.1 (Planned)<a class="headerlink" href="#version-11-planned" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Automatic archival after N messages</li>
+<li>[ ] GitHub integration (save to repo)</li>
+<li>[ ] Export to markdown/PDF</li>
+<li>[ ] Team sharing features</li>
+</ul>
+<h3 id="version-20-future">Version 2.0 (Future)<a class="headerlink" href="#version-20-future" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Multi-modal embeddings (images, diagrams)</li>
+<li>[ ] Automatic ADR generation</li>
+<li>[ ] Integration med Confluence/Notion</li>
+<li>[ ] Advanced analytics dashboard</li>
+</ul>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Dokumentation:</strong> <a href="./">docs/guides/tekupvault-guide.md</a></li>
+<li><strong>Test Suite:</strong> <code>scripts/test_tekupvault.py</code></li>
+<li><strong>Database Schema:</strong> Se <code>chat.md</code> line 2730+</li>
+<li><strong>GitHub Issues:</strong> <a href="https://github.com/JonasAbde/tekup-ai-assistant/issues">github.com/JonasAbde/tekup-ai-assistant/issues</a></li>
+</ul>
+<hr />
+<p><strong>Sidst opdateret:</strong> 2025-10-16<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Ready for Implementation</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

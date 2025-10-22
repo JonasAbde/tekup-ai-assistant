@@ -12,13 +12,13 @@
         <meta name="author" content="TekUp Team">
       
       
-        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/MCP_WEB_SCRAPER_GUIDE/">
+        <link rel="canonical" href="https://github.com/JonasAbde/tekup-ai-assistant/QWEN_TEST_RESULTS/">
       
       
-        <link rel="prev" href="../TROUBLESHOOTING/">
+        <link rel="prev" href="../INSTALLED_MODELS_REPORT/">
       
       
-        <link rel="next" href="../MCP_RESOURCES/">
+        <link rel="next" href="../CHANGELOG/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>MCP Web Scraper - TekUp AI Assistant</title>
+        <title>Qwen Test Results - TekUp AI Assistant</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mcp-web-scraper-setup-guide" class="md-skip">
+        <a href="#qwen-25-coder-14b-test-resultater" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MCP Web Scraper
+              Qwen Test Results
             
           </span>
         </div>
@@ -242,10 +242,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../SETUP/" class="md-tabs__link">
           
   
@@ -262,12 +264,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../WORKFLOWS/" class="md-tabs__link">
           
   
@@ -431,26 +431,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -463,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -566,10 +571,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../QWEN_TEST_RESULTS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Qwen Test Results
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -580,6 +607,269 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model-specifikationer" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Model Specifikationer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Test Scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Test Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-1-simple-code-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test 1: Simple Code Generation ⭐⭐⭐⭐⭐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-2-code-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test 2: Code Debugging ⭐⭐⭐⭐⭐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-3-mcp-integration-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test 3: MCP Integration Simulation ⭐⭐⭐⭐⭐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-4-comparison-with-llama-32-3b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test 4: Comparison with Llama 3.2 3B
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Performance Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#response-tider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response Tider
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kvalitet-scores-1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kvalitet Scores (1-5)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Key Findings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 Key Findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#styrker-qwen-25-coder-14b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styrker (Qwen 2.5 Coder 14B)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svagheder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Svagheder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases-for-tekup-ai-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Use Cases for TekUp AI Assistant
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Use Cases for TekUp AI Assistant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perfekt-til" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perfekt til:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindre-egnet-til" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mindre Egnet til:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anbefalinger" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Anbefalinger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Anbefalinger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#til-tekup-ai-assistant-projektet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Til TekUp AI Assistant Projektet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-selection-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Selection Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nste-skridt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Næste Skridt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konklusio" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Konklusio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Konklusio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-verdict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Verdict
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relaterede-dokumenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Relaterede Dokumenter
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -619,31 +909,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -656,7 +941,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -713,32 +998,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    MCP Web Scraper
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../MCP_WEB_SCRAPER_GUIDE/" class="md-nav__link">
         
   
   
@@ -749,254 +1012,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-er-implementeret" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Hvad er implementeret?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Installation Status
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-skridt-aktiver-mcp-serveren-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Næste skridt: Aktivér MCP-serveren i Cursor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Næste skridt: Aktivér MCP-serveren i Cursor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metode-1-via-cursor-settings-anbefalet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 1: Via Cursor Settings (Anbefalet)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metode-2-via-konfigurationsfil" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metode 2: Via konfigurationsfil
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tilgngelige-vrktjer" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔧 Tilgængelige værktøjer
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔧 Tilgængelige værktøjer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-fetch_url-anbefalet-til-dynamisk-indhold" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. fetch_url (Anbefalet til dynamisk indhold)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-fetch_url_simple-hurtigere-til-statiske-sider" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. fetch_url_simple (Hurtigere til statiske sider)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verificer-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Verificér installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧪 Verificér installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#test-mcp-serveren-direkte" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test MCP-serveren direkte:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-i-cursor-efter-genstart" class="md-nav__link">
-    <span class="md-ellipsis">
-      Test i Cursor (efter genstart):
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brug-mcp-serveren" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎯 Brug MCP-serveren
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🎯 Brug MCP-serveren">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#eksempel-1-hent-delt-claude-samtale" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eksempel 1: Hent delt Claude-samtale
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eksempel-2-hent-og-analyser-enhver-webside" class="md-nav__link">
-    <span class="md-ellipsis">
-      Eksempel 2: Hent og analysér enhver webside
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fejlfinding" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔍 Fejlfinding
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔍 Fejlfinding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem-mcp-server-vises-ikke-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: MCP-server vises ikke i Cursor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-playwright-timeout-fejl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: Playwright timeout fejl
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#problem-unicodeencodeerror" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem: UnicodeEncodeError
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fil-struktur" class="md-nav__link">
-    <span class="md-ellipsis">
-      📁 Fil struktur
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-kan-du-nu-gre" class="md-nav__link">
-    <span class="md-ellipsis">
-      🎉 Hvad kan du nu gøre?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      📞 Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-opgave" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔄 Næste opgave
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1535,46 +1550,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hvad-er-implementeret" class="md-nav__link">
+  <a href="#model-specifikationer" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Hvad er implementeret?
+      📊 Model Specifikationer
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-status" class="md-nav__link">
+  <a href="#test-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ Installation Status
+      🧪 Test Scenarios
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nste-skridt-aktiver-mcp-serveren-i-cursor" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Næste skridt: Aktivér MCP-serveren i Cursor
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Næste skridt: Aktivér MCP-serveren i Cursor">
+    <nav class="md-nav" aria-label="🧪 Test Scenarios">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#metode-1-via-cursor-settings-anbefalet" class="md-nav__link">
+  <a href="#test-1-simple-code-generation" class="md-nav__link">
     <span class="md-ellipsis">
-      Metode 1: Via Cursor Settings (Anbefalet)
+      Test 1: Simple Code Generation ⭐⭐⭐⭐⭐
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#metode-2-via-konfigurationsfil" class="md-nav__link">
+  <a href="#test-2-code-debugging" class="md-nav__link">
     <span class="md-ellipsis">
-      Metode 2: Via konfigurationsfil
+      Test 2: Code Debugging ⭐⭐⭐⭐⭐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-3-mcp-integration-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test 3: MCP Integration Simulation ⭐⭐⭐⭐⭐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-4-comparison-with-llama-32-3b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test 4: Comparison with Llama 3.2 3B
     </span>
   </a>
   
@@ -1586,28 +1610,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tilgngelige-vrktjer" class="md-nav__link">
+  <a href="#performance-metrics" class="md-nav__link">
     <span class="md-ellipsis">
-      🔧 Tilgængelige værktøjer
+      📈 Performance Metrics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔧 Tilgængelige værktøjer">
+    <nav class="md-nav" aria-label="📈 Performance Metrics">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-fetch_url-anbefalet-til-dynamisk-indhold" class="md-nav__link">
+  <a href="#response-tider" class="md-nav__link">
     <span class="md-ellipsis">
-      1. fetch_url (Anbefalet til dynamisk indhold)
+      Response Tider
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-fetch_url_simple-hurtigere-til-statiske-sider" class="md-nav__link">
+  <a href="#kvalitet-scores-1-5" class="md-nav__link">
     <span class="md-ellipsis">
-      2. fetch_url_simple (Hurtigere til statiske sider)
+      Kvalitet Scores (1-5)
     </span>
   </a>
   
@@ -1619,28 +1643,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verificer-installation" class="md-nav__link">
+  <a href="#key-findings" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Verificér installation
+      💡 Key Findings
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧪 Verificér installation">
+    <nav class="md-nav" aria-label="💡 Key Findings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#test-mcp-serveren-direkte" class="md-nav__link">
+  <a href="#styrker-qwen-25-coder-14b" class="md-nav__link">
     <span class="md-ellipsis">
-      Test MCP-serveren direkte:
+      Styrker (Qwen 2.5 Coder 14B)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-i-cursor-efter-genstart" class="md-nav__link">
+  <a href="#svagheder" class="md-nav__link">
     <span class="md-ellipsis">
-      Test i Cursor (efter genstart):
+      Svagheder
     </span>
   </a>
   
@@ -1652,28 +1676,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#brug-mcp-serveren" class="md-nav__link">
+  <a href="#use-cases-for-tekup-ai-assistant" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 Brug MCP-serveren
+      🎯 Use Cases for TekUp AI Assistant
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🎯 Brug MCP-serveren">
+    <nav class="md-nav" aria-label="🎯 Use Cases for TekUp AI Assistant">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#eksempel-1-hent-delt-claude-samtale" class="md-nav__link">
+  <a href="#perfekt-til" class="md-nav__link">
     <span class="md-ellipsis">
-      Eksempel 1: Hent delt Claude-samtale
+      Perfekt til:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#eksempel-2-hent-og-analyser-enhver-webside" class="md-nav__link">
+  <a href="#mindre-egnet-til" class="md-nav__link">
     <span class="md-ellipsis">
-      Eksempel 2: Hent og analysér enhver webside
+      Mindre Egnet til:
     </span>
   </a>
   
@@ -1685,37 +1709,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fejlfinding" class="md-nav__link">
+  <a href="#anbefalinger" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 Fejlfinding
+      🚀 Anbefalinger
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔍 Fejlfinding">
+    <nav class="md-nav" aria-label="🚀 Anbefalinger">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#problem-mcp-server-vises-ikke-i-cursor" class="md-nav__link">
+  <a href="#til-tekup-ai-assistant-projektet" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem: MCP-server vises ikke i Cursor
+      Til TekUp AI Assistant Projektet
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#problem-playwright-timeout-fejl" class="md-nav__link">
+  <a href="#model-selection-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem: Playwright timeout fejl
+      Model Selection Strategy
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#problem-unicodeencodeerror" class="md-nav__link">
+  <a href="#nste-skridt" class="md-nav__link">
     <span class="md-ellipsis">
-      Problem: UnicodeEncodeError
+      Næste Skridt
     </span>
   </a>
   
@@ -1727,36 +1751,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fil-struktur" class="md-nav__link">
+  <a href="#konklusio" class="md-nav__link">
     <span class="md-ellipsis">
-      📁 Fil struktur
+      📊 Konklusio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Konklusio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Scores
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#hvad-kan-du-nu-gre" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#final-verdict" class="md-nav__link">
     <span class="md-ellipsis">
-      🎉 Hvad kan du nu gøre?
+      Final Verdict
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      📞 Support
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nste-opgave" class="md-nav__link">
+  <a href="#relaterede-dokumenter" class="md-nav__link">
     <span class="md-ellipsis">
-      🔄 Næste opgave
+      🔗 Relaterede Dokumenter
     </span>
   </a>
   
@@ -1781,161 +1811,472 @@
   
 
 
-<h1 id="mcp-web-scraper-setup-guide">MCP Web Scraper Setup Guide<a class="headerlink" href="#mcp-web-scraper-setup-guide" title="Permanent link">&para;</a></h1>
-<h2 id="hvad-er-implementeret">🎯 Hvad er implementeret?<a class="headerlink" href="#hvad-er-implementeret" title="Permanent link">&para;</a></h2>
-<p>En Python-baseret MCP (Model Context Protocol) server der giver AI-assistenten evnen til at hente og analysere webindhold direkte, inklusiv JavaScript-renderet indhold fra delte Claude-samtaler.</p>
-<h2 id="installation-status">✅ Installation Status<a class="headerlink" href="#installation-status" title="Permanent link">&para;</a></h2>
-<p>Alle nødvendige komponenter er installeret og testet:</p>
+<h1 id="qwen-25-coder-14b-test-resultater">Qwen 2.5 Coder 14B - Test Resultater<a class="headerlink" href="#qwen-25-coder-14b-test-resultater" title="Permanent link">&para;</a></h1>
+<p><strong>Test Dato:</strong> 16. oktober 2025, 11:30<br />
+<strong>Formål:</strong> Evaluere Qwen 2.5 Coder 14B's coding capabilities til TekUp AI Assistant projektet</p>
+<hr />
+<h2 id="model-specifikationer">📊 Model Specifikationer<a class="headerlink" href="#model-specifikationer" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Værdi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model Navn</strong></td>
+<td>qwen2.5-coder:14b</td>
+</tr>
+<tr>
+<td><strong>Parametre</strong></td>
+<td>14.8 milliarder</td>
+</tr>
+<tr>
+<td><strong>Arkitektur</strong></td>
+<td>Qwen2</td>
+</tr>
+<tr>
+<td><strong>Context Length</strong></td>
+<td>32,768 tokens (~100 sider)</td>
+</tr>
+<tr>
+<td><strong>Embedding Dimension</strong></td>
+<td>5,120</td>
+</tr>
+<tr>
+<td><strong>Quantization</strong></td>
+<td>Q4_K_M (4-bit)</td>
+</tr>
+<tr>
+<td><strong>Størrelse</strong></td>
+<td>9.0 GB</td>
+</tr>
+<tr>
+<td><strong>Capabilities</strong></td>
+<td>Completion, Tools, Insert</td>
+</tr>
+<tr>
+<td><strong>License</strong></td>
+<td>Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>Download Tid</strong></td>
+<td>~30 minutter (5 MB/s)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="test-scenarios">🧪 Test Scenarios<a class="headerlink" href="#test-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="test-1-simple-code-generation">Test 1: Simple Code Generation ⭐⭐⭐⭐⭐<a class="headerlink" href="#test-1-simple-code-generation" title="Permanent link">&para;</a></h3>
+<p><strong>Prompt:</strong> "Write a Python function to validate email addresses using regex. Include docstring and error handling."</p>
+<p><strong>Resultat:</strong>
+- ✅ <strong>Korrekt kode:</strong> Python function med regex
+- ✅ <strong>Docstring:</strong> Komplet med Args og Returns
+- ✅ <strong>Error handling:</strong> Try/except med ValueError
+- ✅ <strong>Best practices:</strong> Type conversion, proper indentation
+- ✅ <strong>Example usage:</strong> Inkluderet med test cases
+- ✅ <strong>Forklaring:</strong> Detaljeret gennemgang af koden</p>
+<p><strong>Kode Kvalitet:</strong> 5/5<br />
+<strong>Forklaring:</strong> 5/5<br />
+<strong>Response Tid:</strong> ~8 sekunder</p>
+<p><strong>Highlights:</strong>
+- Meget struktureret og læsbar kode
+- Professionel error handling (ValueError med from e)
+- Inkluderer både valid og invalid email examples
+- Forklarer regex pattern i detaljer</p>
+<hr />
+<h3 id="test-2-code-debugging">Test 2: Code Debugging ⭐⭐⭐⭐⭐<a class="headerlink" href="#test-2-code-debugging" title="Permanent link">&para;</a></h3>
+<p><strong>Prompt:</strong> "Debug this Python code: def calc(x,y): return x+y calc(5)"</p>
+<p><strong>Resultat:</strong>
+- ✅ <strong>Korrekt identificeret fejl:</strong> Manglende andet argument
+- ✅ <strong>Forklaring:</strong> "function is defined to take two arguments but is being called with only one"
+- ✅ <strong>Korrekt løsning:</strong> Tilføjet andet argument (3)
+- ✅ <strong>Code example:</strong> Komplet working example
+- ✅ <strong>Ekstra hjælp:</strong> Kommentar om at man kan vælge andet tal</p>
+<p><strong>Debugging Kvalitet:</strong> 5/5<br />
+<strong>Forklaring:</strong> 5/5<br />
+<strong>Response Tid:</strong> ~5 sekunder</p>
+<p><strong>Highlights:</strong>
+- Øjeblikkelig identifikation af problemet
+- Klar og koncis forklaring
+- Leverer working solution
+- Hjælpsom kommentar om flexibility</p>
+<hr />
+<h3 id="test-3-mcp-integration-simulation">Test 3: MCP Integration Simulation ⭐⭐⭐⭐⭐<a class="headerlink" href="#test-3-mcp-integration-simulation" title="Permanent link">&para;</a></h3>
+<p><strong>Prompt:</strong> "Create a Python MCP server skeleton with a tool that calls an invoice API. Include error handling and type hints."</p>
+<p><strong>Resultat:</strong>
+- ✅ <strong>Full Flask server:</strong> Komplet web server skeleton
+- ✅ <strong>Type hints:</strong> Dict[str, Any], Optional[InvoiceResponse]
+- ✅ <strong>Error handling:</strong> Multiple exception types (RequestException, ValueError, generic Exception)
+- ✅ <strong>API structure:</strong> POST endpoint <code>/create-invoice</code>
+- ✅ <strong>HTTP status codes:</strong> 201 (success), 400 (bad request), 500 (server error)
+- ✅ <strong>Logging:</strong> app.logger.error for debugging
+- ✅ <strong>Professional structure:</strong> Separate function for API call
+- ✅ <strong>Installation guide:</strong> Included pip install command</p>
+<p><strong>Kode Kvalitet:</strong> 5/5<br />
+<strong>Arkitektur:</strong> 5/5<br />
+<strong>Response Tid:</strong> ~20 sekunder</p>
+<p><strong>Highlights:</strong>
+- Production-ready code structure
+- Proper separation of concerns (API call function separate from endpoint)
+- Comprehensive error handling (3 levels)
+- Type hints throughout
+- Ready for Billy.dk integration!</p>
+<p><strong>Note:</strong> Qwen tolkede MCP som "Micro Control Panel" i stedet for "Model Context Protocol", men strukturen er faktisk perfekt til vores Billy.dk API integration!</p>
+<hr />
+<h3 id="test-4-comparison-with-llama-32-3b">Test 4: Comparison with Llama 3.2 3B<a class="headerlink" href="#test-4-comparison-with-llama-32-3b" title="Permanent link">&para;</a></h3>
+<p><strong>Samme Prompt som Test 1</strong></p>
+<h4 id="llama-32-3b-resultat">Llama 3.2 3B Resultat:<a class="headerlink" href="#llama-32-3b-resultat" title="Permanent link">&para;</a></h4>
 <ul>
-<li>✅ <strong>Python 3.13.7</strong> - Kørende og verificeret</li>
-<li>✅ <strong>Node.js v24.8.0</strong> - Installeret (bonus, ikke påkrævet)</li>
-<li>✅ <strong>MCP Python pakke</strong> - Installeret</li>
-<li>✅ <strong>Playwright</strong> - Installeret med Chromium browser</li>
-<li>✅ <strong>Requests &amp; BeautifulSoup4</strong> - Installeret</li>
-<li>✅ <strong>MCP Web Scraper</strong> - Oprettet og testet</li>
-<li>✅ <strong>Test Suite</strong> - Alle tests bestået ✅</li>
+<li>✅ Basic function structure korrekt</li>
+<li>⚠️ Docstring: OK men mindre detaljeret</li>
+<li>⚠️ Error handling: Generic Exception (mindre specifik)</li>
+<li>⚠️ Import inside function (dårlig practice)</li>
+<li>✅ Example usage: Inkluderet</li>
+<li>❌ Ingen detaljeret forklaring</li>
 </ul>
-<h2 id="nste-skridt-aktiver-mcp-serveren-i-cursor">🚀 Næste skridt: Aktivér MCP-serveren i Cursor<a class="headerlink" href="#nste-skridt-aktiver-mcp-serveren-i-cursor" title="Permanent link">&para;</a></h2>
-<h3 id="metode-1-via-cursor-settings-anbefalet">Metode 1: Via Cursor Settings (Anbefalet)<a class="headerlink" href="#metode-1-via-cursor-settings-anbefalet" title="Permanent link">&para;</a></h3>
+<p><strong>Sammenligning:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Kriterie</th>
+<th>Qwen 14B</th>
+<th>Llama 3.2 3B</th>
+<th>Vinder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code Correctness</td>
+<td>✅ Perfekt</td>
+<td>✅ Korrekt</td>
+<td>Qwen (bedre struktur)</td>
+</tr>
+<tr>
+<td>Docstring Quality</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td><strong>Qwen</strong></td>
+</tr>
+<tr>
+<td>Error Handling</td>
+<td>Specifik (ValueError)</td>
+<td>Generic (Exception)</td>
+<td><strong>Qwen</strong></td>
+</tr>
+<tr>
+<td>Best Practices</td>
+<td>Import top-level</td>
+<td>Import in function</td>
+<td><strong>Qwen</strong></td>
+</tr>
+<tr>
+<td>Explanation</td>
+<td>Detaljeret</td>
+<td>Ingen</td>
+<td><strong>Qwen</strong></td>
+</tr>
+<tr>
+<td>Response Time</td>
+<td>~8s</td>
+<td>~6s</td>
+<td>Llama (2s faster)</td>
+</tr>
+<tr>
+<td>Code Length</td>
+<td>Longer, more complete</td>
+<td>Shorter, minimal</td>
+<td><strong>Qwen</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Konklusion:</strong> Qwen 2.5 Coder 14B er klart overlegen til coding tasks. Llama 3.2 3B kan grundlæggende kode, men mangler professionel kvalitet og detaljer.</p>
+<hr />
+<h2 id="performance-metrics">📈 Performance Metrics<a class="headerlink" href="#performance-metrics" title="Permanent link">&para;</a></h2>
+<h3 id="response-tider">Response Tider<a class="headerlink" href="#response-tider" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Qwen 14B</th>
+<th>Llama 3.2 3B</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test 1 (Code Gen)</td>
+<td>~8s</td>
+<td>~6s</td>
+<td>+2s</td>
+</tr>
+<tr>
+<td>Test 2 (Debug)</td>
+<td>~5s</td>
+<td>N/A</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Test 3 (MCP)</td>
+<td>~20s</td>
+<td>N/A</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gennemsnit:</strong> ~11 sekunder per respons</p>
+<h3 id="kvalitet-scores-1-5">Kvalitet Scores (1-5)<a class="headerlink" href="#kvalitet-scores-1-5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Qwen 14B</th>
+<th>Llama 3.2 3B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code Correctness</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Code Structure</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Error Handling</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Best Practices</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Explanation Quality</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>30/30</strong></td>
+<td><strong>18/30</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="key-findings">💡 Key Findings<a class="headerlink" href="#key-findings" title="Permanent link">&para;</a></h2>
+<h3 id="styrker-qwen-25-coder-14b">Styrker (Qwen 2.5 Coder 14B)<a class="headerlink" href="#styrker-qwen-25-coder-14b" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Åbn Cursor Settings</strong></li>
+<li><strong>Professional Code Quality</strong></li>
+<li>Production-ready struktur</li>
+<li>Comprehensive error handling</li>
+<li>Type hints throughout</li>
 <li>
-<p>Tryk <code>Ctrl+,</code> eller File &gt; Preferences &gt; Settings</p>
+<p>Proper imports and structure</p>
 </li>
 <li>
-<p><strong>Find MCP Settings</strong></p>
+<p><strong>Excellent Documentation</strong></p>
 </li>
-<li>Søg efter "MCP" i søgefeltet</li>
+<li>Detailed docstrings</li>
+<li>Inline comments hvor relevant</li>
+<li>Usage examples included</li>
 <li>
-<p>Gå til Features &gt; MCP</p>
+<p>Detailed explanations</p>
 </li>
 <li>
-<p><strong>Tilføj MCP Server</strong></p>
+<p><strong>Debugging Capability</strong></p>
 </li>
-<li>Klik på "+ Add New MCP Server"</li>
+<li>Instant problem identification</li>
+<li>Clear explanations</li>
 <li>
-<p>Indtast:</p>
+<p>Working solutions provided</p>
+</li>
+<li>
+<p><strong>MCP/API Integration</strong></p>
+</li>
+<li>Full Flask server skeleton</li>
+<li>REST API best practices</li>
+<li>HTTP status codes</li>
+<li>
+<p>Logging and error handling</p>
+</li>
+<li>
+<p><strong>Learning Friendly</strong></p>
+</li>
+<li>Forklarer koden efterfølgende</li>
+<li>Giver context og rationale</li>
+<li>Inkluderer installation instructions</li>
+</ol>
+<h3 id="svagheder">Svagheder<a class="headerlink" href="#svagheder" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Response Tid</strong></li>
+<li>2-3x langsommere end Llama 3.2 3B</li>
+<li>
+<p>Stadig acceptabelt (~8-11s gennemsnit)</p>
+</li>
+<li>
+<p><strong>Model Size</strong></p>
+</li>
+<li>9 GB vs 2 GB (Llama 3.2)</li>
+<li>
+<p>Kræver mere GPU memory when loaded</p>
+</li>
+<li>
+<p><strong>Context Misunderstanding</strong></p>
+</li>
+<li>Tolkede MCP som "Micro Control Panel"</li>
+<li>Men output var stadig brugbart!</li>
+</ol>
+<hr />
+<h2 id="use-cases-for-tekup-ai-assistant">🎯 Use Cases for TekUp AI Assistant<a class="headerlink" href="#use-cases-for-tekup-ai-assistant" title="Permanent link">&para;</a></h2>
+<h3 id="perfekt-til">Perfekt til:<a class="headerlink" href="#perfekt-til" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Billy.dk MCP Server Development</strong>
+- Kan generere production-ready API integration code
+- Type hints og error handling indbygget
+- Flask/FastAPI struktur ready to go</p>
+<p>✅ <strong>Code Review &amp; Debugging</strong>
+- Instant bug identification
+- Professional fixes
+- Explanation of issues</p>
+<p>✅ <strong>Documentation Generation</strong>
+- Excellent docstrings
+- README generation
+- API documentation</p>
+<p>✅ <strong>Refactoring &amp; Optimization</strong>
+- Suggests best practices
+- Modern Python patterns
+- Type hints migration</p>
+<p>✅ <strong>Test Generation</strong>
+- Can generate pytest tests
+- Comprehensive test coverage
+- Edge case consideration</p>
+<h3 id="mindre-egnet-til">Mindre Egnet til:<a class="headerlink" href="#mindre-egnet-til" title="Permanent link">&para;</a></h3>
+<p>⚠️ <strong>Quick Simple Queries</strong>
+- Llama 3.2 3B er hurtigere til trivielle spørgsmål
+- Overkill for "what is X?" queries</p>
+<p>⚠️ <strong>Når Internet Forbindelse Mangler</strong>
+- GPT-OSS 120B cloud er bedre hvis online</p>
+<hr />
+<h2 id="anbefalinger">🚀 Anbefalinger<a class="headerlink" href="#anbefalinger" title="Permanent link">&para;</a></h2>
+<h3 id="til-tekup-ai-assistant-projektet">Til TekUp AI Assistant Projektet<a class="headerlink" href="#til-tekup-ai-assistant-projektet" title="Permanent link">&para;</a></h3>
+<p><strong>1. GØR Qwen 14B til Primary Coding Model ✅</strong></p>
+<p>Rationale:
+- Klart den bedste til coding tasks
+- Production-ready code quality
+- Perfect til Billy.dk MCP implementation
+- Fremtidssikret til komplekse integrations</p>
+<p><strong>2. Behold Llama 3.2 3B til Quick Tasks</strong></p>
+<p>Rationale:
+- Hurtigere responses (2s forskel)
+- God til simple queries
+- Backup når Qwen ikke behøves</p>
+<p><strong>3. Brug GPT-OSS 120B Cloud til Reasoning</strong></p>
+<p>Rationale:
+- Complex architectural decisions
+- System design discussions
+- Når local models ikke er nok</p>
+<h3 id="model-selection-strategy">Model Selection Strategy<a class="headerlink" href="#model-selection-strategy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Workflow:
+├─ Coding Task? 
+│  ├─ Complex/Production → Qwen 2.5 Coder 14B
+│  └─ Simple/Quick → Llama 3.2 3B
+│
+├─ Reasoning/Planning?
+│  └─ GPT-OSS 120B Cloud
+│
+└─ General Chat?
+    └─ Llama 3.2 3B (fast) eller Qwen (bedre kvalitet)
+</code></pre></div>
+<h3 id="nste-skridt">Næste Skridt<a class="headerlink" href="#nste-skridt" title="Permanent link">&para;</a></h3>
+<p><strong>Immediat (I dag):</strong>
+1. ✅ Test Qwen med Billy.dk API documentation
+2. ✅ Generate initial MCP server code
+3. ✅ Test code generation quality</p>
+<p><strong>Denne Uge:</strong>
+1. Implement Billy.dk MCP server med Qwen
+2. Generate comprehensive tests
+3. Document API integration</p>
+<p><strong>Næste Uge:</strong>
+1. Extend til RenOS integration
+2. Performance tuning
+3. Production deployment</p>
+<hr />
+<h2 id="konklusio">📊 Konklusio<a class="headerlink" href="#konklusio" title="Permanent link">&para;</a></h2>
+<p><strong>Qwen 2.5 Coder 14B er et MUST-HAVE for TekUp AI Assistant projektet.</strong></p>
+<h3 id="summary-scores">Summary Scores<a class="headerlink" href="#summary-scores" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Score</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code Quality</strong></td>
+<td>10/10</td>
+<td>Production-ready</td>
+</tr>
+<tr>
+<td><strong>Debugging</strong></td>
+<td>10/10</td>
+<td>Instant &amp; accurate</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>10/10</td>
+<td>Professional level</td>
+</tr>
+<tr>
+<td><strong>MCP Integration</strong></td>
+<td>10/10</td>
+<td>Perfect for Billy.dk</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>8/10</td>
+<td>Good (slightly slower)</td>
+</tr>
+<tr>
+<td><strong>Value for Project</strong></td>
+<td>10/10</td>
+<td><strong>ESSENTIAL</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total:</strong> 58/60 (97%)</p>
+<h3 id="final-verdict">Final Verdict<a class="headerlink" href="#final-verdict" title="Permanent link">&para;</a></h3>
+<p>🎉 <strong>Qwen 2.5 Coder 14B overgår alle forventninger!</strong></p>
+<p>Dette er præcis den model vi manglede til:
+- Billy.dk MCP server implementation ✅
+- RenOS integration ✅
+- Production-quality code generation ✅
+- Professional debugging ✅</p>
+<p><strong>Anbefaling:</strong> Brug Qwen som primary coding assistant og fortsæt med Billy.dk implementation NU!</p>
+<hr />
+<h2 id="relaterede-dokumenter">🔗 Relaterede Dokumenter<a class="headerlink" href="#relaterede-dokumenter" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Navn:</strong> <code>web-scraper</code></li>
-<li><strong>Type:</strong> <code>stdio</code></li>
-<li><strong>Command:</strong> <code>python</code></li>
-<li><strong>Args:</strong> <code>C:\Users\empir\tekup-ai-assistant\scripts\mcp_web_scraper.py</code></li>
+<li><a href="../INSTALLED_MODELS_REPORT/">Installed Models Report</a></li>
+<li><a href="../AI_ASSISTANT_STATUS_REPORT/">AI Assistant Status Report</a></li>
+<li><a href="../guides/billy-integration/">Billy.dk Integration Guide</a></li>
+<li><a href="../MCP_RESOURCES/">MCP Resources</a></li>
 </ul>
-</li>
-<li>
-<p><strong>Gem og Genstart</strong></p>
-</li>
-<li>Gem ændringerne</li>
-<li>Genstart Cursor fuldstændigt (luk og åbn)</li>
-</ol>
-<h3 id="metode-2-via-konfigurationsfil">Metode 2: Via konfigurationsfil<a class="headerlink" href="#metode-2-via-konfigurationsfil" title="Permanent link">&para;</a></h3>
-<p>Hvis Cursor understøtter at læse MCP-konfiguration fra fil:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;web-scraper&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;args&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;C:\\Users\\empir\\tekup-ai-assistant\\scripts\\mcp_web_scraper.py&quot;</span><span class="p">]</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Konfigurationsfilen findes allerede her: <code>configs/claude-desktop/mcp_config.json</code></p>
-<h2 id="tilgngelige-vrktjer">🔧 Tilgængelige værktøjer<a class="headerlink" href="#tilgngelige-vrktjer" title="Permanent link">&para;</a></h2>
-<p>Når MCP-serveren er aktiveret, har AI-assistenten adgang til:</p>
-<h3 id="1-fetch_url-anbefalet-til-dynamisk-indhold">1. <code>fetch_url</code> (Anbefalet til dynamisk indhold)<a class="headerlink" href="#1-fetch_url-anbefalet-til-dynamisk-indhold" title="Permanent link">&para;</a></h3>
-<p>Bruger Playwright med Chromium til at hente indhold, inklusiv JavaScript-renderet sider.</p>
-<p><strong>Eksempel brug:</strong>
-<div class="highlight"><pre><span></span><code>Brug fetch_url værktøjet til at hente indhold fra:
-https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
-</code></pre></div></p>
-<p><strong>Parametre:</strong>
-- <code>url</code> (påkrævet): URL'en der skal hentes
-- <code>wait_for</code> (valgfri): CSS selector at vente på før scraping</p>
-<h3 id="2-fetch_url_simple-hurtigere-til-statiske-sider">2. <code>fetch_url_simple</code> (Hurtigere til statiske sider)<a class="headerlink" href="#2-fetch_url_simple-hurtigere-til-statiske-sider" title="Permanent link">&para;</a></h3>
-<p>Bruger simple HTTP requests til statiske HTML-sider.</p>
-<p><strong>Eksempel brug:</strong>
-<div class="highlight"><pre><span></span><code>Brug fetch_url_simple værktøjet til at hente: https://example.com
-</code></pre></div></p>
-<h2 id="verificer-installation">🧪 Verificér installation<a class="headerlink" href="#verificer-installation" title="Permanent link">&para;</a></h2>
-<h3 id="test-mcp-serveren-direkte">Test MCP-serveren direkte:<a class="headerlink" href="#test-mcp-serveren-direkte" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">scripts</span><span class="p">/</span><span class="n">test_mcp_scraper</span><span class="p">.</span><span class="n">py</span>
-</code></pre></div>
-<p>Du skulle se:
-<div class="highlight"><pre><span></span><code>✅ Simple HTTP: PASSED
-✅ Playwright: PASSED
-🎉 Alle tests bestået!
-</code></pre></div></p>
-<h3 id="test-i-cursor-efter-genstart">Test i Cursor (efter genstart):<a class="headerlink" href="#test-i-cursor-efter-genstart" title="Permanent link">&para;</a></h3>
-<p>Åbn en ny chat og spørg:
-<div class="highlight"><pre><span></span><code>Hvilke MCP-værktøjer har du adgang til?
-</code></pre></div></p>
-<p>Du skulle se <code>fetch_url</code> og <code>fetch_url_simple</code> i listen.</p>
-<h2 id="brug-mcp-serveren">🎯 Brug MCP-serveren<a class="headerlink" href="#brug-mcp-serveren" title="Permanent link">&para;</a></h2>
-<h3 id="eksempel-1-hent-delt-claude-samtale">Eksempel 1: Hent delt Claude-samtale<a class="headerlink" href="#eksempel-1-hent-delt-claude-samtale" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Brug fetch_url til at hente indholdet fra denne delte Claude-samtale:
-https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
-
-Analysér derefter indholdet og giv mig en rapport.
-</code></pre></div>
-<h3 id="eksempel-2-hent-og-analyser-enhver-webside">Eksempel 2: Hent og analysér enhver webside<a class="headerlink" href="#eksempel-2-hent-og-analyser-enhver-webside" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Hent indholdet fra https://example.com og giv mig en opsummering.
-</code></pre></div>
-<h2 id="fejlfinding">🔍 Fejlfinding<a class="headerlink" href="#fejlfinding" title="Permanent link">&para;</a></h2>
-<h3 id="problem-mcp-server-vises-ikke-i-cursor">Problem: MCP-server vises ikke i Cursor<a class="headerlink" href="#problem-mcp-server-vises-ikke-i-cursor" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-1. Bekræft at Python er i PATH: <code>python --version</code>
-2. Kontroller den fulde sti er korrekt i konfigurationen
-3. Genstart Cursor fuldstændigt
-4. Tjek Cursor's output/developer tools for fejl</p>
-<h3 id="problem-playwright-timeout-fejl">Problem: Playwright timeout fejl<a class="headerlink" href="#problem-playwright-timeout-fejl" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-1. Kontroller internetforbindelse
-2. Nogle sider tager længere tid - timeout kan øges i <code>mcp_web_scraper.py</code>
-3. Prøv <code>fetch_url_simple</code> som alternativ for statiske sider</p>
-<h3 id="problem-unicodeencodeerror">Problem: UnicodeEncodeError<a class="headerlink" href="#problem-unicodeencodeerror" title="Permanent link">&para;</a></h3>
-<p><strong>Løsning:</strong>
-- Dette er allerede fikset i test-scriptet
-- Hvis det sker i MCP-serveren, lad mig vide</p>
-<h2 id="fil-struktur">📁 Fil struktur<a class="headerlink" href="#fil-struktur" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>tekup-ai-assistant/
-├── configs/
-│   └── claude-desktop/
-│       ├── mcp_config.json           # MCP konfiguration
-│       └── CURSOR_MCP_SETUP.md       # Detaljerede setup-instruktioner
-├── scripts/
-│   ├── mcp_web_scraper.py            # MCP server (hovedfil)
-│   ├── test_mcp_scraper.py           # Test suite
-│   └── README.md                     # Scripts dokumentation
-└── docs/
-    └── MCP_WEB_SCRAPER_GUIDE.md      # Denne guide
-</code></pre></div>
-<h2 id="hvad-kan-du-nu-gre">🎉 Hvad kan du nu gøre?<a class="headerlink" href="#hvad-kan-du-nu-gre" title="Permanent link">&para;</a></h2>
-<p>Med MCP Web Scraper aktiveret kan AI-assistenten:</p>
-<ol>
-<li>✅ Hente indhold fra delte Claude-samtaler</li>
-<li>✅ Analysere dynamisk JavaScript-renderet indhold</li>
-<li>✅ Scrape enhver offentlig tilgængelig webside</li>
-<li>✅ Automatisk analysere og rapportere om webindhold</li>
-<li>✅ Integrere web-data i dit TekUp AI Assistant workflow</li>
-</ol>
-<h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>Hvis du støder på problemer:</p>
-<ol>
-<li>Kør test-scriptet: <code>python scripts/test_mcp_scraper.py</code></li>
-<li>Tjek logs i Cursor's developer tools</li>
-<li>Verificér alle pakker er installeret: <code>pip list | findstr "mcp playwright requests"</code></li>
-</ol>
-<h2 id="nste-opgave">🔄 Næste opgave<a class="headerlink" href="#nste-opgave" title="Permanent link">&para;</a></h2>
-<p>Nu hvor MCP-serveren er sat op, er næste skridt:</p>
-<ol>
-<li><strong>Tilføj MCP-serveren i Cursor Settings</strong> (følg Metode 1 ovenfor)</li>
-<li><strong>Genstart Cursor</strong></li>
-<li><strong>Test at værktøjerne er tilgængelige</strong></li>
-<li><strong>Hent og analysér det delte Claude-link</strong></li>
-</ol>
-<p>Når du har aktiveret MCP-serveren i Cursor, kan du bede AI-assistenten om at hente og analysere indholdet fra:
-<div class="highlight"><pre><span></span><code>https://claude.ai/share/ae42cf6f-0409-4ff7-a1c1-1d78e3fb0d6a
-</code></pre></div></p>
+<hr />
+<p><strong>Test udført af:</strong> TekUp AI Assistant<br />
+<strong>Test dato:</strong> 2025-10-16<br />
+<strong>Model version:</strong> qwen2.5-coder:14b (9ec8897f747e)<br />
+<strong>Næste test:</strong> Efter Billy.dk implementation</p>
 
 
 
